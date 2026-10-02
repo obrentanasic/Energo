@@ -11,14 +11,27 @@ export const nav = [
   { label: 'Kontakt', to: '/kontakt' },
 ]
 
+// Only items that have real content on the site. `id` scrolls to that section after navigation.
 export const megaMenu = [
-  { label: 'O nama', to: '/o-nama', items: ['Ko smo', 'Misija, vizija, vrednosti', 'Istorijat', 'Organizacija', 'Tržišta', 'Publikacije'] },
-  { label: 'Usluge', to: '/usluge', items: ['Energetika', 'Visokogradnja', 'Infrastruktura', 'Vodoprivreda', 'Industrija', 'Real estate'] },
-  { label: 'Za investitore', to: '/investitori', items: ['Finansijski izveštaji', 'Akcije i Beogradska berza', 'Skupština', 'Korporativno upravljanje', 'Finansijski kalendar', 'Obaveštenja akcionarima'] },
-  { label: 'Projekti', to: '/projekti', items: ['Svi projekti', 'Izdvojeni projekti', 'Real estate – Kosa Kvart'] },
-  { label: 'Karijera', to: '/karijera', items: ['Zašto Energoprojekt', 'Slobodna radna mesta', 'Praksa i stipendije', 'Priče zaposlenih'] },
-  { label: 'Vesti', to: '/vesti', items: ['Sve vesti', 'Saopštenja', 'Mediji'] },
-  { label: 'Kontakt', to: '/kontakt', items: ['Sedište', 'Zavisna društva', 'Regionalne kancelarije'] },
+  { label: 'O nama', to: '/o-nama', items: [
+    { label: 'Ko smo', to: '/o-nama' }, { label: 'Misija, vizija, vrednosti', to: '/o-nama', id: 'misija' },
+    { label: 'Istorijat', to: '/o-nama', id: 'istorijat' }, { label: 'Organi upravljanja', to: '/o-nama', id: 'organizacija' },
+    { label: 'Tržišta', to: '/o-nama', id: 'trzista' }, { label: 'Publikacije', to: '/o-nama', id: 'publikacije' }] },
+  { label: 'Usluge', to: '/usluge', items: [
+    { label: 'Energetika', to: '/usluge', id: 'energetika' }, { label: 'Visokogradnja', to: '/usluge', id: 'visokogradnja' },
+    { label: 'Infrastruktura', to: '/usluge', id: 'infrastruktura' }, { label: 'Vodoprivreda', to: '/usluge', id: 'vodoprivreda' },
+    { label: 'Industrija', to: '/usluge', id: 'industrija' }, { label: 'Real estate', to: '/usluge', id: 'real-estate' }] },
+  { label: 'Za investitore', to: '/investitori', items: [
+    { label: 'Finansijski izveštaji', to: '/investitori', id: 'izvestaji' }, { label: 'Obaveštenja akcionarima', to: '/investitori', id: 'obavestenja' }] },
+  { label: 'Projekti', to: '/projekti', items: [
+    { label: 'Svi projekti', to: '/projekti' }, { label: 'Kosa Kvart', to: '/projekti/stambeni-kompleks-kosa-kvart-blok-24-bezanijska-kosa-beograd' }] },
+  { label: 'Karijera', to: '/karijera', items: [
+    { label: 'Zašto Energoprojekt', to: '/karijera' }, { label: 'Otvorena prijava', to: '/karijera', id: 'prijava' }] },
+  { label: 'Vesti', to: '/vesti', items: [
+    { label: 'Sve vesti', to: '/vesti' }, { label: 'Saopštenja', to: '/vesti', tab: 'Saopštenja' }] },
+  { label: 'Kontakt', to: '/kontakt', items: [
+    { label: 'Sedište', to: '/kontakt' }, { label: 'Zavisna društva', to: '/kontakt', id: 'drustva' },
+    { label: 'Predstavništva u inostranstvu', to: '/kontakt', id: 'inostranstvo' }] },
 ]
 
 export const sectors = ['Energetika', 'Visokogradnja', 'Infrastruktura', 'Vodoprivreda', 'Industrija']

@@ -59,15 +59,15 @@ function MegaMenu({ onClose }) {
           const isOpen = openCol === col.label
           return (
             <div className="mega-col" key={col.label}>
-              <Link className="mega-link" to={col.to}>{col.label}</Link>
+              <Link className="mega-link" to={col.to} onClick={onClose}>{col.label}</Link>
               <button type="button" className="mega-toggle" aria-expanded={isOpen} aria-controls={`mega-${col.label}`}
                 onClick={() => setOpenCol(isOpen ? null : col.label)}>
                 {col.label}<span className="chev" aria-hidden="true" />
               </button>
               <div className="mega-sub" id={`mega-${col.label}`} data-open={isOpen}>
                 <ul>
-                  <li className="mega-all"><Link to={col.to}>Pregled: {col.label} →</Link></li>
-                  {col.items.map(it => <li key={it}><Link to={col.to}>{it}</Link></li>)}
+                  <li className="mega-all"><Link to={col.to} onClick={onClose}>Pregled: {col.label} →</Link></li>
+                  {col.items.map(it => <li key={it.label}><Link to={it.to} state={{ scrollTo: it.id, tab: it.tab }} onClick={onClose}>{it.label}</Link></li>)}
                 </ul>
               </div>
             </div>
@@ -95,11 +95,12 @@ function OfficesModal({ onClose }) {
 
 export default function Header() {
   // Overlay is tied to the path it was opened on, so navigating away closes it.
-  const [opened, setOpened] = useState(null) // { name: 'mega' | 'search' | 'offices', path }
+  const [opened, setOpened] = useState(null) // { name: 'mega' | 'search' | 'offices', key }
   const [scrolled, setScrolled] = useState(false)
   const triggerRef = useRef(null)
-  const { pathname } = useLocation()
-  const overlay = opened && opened.path === pathname ? opened.name : null
+  const { key } = useLocation()
+  // history entries have unique keys, so back/forward never reopens an overlay
+  const overlay = opened && opened.key === key ? opened.name : null
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 4)
@@ -116,7 +117,7 @@ export default function Header() {
     return () => document.removeEventListener('keydown', onKey)
   }, [overlay])
 
-  const open = (name, e) => { triggerRef.current = e.currentTarget; setOpened({ name, path: pathname }) }
+  const open = (name, e) => { triggerRef.current = e.currentTarget; setOpened({ name, key }) }
   const close = () => { setOpened(null); triggerRef.current?.focus() }
 
   return (

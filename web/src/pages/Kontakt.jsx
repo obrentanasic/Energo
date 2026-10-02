@@ -53,11 +53,11 @@ export default function Kontakt() {
         </div>
       </div>
 
-      <h2 className="h2 mb-sm">Zavisna društva</h2>
+      <h2 id="drustva" className="h2 mb-sm">Zavisna društva</h2>
       <Tabs rule items={subs.map(s => short(s.name))} value={sub} onChange={setSub} />
       <div className="entity-grid" style={{ marginBottom: 'var(--section-y)' }}>{current && <Entity e={current} />}</div>
 
-      <h2 className="h2 mb-sm">Predstavništva i filijale u inostranstvu</h2>
+      <h2 id="inostranstvo" className="h2 mb-sm">Predstavništva i filijale u inostranstvu</h2>
       <Tabs rule items={abroadCountries} value={country} onChange={setCountry} />
       <div className="entity-grid">
         {contactData.abroad.filter(e => e.country === country).map(e => <Entity key={e.name + e.lines[0]} e={e} />)}

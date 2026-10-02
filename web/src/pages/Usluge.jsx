@@ -35,7 +35,7 @@ export default function Usluge() {
       <article className="prose top"><p>{intro[1]}</p><Blocks blocks={toBlocks(intro.slice(2))} /></article>
 
       {sections.map((sec, i) => (
-        <section key={sec.head} className={i % 2 === 0 ? 'bg-grey' : ''} style={{ marginTop: 'var(--section-y)' }}>
+        <section key={sec.head} id={TAB[sec.head].toLowerCase()} className={i % 2 === 0 ? 'bg-grey' : ''} style={{ marginTop: 'var(--section-y)' }}>
           <div className="prose" style={{ padding: 'clamp(48px,6vw,80px) var(--gutter)' }}>
             <h2>{sec.head.charAt(0) + sec.head.slice(1).toLowerCase()}</h2>
             <Blocks blocks={toBlocks(sec.lines.filter(l => l !== 'Reference'))} headingLevel={3} />

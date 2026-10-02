@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Crumbs from '../components/Crumbs'
 import ImageSlot from '../components/ImageSlot'
 import Meta from '../components/Meta'
@@ -9,7 +9,8 @@ import { allNews, newsTabs } from '../data'
 const PAGE = 8
 
 export default function Vesti() {
-  const [tab, setTab] = useState('Sve')
+  const preset = useLocation().state?.tab
+  const [tab, setTab] = useState(newsTabs.includes(preset) ? preset : 'Sve')
   const [n, setN] = useState(PAGE)
   const [touched, setTouched] = useState(false)
   const list = allNews.filter(x => tab === 'Sve' || x.cat === tab)

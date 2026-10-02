@@ -71,7 +71,7 @@ export default function ONama() {
         </div>
       </section>
 
-      <section className="bg-grey">
+      <section id="misija" className="bg-grey">
         <div className="section">
           <div className="cols-3" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 380px), 1fr))' }}>
             <div><h2>Misija</h2><p>{about.vizija[0]}</p></div>
@@ -86,7 +86,7 @@ export default function ONama() {
         </div>
       </section>
 
-      <section className="section narrow big">
+      <section id="istorijat" className="section narrow big">
         <h2 className="h2 mb">Istorijat</h2>
         <ol className="timeline">
           {about.istorijat.map(t => (
@@ -96,7 +96,7 @@ export default function ONama() {
       </section>
 
       {board.length > 0 && (
-        <section className="bg-grey">
+        <section id="organizacija" className="bg-grey">
           <div className="section">
             <h2 className="h2 mb">Organi upravljanja</h2>
             <div className="person-grid">
@@ -113,7 +113,7 @@ export default function ONama() {
         </section>
       )}
 
-      <section className="section">
+      <section id="trzista" className="section">
         <h2 className="h2 mb-sm">Tržišta</h2>
         <p className="lead" style={{ marginBottom: 32, maxWidth: 840 }}>{about.trzista[1]}</p>
         <Tabs rule items={REGIONS} value={region} onChange={setRegion} />
@@ -123,7 +123,7 @@ export default function ONama() {
         </div>
       </section>
 
-      <section className="bg-grey">
+      <section id="publikacije" className="bg-grey">
         <div className="section narrow">
           <h2 className="h2 mb-sm">Publikacije</h2>
           <div className="prose" style={{ padding: 0 }}>{about.publikacije.map(t => <p key={t}>{t}</p>)}</div>

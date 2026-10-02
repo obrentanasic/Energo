@@ -17,8 +17,21 @@ const Usluge = lazy(() => import('./pages/Usluge'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
 function ScrollToTop() {
-  const { pathname } = useLocation()
-  useEffect(() => window.scrollTo(0, 0), [pathname])
+  const { pathname, state, key } = useLocation()
+  const target = state?.scrollTo
+  useEffect(() => {
+    if (!target) return window.scrollTo(0, 0)
+    // lazy pages mount a tick later; retry for up to ~1s
+    let tries = 0
+    let raf
+    const go = () => {
+      const el = document.getElementById(target)
+      if (el) el.scrollIntoView({ block: 'start' })
+      else if (tries++ < 60) raf = requestAnimationFrame(go)
+    }
+    raf = requestAnimationFrame(go)
+    return () => cancelAnimationFrame(raf)
+  }, [pathname, target, key])
   useReveal(pathname)
   return null
 }
