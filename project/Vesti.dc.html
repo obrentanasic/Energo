@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>body{margin:0;font-family:'Barlow Semi Condensed',sans-serif;color:#111;background:#fff}a{color:#111}a:hover{color:#C11717}*:focus-visible{outline:2px solid #111;outline-offset:2px}</style>
+</helmet>
+<dc-import name="Header" active="Vesti" hint-size="100%,96px"></dc-import>
+<main style="font-family:'Barlow Semi Condensed',sans-serif;max-width:1184px;margin:0 auto;padding:40px clamp(20px,5vw,48px) clamp(64px,9vw,128px);">
+  <div style="font-size:14px;color:#575656;margin-bottom:32px;display:flex;gap:8px;"><a href="Home.dc.html" style="color:#575656;">Početna</a><span>/</span><span>Vesti</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 56px;margin-bottom:48px;">
+    <h1 style="font-size:clamp(40px,5vw,56px);font-weight:400;line-height:1.08;margin:0;">Vesti</h1>
+    <p style="font-size:18px;line-height:1.5;margin:0;">Novosti sa naših projekata, saopštenja za javnost i priče o ljudima koji grade Energoprojekt.</p>
+  </div>
+  <div role="tablist" style="display:flex;flex-wrap:wrap;align-items:center;row-gap:4px;border-bottom:1px solid #E1E1E1;padding-bottom:12px;margin-bottom:24px;">
+    <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="7">
+      <div style="display:flex;align-items:center;">
+        <button role="tab" aria-selected="{{ t.active }}" onClick="{{ t.onClick }}" style="{{ t.style }}">{{ t.label }}</button>
+        <span style="width:1px;height:18px;background:#C4C4C4;"></span>
+      </div>
+    </sc-for>
+  </div>
+  <div style="display:flex;flex-direction:column;">
+    <sc-for list="{{ shown }}" as="n" hint-placeholder-count="5">
+      <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,224px),max-content));gap:20px 32px;padding:32px 0;border-bottom:1px solid #E1E1E1;">
+        <div style="width:224px;max-width:100%;aspect-ratio:224/166;"><image-slot id="{{ n.id }}" placeholder="Fotografija vesti" style="width:100%;height:100%;"></image-slot></div>
+        <div style="max-width:720px;">
+          <div style="display:flex;gap:10px;font-size:14px;color:#575656;margin-bottom:8px;"><span>{{ n.date }}</span><span style="width:1px;background:#999;"></span><span>{{ n.cat }}</span></div>
+          <h2 style="font-size:clamp(22px,2.2vw,28px);font-weight:400;line-height:1.2;margin:0 0 10px;">{{ n.title }}</h2>
+          <p style="font-size:17px;line-height:1.5;margin:0 0 14px;color:#333;">{{ n.text }}</p>
+          <a href="Vesti.dc.html" style="font-size:17px;font-weight:500;text-decoration:underline;text-decoration-color:#C11717;text-decoration-thickness:2px;text-underline-offset:4px;">Pročitajte više</a>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+  <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+    <div style="background:#F2F2F2;padding:48px;font-size:20px;">Trenutno nema vesti u ovoj kategoriji.</div>
+  </sc-if>
+  <sc-if value="{{ more }}" hint-placeholder-val="{{ true }}">
+    <div style="text-align:center;margin-top:56px;"><button onClick="{{ loadMore }}" style="background:#fff;border:2px solid #C11717;padding:14px 32px;font-family:inherit;font-size:18px;font-weight:500;cursor:pointer;">{{ loadLabel }}</button></div>
+  </sc-if>
+</main>
+<dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state={tab:'Sve',n:5,loading:false};
+  renderVals(){
+    const all=[
+      ['Potpisan ugovor za izgradnju hidroelektrane u Ugandi','Energetika','28. sep 2026.','Ugovor vredan 84 miliona evra obuhvata hidroelektranu snage 42 MW i dalekovod dužine 60 km.'],
+      ['Rezultati poslovanja za prvo polugodište 2026.','Saopštenja','15. sep 2026.','Konsolidovani poslovni prihodi grupe porasli su za 12% u odnosu na isti period prošle godine.'],
+      ['Uručene stipendije studentima tehničkih fakulteta','Održivost','2. sep 2026.','Dvadeset studenata dobilo je stipendiju i mentorstvo naših inženjera tokom školske godine.'],
+      ['Završena prva faza autoputa Pakovraće – Požega','Infrastruktura','20. avg 2026.','Pušteno je u saobraćaj 11 km deonice sa dva tunela i šest mostova.'],
+      ['Rekonstrukcija vodovoda u Kampali ulazi u završnu fazu','Vodoprivreda','5. avg 2026.','Novi cevovod obezbediće pitku vodu za dodatnih 300.000 stanovnika.'],
+      ['Odluka o isplati dividende za 2025.','Saopštenja','1. jul 2026.','Skupština akcionara usvojila je odluku o isplati dividende od 18 dinara po akciji.'],
+      ['Energoprojekt na Međunarodnom sajmu građevinarstva','Energetika','14. apr 2026.','Na štandu su predstavljeni projekti iz oblasti obnovljivih izvora energije.']
+    ].map(([title,cat,date,text],i)=>({title,cat,date,text,id:'vest-'+i}));
+    const {tab,n}=this.state;
+    const f=all.filter(x=>tab==='Sve'||x.cat===tab);
+    const tabs=['Sve','Energetika','Infrastruktura','Vodoprivreda','Održivost','Saopštenja','Mediji'].map(label=>{const a=label===tab;return {label,active:a,onClick:()=>this.setState({tab:label,n:5}),
+      style:{background:'none',border:0,fontFamily:'inherit',fontSize:'17px',padding:'10px 16px',minHeight:'44px',cursor:'pointer',color:'#111',fontWeight:a?500:400,textDecoration:a?'underline':'none',textDecorationColor:'#C11717',textDecorationThickness:'2px',textUnderlineOffset:'8px'}};});
+    return {tabs,shown:f.slice(0,n),empty:!f.length,more:f.length>n,loadLabel:this.state.loading?'Učitavanje…':'Učitaj još',
+      loadMore:()=>{this.setState({loading:true});setTimeout(()=>this.setState({loading:false,n:n+5}),600);}};
+  }
+}
+</script>
+</body>
+</html>
