@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { useReveal } from './hooks'
 import Home from './pages/Home'
 const ONama = lazy(() => import('./pages/ONama'))
 const Investitori = lazy(() => import('./pages/Investitori'))
@@ -18,6 +19,7 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 function ScrollToTop() {
   const { pathname } = useLocation()
   useEffect(() => window.scrollTo(0, 0), [pathname])
+  useReveal(pathname)
   return null
 }
 

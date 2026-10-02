@@ -3,7 +3,6 @@
 .page-top { max-width: 1184px; margin: 0 auto; padding: 40px var(--gutter) 56px; }
 .crumbs { font-size: 14px; color: var(--muted); margin-bottom: 32px; display: flex; gap: 8px; flex-wrap: wrap; }
 .crumbs a { color: var(--muted); }
-.crumbs a:hover { color: var(--red); }
 .page-head { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 24px 56px; align-items: end; }
 .page-head .h1 { margin: 0; }
 .page-head.mb { margin-bottom: 48px; }
@@ -43,7 +42,6 @@
   background: var(--white); border: 2px solid var(--red); padding: 14px 24px; font-family: inherit; font-size: 18px;
   font-weight: 500; cursor: pointer; color: var(--ink); text-decoration: none; display: inline-block;
 }
-.btn-outline:hover { background: var(--grey-bg); color: var(--ink); }
 .btn-outline.sm { padding: 12px 20px; font-size: 17px; font-weight: 400; }
 .load-more { text-align: center; margin-top: 56px; }
 .filters { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; }
@@ -156,7 +154,6 @@
 .jobs td.name { font-weight: 500; }
 .jobs td.act { padding: 8px 0; width: 56px; }
 .jobs td.act button { width: 48px; height: 48px; background: var(--red); color: var(--white); border: 0; font-size: 20px; cursor: pointer; transition: transform .15s; }
-.jobs td.act button:hover { transform: translateX(4px); }
 .drawer-back { position: fixed; inset: 0; z-index: 90; background: rgba(0,0,0,0.6); display: flex; justify-content: flex-end; }
 .drawer { background: var(--white); width: 100%; max-width: 640px; height: 100%; overflow: auto; padding: 40px clamp(20px, 4vw, 48px); }
 .drawer-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
@@ -222,7 +219,6 @@
 .entity-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 0 40px; }
 .apply-inline { max-width: 640px; }
 a.ir-row { display: block; text-decoration: none; color: inherit; }
-a.ir-row:hover .t { color: var(--red); }
 a.pdf-row { display: flex; }
 
 /* Aspect-ratio slots size themselves; avoid percent-height resolving against grid rows. */
@@ -232,3 +228,11 @@ a.pdf-row { display: flex; }
 .contained-hero { max-width: 880px; margin: 0 auto; }
 .contained-hero .img-slot { height: auto; }
 .contained-hero .img-slot > img { position: static; height: auto; }
+
+/* hover styles only where hover exists (touch fires false hovers on tap) */
+@media (hover: hover) and (pointer: fine) {
+  .crumbs a:hover { color: var(--red); }
+  .btn-outline:hover { background: var(--grey-bg); color: var(--ink); }
+  .jobs td.act button:hover { transform: translateX(4px); }
+  a.ir-row:hover .t { color: var(--red); }
+}
