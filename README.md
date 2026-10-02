@@ -12,8 +12,6 @@ stories/news, project references and photos — but in the new look.
     and `Footer`. `ContactForm` (validation + success state, no backend) and `Counters` (count-up on scroll).
   - **All copy and image paths live in `src/content/site.js`.** Every `image: null` shows a grey
     captioned placeholder (`ImageSlot`). Put photos in `web/public/images/` and set `image: 'images/…'`.
-  - Routes `/o-nama`, `/investitori`, `/odrzivost`, `/projekti`, `/projekti/:slug`, `/karijera`,
-    `/vesti`, `/vesti/:slug`, `/kontakt` exist but render `ComingSoon`.
   - Smoke-tested in headless Chromium: overlays, navigation, counters, form, no horizontal scroll at 390px.
 - `site/` — earlier plain HTML/CSS/JS version of Home. Superseded by `web/`; can be deleted.
 - Design decision: image corners are square (brief says "flat edges"), not the prototype slot's 12px radius.
@@ -23,16 +21,21 @@ stories/news, project references and photos — but in the new look.
   refused). Fix: environment settings → Network access → allow `energoprojekt.rs` and
   `www.energoprojekt.rs` (or a broader level). Alternative: upload the texts/photos manually.
 
+## Update (inner pages built)
+- All routes now render real pages from the designs: `ONama`, `Investitori`, `Projekti`, `Projekat`, `Vesti`,
+  `Karijera` (job filters + application drawer), `Kontakt`. Added pages without a design in the same visual
+  language: `Odrzivost`, `Vest` (news article), `NotFound` (404). `ComingSoon` was removed.
+- Inner-page copy lives in `web/src/content/pages.js` (placeholder text from the prototypes), styles in
+  `web/src/pages.css`, shared bits in `components/` (`Crumbs`, `Tabs`, `Select`, `Meta`, `ProjectCard`).
+- Only `he-gornja-drina` has a full case study; other projects show the short template. News articles show the teaser only.
+- Smoke-tested all routes at 1280px and 390px (no horizontal scroll, filters/load-more/forms work).
+
 ## Next steps
-1. Once the site is reachable: crawl energoprojekt.rs — full menu/sitemap, every page's text,
-   news/stories, project references, photos (download to `web/public/images/`).
-2. Replace the placeholder content in `src/content/site.js` with the real content.
-3. Build the remaining pages from the designs in `project/`: `ONama`, `Investitori`, `Projekti`,
-   `Projekat`, `Vesti`, `Karijera`, `Kontakt` (`.dc.html`) — reuse `styles.css` tokens/classes.
-4. Add pages the old site has that the design doesn't cover yet (chat notes: Usluge, Održivost,
-   Real estate, news article page, 404, full search results), in the same visual language.
-5. Work lives on branch `feat/home-page` of github.com/obrentanasic/Energo (draft PR open
-   against `ccr-ab5c242e-k86y6k`). Continue on that branch.
+1. Allow `energoprojekt.rs` in the network policy, then crawl: sitemap, page texts, news, project references, photos
+   (to `web/public/images/`).
+2. Replace placeholder content in `content/site.js` and `content/pages.js` with the real content; set `image` fields.
+3. Add any old-site pages not covered yet (Usluge, Real estate, full search results page).
+4. Work lives on branch `feat/home-page` (draft PR open). Continue there.
 
 ---
 

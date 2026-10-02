@@ -2,28 +2,12 @@ import { Link } from 'react-router-dom'
 import ImageSlot from '../components/ImageSlot'
 import Counters from '../components/Counters'
 import ContactForm from '../components/ContactForm'
+import Meta from '../components/Meta'
+import ProjectCard from '../components/ProjectCard'
 import {
   altBlocks, calendar, contactIntro, hero, intro, investorHighlight, news, projects,
   releases, reports, sectors, sustainability, teasers, wideImage,
 } from '../content/site'
-
-function Meta({ parts }) {
-  return (
-    <div className="meta">
-      {parts.map((p, i) => [i > 0 && <span key={`s${i}`} className="sep" />, <span key={i}>{p}</span>])}
-    </div>
-  )
-}
-
-function ProjectCard({ p }) {
-  return (
-    <Link to={`/projekti/${p.slug}`} className="proj-card">
-      <h3>{p.title}</h3>
-      <Meta parts={[p.location, p.sector]} />
-      <ImageSlot className="ar-4-3" src={p.image} alt={p.title} placeholder="Fotografija projekta" />
-    </Link>
-  )
-}
 
 export default function Home() {
   return (

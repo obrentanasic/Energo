@@ -3,19 +3,16 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import ComingSoon from './pages/ComingSoon'
-
-const PLANNED = [
-  ['o-nama', 'O nama'],
-  ['investitori', 'Za investitore'],
-  ['odrzivost', 'Održivost'],
-  ['projekti', 'Projekti'],
-  ['projekti/:slug', 'Projekat'],
-  ['karijera', 'Karijera'],
-  ['vesti', 'Vesti'],
-  ['vesti/:slug', 'Vest'],
-  ['kontakt', 'Kontakt'],
-]
+import ONama from './pages/ONama'
+import Investitori from './pages/Investitori'
+import Odrzivost from './pages/Odrzivost'
+import Projekti from './pages/Projekti'
+import Projekat from './pages/Projekat'
+import Karijera from './pages/Karijera'
+import Vesti from './pages/Vesti'
+import Vest from './pages/Vest'
+import Kontakt from './pages/Kontakt'
+import NotFound from './pages/NotFound'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -30,8 +27,16 @@ export default function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {PLANNED.map(([path, title]) => <Route key={path} path={path} element={<ComingSoon title={title} />} />)}
-        <Route path="*" element={<ComingSoon title="Stranica nije pronađena" />} />
+        <Route path="o-nama" element={<ONama />} />
+        <Route path="investitori" element={<Investitori />} />
+        <Route path="odrzivost" element={<Odrzivost />} />
+        <Route path="projekti" element={<Projekti />} />
+        <Route path="projekti/:slug" element={<Projekat />} />
+        <Route path="karijera" element={<Karijera />} />
+        <Route path="vesti" element={<Vesti />} />
+        <Route path="vesti/:slug" element={<Vest />} />
+        <Route path="kontakt" element={<Kontakt />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
     </>
