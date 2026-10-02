@@ -31,8 +31,8 @@ stories/news, project references and photos — but in the new look.
    `Projekat`, `Vesti`, `Karijera`, `Kontakt` (`.dc.html`) — reuse `styles.css` tokens/classes.
 4. Add pages the old site has that the design doesn't cover yet (chat notes: Usluge, Održivost,
    Real estate, news article page, 404, full search results), in the same visual language.
-5. Push to a GitHub repo — **this repo currently has no git remote** (work is on local branch
-   `feat/home-page`).
+5. Work lives on branch `feat/home-page` of github.com/obrentanasic/Energo (draft PR open
+   against `ccr-ab5c242e-k86y6k`). Continue on that branch.
 
 ---
 
