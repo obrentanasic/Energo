@@ -57,6 +57,8 @@ img { display: block; max-width: 100%; }
   display: flex; align-items: center; justify-content: center; text-align: center;
 }
 .img-slot > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.img-slot > picture { position: absolute; inset: 0; }
+.img-slot > picture > img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .img-slot[data-placeholder] { background: var(--grey-bg); }
 .ph-mark { width: min(45%, 220px); opacity: 0.22; filter: grayscale(1); }
 .ph-mark img { width: 100%; height: auto; }

@@ -7,6 +7,8 @@ const news = (re, fallback = 0) => newsList.filter(n => n.image && n.imageW >= B
 
 export const heroImages = {
   home: proj(/kostolac b/i, 0), // TE Kostolac B3 – real site photo, clear sky (the Kosa Kvart render read as stock)
+  // phones: a portrait shot (1600×2135) so the tall hero isn't an upscaled crop of a 1600×900 photo
+  homeMobile: 'images/projects/rehabilitacija-bloka-b2-i-rekonstrukcija-elektrofiltera-na-termoelektr.jpg',
   about: proj(/kosa kvart/i, 1),
   services: proj(/karuma|piva|perućica/i, 2),
   sustainability: news(/ekovadis|održiv/i, 1),

@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero" aria-label="Uvod">
-        <div className="hero-bg"><ImageSlot src={heroImages.home} placeholder={hero.placeholder} /></div>
+        <div className="hero-bg"><ImageSlot src={heroImages.home} mobileSrc={heroImages.homeMobile} eager alt="" placeholder={hero.placeholder} /></div>
         <div className="hero-body">
           <div className="hero-card">
             <div className="eyebrow">{hero.eyebrow}</div>
