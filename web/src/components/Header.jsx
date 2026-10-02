@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { megaMenu, nav } from '../content/site'
-import { offices, searchIndex } from '../data'
+import { matcher, offices, searchIndex } from '../data'
 
 function CloseButton({ onClick, small }) {
   return (
@@ -12,9 +12,10 @@ function CloseButton({ onClick, small }) {
 
 function SearchOverlay({ onClose }) {
   const [q, setQ] = useState('')
-  const needle = q.trim().toLowerCase()
+  const needle = q.trim()
+  const hit = matcher(needle)
   const groups = searchIndex
-    .map(g => ({ ...g, items: (needle ? g.items.filter(i => i.label.toLowerCase().includes(needle)) : g.items.slice(0, 3)).slice(0, 8) }))
+    .map(g => ({ ...g, items: (needle ? g.items.filter(i => hit(i.label)) : g.items.slice(0, 3)).slice(0, 8) }))
     .filter(g => g.items.length)
 
   return (

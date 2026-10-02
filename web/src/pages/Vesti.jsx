@@ -26,7 +26,9 @@ export default function Vesti() {
       <div className="news-list">
         {list.slice(0, n).map(x => (
           <article key={x.kind + x.slug} className={touched ? 'enter' : ''}>
-            <div className="thumb"><ImageSlot src={x.image} alt={x.title} placeholder={x.kind === 'notice' ? 'PDF dokument' : 'Fotografija vesti'} /></div>
+            {x.kind === 'notice'
+              ? <div className="thumb doc" aria-hidden="true"><span className="pdf-badge">PDF</span><span>{x.noticeKind}</span></div>
+              : <div className="thumb"><ImageSlot src={x.image} alt={x.title} placeholder="Fotografija vesti" /></div>}
             <div className="body">
               <Meta parts={[x.dateLabel, x.cat]} />
               <h2>{x.title}</h2>

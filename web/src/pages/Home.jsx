@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         <nav className="sector-bar" aria-label="Sektori">
-          {sectors.map(s => <Link key={s} to="/projekti">{s}<span aria-hidden="true">→</span></Link>)}
+          {sectors.map(s => <Link key={s} to="/projekti" state={{ sector: s }}>{s}<span aria-hidden="true">→</span></Link>)}
         </nav>
       </section>
 

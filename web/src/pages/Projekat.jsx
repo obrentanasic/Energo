@@ -26,9 +26,9 @@ export default function Projekat() {
           {p.service && <p className="lead">{p.service}</p>}
         </div>
       </div>
-      {p.imageW >= 1400 || !p.image
-        ? <div className="wide-hero"><ImageSlot src={p.image} alt={p.title} placeholder="Fotografija projekta" /></div>
-        : <div className="section no-bottom" style={{ paddingTop: 0 }}><div className="contained-hero"><ImageSlot src={p.image} alt={p.title} /></div></div>}
+      {p.image && (p.imageW >= 1400
+        ? <div className="wide-hero"><ImageSlot src={p.image} alt={p.title} /></div>
+        : <div className="section no-bottom" style={{ paddingTop: 0 }}><div className="contained-hero"><ImageSlot src={p.image} alt={p.title} /></div></div>)}
 
       <section className="bg-grey">
         <dl className="facts">{facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
@@ -49,7 +49,7 @@ export default function Projekat() {
       )}
 
       {related.length > 0 && (
-        <section className="bg-grey" style={{ marginTop: p.gallery.length ? 0 : 'var(--section-y)' }}>
+        <section className="bg-grey" style={{ marginTop: p.tech && !p.gallery.length ? 'var(--section-y)' : 0, borderTop: !p.tech && !p.gallery.length ? '1px solid var(--rule)' : undefined }}>
           <div className="section">
             <h2 className="h2 mb">Povezani projekti</h2>
             <div className="related-grid">{related.map(r => <ProjectCard key={r.slug} p={r} />)}</div>

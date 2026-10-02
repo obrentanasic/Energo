@@ -4,7 +4,7 @@ import Crumbs from '../components/Crumbs'
 import ProjectCard from '../components/ProjectCard'
 import Select from '../components/Select'
 import Tabs from '../components/Tabs'
-import { projectList, projectTabs } from '../data'
+import { matcher, projectList, projectTabs } from '../data'
 
 const PAGE = 10
 const REGIONS = ['Svi regioni', 'Evropa', 'Afrika', 'Bliski istok', 'Azija', 'Južna Amerika']
@@ -17,11 +17,11 @@ export default function Projekti() {
   const [n, setN] = useState(PAGE)
   const [touched, setTouched] = useState(false) // animate only items added by user action
 
-  const needle = q.trim().toLowerCase()
+  const hit = matcher(q)
   const list = projectList.filter(p =>
     (tab === 'Sve' || p.sectors.includes(tab)) &&
     (region === 'Svi regioni' || p.regions.includes(region)) &&
-    (!needle || `${p.title} ${p.country} ${p.client}`.toLowerCase().includes(needle)))
+    hit(`${p.title} ${p.country} ${p.client}`))
   const reset = () => { setTab('Sve'); setRegion('Svi regioni'); setQ(''); setN(PAGE) }
 
   return (

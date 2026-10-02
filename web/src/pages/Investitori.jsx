@@ -25,16 +25,20 @@ const Pdf = ({ href, children }) => (
 )
 
 const NOTICE_PAGE = 10
+const YEAR_PAGE = 3 // report years shown before "Učitaj starije"
 
 export default function Investitori() {
   const [type, setType] = useState('Sve vrste')
   const [year, setYear] = useState('Sve godine')
   const [kind, setKind] = useState('Sva obaveštenja')
   const [n, setN] = useState(NOTICE_PAGE)
+  const [ny, setNy] = useState(YEAR_PAGE)
   const [touched, setTouched] = useState(false)
 
   const list = reports.filter(r => (type === 'Sve vrste' || r.type === type) && (year === 'Sve godine' || r.year === year))
-  const years = [...new Set(list.map(r => r.year))]
+  const allYears = [...new Set(list.map(r => r.year))]
+  const years = allYears.slice(0, ny)
+  const hiddenReports = list.filter(r => !years.includes(r.year)).length
   const nlist = notices.filter(x => kind === 'Sva obaveštenja' || x.noticeKind === kind)
   const go = id => e => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }) }
 
@@ -64,8 +68,8 @@ export default function Investitori() {
       <section id="izvestaji" className="section">
         <h2 className="h2 mb-md">Finansijski izveštaji</h2>
         <div className="filters" style={{ marginBottom: 48 }}>
-          <Select label="Vrsta izveštaja" options={investors.reportTypes} value={type} onChange={setType} />
-          <Select label="Godina" options={['Sve godine', ...reportYears]} value={year} onChange={setYear} />
+          <Select label="Vrsta izveštaja" options={investors.reportTypes} value={type} onChange={v => { setType(v); setNy(YEAR_PAGE) }} />
+          <Select label="Godina" options={['Sve godine', ...reportYears]} value={year} onChange={v => { setYear(v); setNy(YEAR_PAGE) }} />
         </div>
         {!list.length && <div className="empty-box">Nema izveštaja za izabrane filtere.</div>}
         {years.map(y => (
@@ -82,6 +86,9 @@ export default function Investitori() {
             </div>
           </div>
         ))}
+        {hiddenReports > 0 && (
+          <div className="load-more"><button className="btn-outline" onClick={() => setNy(v => v + YEAR_PAGE)}>Starije godine ({hiddenReports})</button></div>
+        )}
       </section>
 
       <section id="obavestenja" className="bg-grey">
