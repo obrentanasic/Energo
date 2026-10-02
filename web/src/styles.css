@@ -188,6 +188,26 @@ img { display: block; max-width: 100%; }
   width: 36px; height: 36px; background: var(--red); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
 }
 
+/* Phones: closer to the Sweco pattern – edge-to-edge header buttons, hero card hugging the right edge,
+   sectors as a full-width list with an inline arrow */
+@media (max-width: 759px) {
+  :root { --header-h: 72px; }
+  .header-inner { padding-right: 0; }
+  .header-tools { gap: 0; align-self: stretch; }
+  .header-tools .icon-btn { width: 64px; height: 100%; }
+  .header-tools .icon-btn:nth-child(2) { background: #DADADA; }
+  .header-tools .icon-btn svg { width: 24px; height: 24px; }
+  .header-tools .icon-btn.dark span { width: 24px; }
+  .hero-body { padding: clamp(96px, 22vh, 160px) 0 32px 28px; align-items: flex-end; }
+  .hero-card { width: 100%; min-width: 0; padding: 32px 24px 32px 28px; }
+  .hero-card .h1 { font-size: 46px; line-height: 1.05; }
+  .hero-card .lead { font-size: 17px; }
+  .sector-bar { grid-template-columns: 1fr; background: rgba(0,0,0,0.58); }
+  .sector-bar a { justify-content: flex-start; gap: 16px; padding: 16px 20px; font-size: 24px; border-right: 0; border-top: 1px solid rgba(255,255,255,0.18); }
+  .sector-bar a:first-child { border-top: 0; }
+  .sector-bar a span { width: auto; height: auto; background: none; color: #FF5A5A; font-size: 38px; font-weight: 500; line-height: 1; transform: translateY(-2px); }
+}
+
 .intro {
   padding-top: var(--section-y); padding-bottom: var(--section-y);
   display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 56px; align-items: center;
