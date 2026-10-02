@@ -35,12 +35,14 @@ const excerpt = (parts, n = 220) => {
   return t.slice(0, n).replace(/\s+\S*$/, '') + '…'
 }
 
+const shorten = (t, n = 130) => (t.length <= n ? t : t.slice(0, n).replace(/\s+\S*$/, '') + '…')
+
 const stories = newsRaw.map(n => ({
-  slug: n.slug, title: n.title, cat: company(n.company), date: n.date, dateLabel: fmtDate(n.date),
+  slug: n.slug, title: shorten(n.title), cat: company(n.company), date: n.date, dateLabel: fmtDate(n.date),
   text: excerpt(n.body), body: n.body, image: img(n.image), kind: 'story',
 }))
 export const notices = noticesRaw.map(n => ({
-  slug: n.slug, title: n.title, cat: 'Saopštenja', date: n.date, dateLabel: fmtDate(n.date),
+  slug: n.slug, title: shorten(n.title), cat: 'Saopštenja', date: n.date, dateLabel: fmtDate(n.date),
   text: '', pdf: n.pdf, kind: 'notice', noticeKind: n.kind, image: null,
 }))
 export const newsList = stories
@@ -87,7 +89,7 @@ export function toBlocks(ls) {
   let list = null
   for (const l of ls) {
     const isHead = l.length < 70 && /[A-ZČĆŽŠĐ]/.test(l) && l === l.toUpperCase() && !/\d{3}/.test(l)
-    const isPara = l.length > 110 || /[.!?]$/.test(l) && l.length > 50
+    const isPara = l.length > 110 || (/[.!?:]$/.test(l) && l.length > 50)
     if (isHead) { blocks.push({ t: 'h', text: l }); list = null }
     else if (isPara) { blocks.push({ t: 'p', text: l }); list = null }
     else {
