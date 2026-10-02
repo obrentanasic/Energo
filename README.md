@@ -1,3 +1,41 @@
+# STATUS — where work left off (2026-10-02)
+
+Goal from the user: a **React presentation** of the new Energoprojekt website in the new design
+(`project/*.dc.html`), with **all the content of the old site (energoprojekt.rs)** — its pages,
+stories/news, project references and photos — but in the new look.
+
+## Done
+- `web/` — Vite + React 19 + react-router (HashRouter, `base: './'` so `dist/` works on any static host).
+  - Run: `cd web && npm install && npm run dev` · Build: `npm run build` · Lint: `npx oxlint src`
+  - **Home page** (`src/pages/Home.jsx`) built to match `project/Home.dc.html` exactly, plus
+    `Header` (sticky, scroll shadow, mega menu, search overlay, offices modal; nav links show ≥1180px)
+    and `Footer`. `ContactForm` (validation + success state, no backend) and `Counters` (count-up on scroll).
+  - **All copy and image paths live in `src/content/site.js`.** Every `image: null` shows a grey
+    captioned placeholder (`ImageSlot`). Put photos in `web/public/images/` and set `image: 'images/…'`.
+  - Routes `/o-nama`, `/investitori`, `/odrzivost`, `/projekti`, `/projekti/:slug`, `/karijera`,
+    `/vesti`, `/vesti/:slug`, `/kontakt` exist but render `ComingSoon`.
+  - Smoke-tested in headless Chromium: overlays, navigation, counters, form, no horizontal scroll at 390px.
+- `site/` — earlier plain HTML/CSS/JS version of Home. Superseded by `web/`; can be deleted.
+- Design decision: image corners are square (brief says "flat edges"), not the prototype slot's 12px radius.
+
+## Blocked
+- **energoprojekt.rs is blocked by this cloud environment's network policy** (curl and WebFetch both
+  refused). Fix: environment settings → Network access → allow `energoprojekt.rs` and
+  `www.energoprojekt.rs` (or a broader level). Alternative: upload the texts/photos manually.
+
+## Next steps
+1. Once the site is reachable: crawl energoprojekt.rs — full menu/sitemap, every page's text,
+   news/stories, project references, photos (download to `web/public/images/`).
+2. Replace the placeholder content in `src/content/site.js` with the real content.
+3. Build the remaining pages from the designs in `project/`: `ONama`, `Investitori`, `Projekti`,
+   `Projekat`, `Vesti`, `Karijera`, `Kontakt` (`.dc.html`) — reuse `styles.css` tokens/classes.
+4. Add pages the old site has that the design doesn't cover yet (chat notes: Usluge, Održivost,
+   Real estate, news article page, 404, full search results), in the same visual language.
+5. Push to a GitHub repo — **this repo currently has no git remote** (work is on local branch
+   `feat/home-page`).
+
+---
+
 # CODING AGENTS: READ THIS FIRST
 
 This is a **handoff bundle** from Claude Design (claude.ai/design).
