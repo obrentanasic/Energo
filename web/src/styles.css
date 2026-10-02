@@ -136,17 +136,31 @@ img { display: block; max-width: 100%; }
 
 .offices-ov { background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; padding: 16px; }
 .offices-ov[hidden] { display: none; }
-.offices-card {
-  background: var(--white); width: 100%; max-width: 880px; max-height: 90vh; max-height: 90dvh; overflow: auto;
-  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-.offices-list { padding: 40px; }
-.offices-list .head { display: flex; justify-content: space-between; align-items: start; }
-.offices-list h2 { font-size: 32px; font-weight: 400; margin: 0 0 24px; }
-.offices-list .close-btn { width: 44px; height: 44px; font-size: 24px; }
-.office-row { padding: 12px 0; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; gap: 16px; font-size: 17px; }
-.office-row span:last-child { color: var(--muted); font-size: 15px; }
-.offices-map { background: var(--grey-bg); min-height: 320px; display: flex; align-items: center; justify-content: center; color: var(--muted); }
+.offices-card { background: var(--white); width: 100%; max-width: 960px; max-height: 90vh; max-height: 90dvh; overflow: auto; }
+.offices-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px) 20px; }
+.offices-head h2 { font-size: clamp(26px, 3vw, 32px); font-weight: 400; margin: 0; }
+.offices-head .close-btn { width: 44px; height: 44px; font-size: 24px; }
+.offices-card .office-map { background: var(--grey-bg); }
+.offices-list { list-style: none; margin: 0; padding: 8px clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px); columns: 2 360px; column-gap: 40px; }
+/* two fixed columns so every company name starts on the same line */
+.office-row { break-inside: avoid; display: grid; grid-template-columns: 9.5em 1fr; gap: 16px; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--rule); cursor: default; }
+.office-row .where { display: flex; flex-direction: column; }
+.office-row .country { font-size: 17px; }
+.office-row .city { font-size: 14px; color: var(--muted); }
+.office-row .name { font-size: 15px; color: var(--muted); }
+.office-row.on .country, .office-row:focus-visible .country { color: var(--red); }
+
+/* Office map (OfficeMap.jsx) */
+.office-map svg { display: block; width: 100%; height: auto; }
+.office-map .land { fill: #D6D6D6; }
+.office-map .pin { cursor: pointer; }
+.office-map .pin .hit { fill: transparent; }
+.office-map .pin .dot { fill: var(--red); stroke: #fff; stroke-width: 2; transition: r 150ms ease-out, fill 150ms; }
+.office-map .pin .ring { fill: none; stroke: var(--red); stroke-width: 2; }
+.office-map .pin.dim .dot { fill: #9A9A9A; }
+.office-map .pin.dim .ring { stroke: #9A9A9A; }
+.office-map .pin.on .dot { fill: var(--ink); }
+.office-map .pin-label text { font: 500 20px var(--font); fill: var(--ink); paint-order: stroke; stroke: #fff; stroke-width: 5px; stroke-linejoin: round; pointer-events: none; }
 
 /* ======================================================= HOME */
 .hero {
