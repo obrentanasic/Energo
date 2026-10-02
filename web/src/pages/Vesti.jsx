@@ -11,6 +11,7 @@ const PAGE = 8
 export default function Vesti() {
   const [tab, setTab] = useState('Sve')
   const [n, setN] = useState(PAGE)
+  const [touched, setTouched] = useState(false)
   const list = allNews.filter(x => tab === 'Sve' || x.cat === tab)
 
   return (
@@ -20,10 +21,10 @@ export default function Vesti() {
         <h1 className="h1">Vesti</h1>
         <p className="lead">Novosti sa naših projekata, saopštenja za javnost i obaveštenja akcionarima Energoprojekt holdinga i zavisnih društava.</p>
       </div>
-      <Tabs rule items={newsTabs} value={tab} onChange={t => { setTab(t); setN(PAGE) }} />
+      <Tabs rule items={newsTabs} value={tab} onChange={t => { setTab(t); setN(PAGE); setTouched(true) }} />
       <div className="news-list">
         {list.slice(0, n).map(x => (
-          <article key={x.kind + x.slug}>
+          <article key={x.kind + x.slug} className={touched ? 'enter' : ''}>
             <div className="thumb"><ImageSlot src={x.image} alt={x.title} placeholder={x.kind === 'notice' ? 'PDF dokument' : 'Fotografija vesti'} /></div>
             <div className="body">
               <Meta parts={[x.dateLabel, x.cat]} />
@@ -38,7 +39,7 @@ export default function Vesti() {
       </div>
       {!list.length && <div className="empty-box">Trenutno nema vesti u ovoj kategoriji.</div>}
       {list.length > n && (
-        <div className="load-more"><button className="btn-outline" onClick={() => setN(v => v + PAGE)}>Učitaj još ({list.length - n})</button></div>
+        <div className="load-more"><button className="btn-outline" onClick={() => { setN(v => v + PAGE); setTouched(true) }}>Učitaj još ({list.length - n})</button></div>
       )}
     </main>
   )

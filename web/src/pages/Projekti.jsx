@@ -15,6 +15,7 @@ export default function Projekti() {
   const [region, setRegion] = useState('Svi regioni')
   const [q, setQ] = useState('')
   const [n, setN] = useState(PAGE)
+  const [touched, setTouched] = useState(false) // animate only items added by user action
 
   const needle = q.trim().toLowerCase()
   const list = projectList.filter(p =>
@@ -31,12 +32,12 @@ export default function Projekti() {
         <p className="lead">Izbor od {projectList.length} referenci iz energetike, visokogradnje, infrastrukture, vodoprivrede i industrije. Energoprojekt je realizovao projekte u više od 70 zemalja širom sveta.</p>
       </div>
       <div className="toolbar">
-        <Tabs items={projectTabs} value={tab} onChange={t => { setTab(t); setN(PAGE) }} />
+        <Tabs items={projectTabs} value={tab} onChange={t => { setTab(t); setN(PAGE); setTouched(true) }} />
         <div className="filters">
-          <Select label="Region" options={REGIONS} value={region} onChange={v => { setRegion(v); setN(PAGE) }} />
+          <Select label="Region" options={REGIONS} value={region} onChange={v => { setRegion(v); setN(PAGE); setTouched(true) }} />
           <label className="search-field">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="M15.5 15.5L21 21" /></svg>
-            <input value={q} onChange={e => { setQ(e.target.value); setN(PAGE) }} placeholder="Pretraži projekte" aria-label="Pretraži projekte" />
+            <input value={q} onChange={e => { setQ(e.target.value); setN(PAGE); setTouched(true) }} placeholder="Pretraži projekte" aria-label="Pretraži projekte" />
           </label>
         </div>
       </div>
@@ -46,10 +47,10 @@ export default function Projekti() {
           <button className="btn-outline" style={{ marginTop: 16 }} onClick={reset}>Poništi filtere</button>
         </div>
       )}
-      <div className="proj-list">{list.slice(0, n).map(p => <ProjectCard key={p.slug} p={p} />)}</div>
+      <div className="proj-list">{list.slice(0, n).map(p => <ProjectCard key={p.slug} p={p} className={touched ? 'enter' : ''} />)}</div>
       {list.length > n && (
         <div className="load-more">
-          <button className="btn-outline" onClick={() => setN(v => v + PAGE)}>Učitaj još ({list.length - n})</button>
+          <button className="btn-outline" onClick={() => { setN(v => v + PAGE); setTouched(true) }}>Učitaj još ({list.length - n})</button>
         </div>
       )}
     </main>

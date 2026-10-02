@@ -31,6 +31,7 @@ export default function Investitori() {
   const [year, setYear] = useState('Sve godine')
   const [kind, setKind] = useState('Sva obaveštenja')
   const [n, setN] = useState(NOTICE_PAGE)
+  const [touched, setTouched] = useState(false)
 
   const list = reports.filter(r => (type === 'Sve vrste' || r.type === type) && (year === 'Sve godine' || r.year === year))
   const years = [...new Set(list.map(r => r.year))]
@@ -87,11 +88,11 @@ export default function Investitori() {
         <div className="section">
           <h2 className="h2 mb-md">Obaveštenja akcionarima</h2>
           <div className="filters" style={{ marginBottom: 32 }}>
-            <Select label="Vrsta" options={investors.noticeKinds} value={kind} onChange={v => { setKind(v); setN(NOTICE_PAGE) }} />
+            <Select label="Vrsta" options={investors.noticeKinds} value={kind} onChange={v => { setKind(v); setN(NOTICE_PAGE); setTouched(true) }} />
           </div>
           <div className="report-stack">
             {nlist.slice(0, n).map(x => (
-              <div className="report" style={{ background: 'var(--white)' }} key={x.slug}>
+              <div className={`report${touched ? ' enter' : ''}`} style={{ background: 'var(--white)' }} key={x.slug}>
                 <Meta parts={[fmtDate(x.date), x.noticeKind]} />
                 <h4 style={{ margin: '6px 0 12px', fontSize: 20 }}>{x.title}</h4>
                 {x.pdf && <Pdf href={x.pdf}>Preuzmite dokument</Pdf>}
@@ -99,7 +100,7 @@ export default function Investitori() {
             ))}
           </div>
           {nlist.length > n && (
-            <div className="load-more"><button className="btn-outline" onClick={() => setN(v => v + NOTICE_PAGE)}>Učitaj još ({nlist.length - n})</button></div>
+            <div className="load-more"><button className="btn-outline" onClick={() => { setN(v => v + NOTICE_PAGE); setTouched(true) }}>Učitaj još ({nlist.length - n})</button></div>
           )}
         </div>
       </section>

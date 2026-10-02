@@ -19,7 +19,7 @@ export function useReveal(key) {
     }, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 })
     const scan = () => {
       document.querySelectorAll(TARGETS).forEach(el => {
-        if (seen.has(el)) return
+        if (seen.has(el) || el.classList.contains('enter')) return
         seen.add(el)
         if (el.getBoundingClientRect().top < window.innerHeight * 0.92) return
         el.classList.add('reveal')

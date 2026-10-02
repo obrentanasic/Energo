@@ -46,6 +46,7 @@ function SearchOverlay({ onClose }) {
 
 function MegaMenu({ onClose }) {
   const closeRef = useRef(null)
+  const [openCol, setOpenCol] = useState(null)
   useEffect(() => closeRef.current?.focus(), [])
   return (
     <div className="overlay mega" role="dialog" aria-modal="true" aria-label="Meni">
@@ -54,12 +55,24 @@ function MegaMenu({ onClose }) {
         <button ref={closeRef} type="button" className="close-btn" aria-label="Zatvori" onClick={onClose}>×</button>
       </div>
       <div className="mega-grid">
-        {megaMenu.map(col => (
-          <div className="mega-col" key={col.label}>
-            <Link to={col.to}>{col.label}</Link>
-            <ul>{col.items.map(it => <li key={it}><Link to={col.to}>{it}</Link></li>)}</ul>
-          </div>
-        ))}
+        {megaMenu.map(col => {
+          const isOpen = openCol === col.label
+          return (
+            <div className="mega-col" key={col.label}>
+              <Link className="mega-link" to={col.to}>{col.label}</Link>
+              <button type="button" className="mega-toggle" aria-expanded={isOpen} aria-controls={`mega-${col.label}`}
+                onClick={() => setOpenCol(isOpen ? null : col.label)}>
+                {col.label}<span className="chev" aria-hidden="true" />
+              </button>
+              <div className="mega-sub" id={`mega-${col.label}`} data-open={isOpen}>
+                <ul>
+                  <li className="mega-all"><Link to={col.to}>Pregled: {col.label} →</Link></li>
+                  {col.items.map(it => <li key={it}><Link to={col.to}>{it}</Link></li>)}
+                </ul>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
