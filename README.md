@@ -21,21 +21,24 @@ stories/news, project references and photos — but in the new look.
   refused). Fix: environment settings → Network access → allow `energoprojekt.rs` and
   `www.energoprojekt.rs` (or a broader level). Alternative: upload the texts/photos manually.
 
-## Update (inner pages built)
-- All routes now render real pages from the designs: `ONama`, `Investitori`, `Projekti`, `Projekat`, `Vesti`,
-  `Karijera` (job filters + application drawer), `Kontakt`. Added pages without a design in the same visual
-  language: `Odrzivost`, `Vest` (news article), `NotFound` (404). `ComingSoon` was removed.
-- Inner-page copy lives in `web/src/content/pages.js` (placeholder text from the prototypes), styles in
-  `web/src/pages.css`, shared bits in `components/` (`Crumbs`, `Tabs`, `Select`, `Meta`, `ProjectCard`).
-- Only `he-gornja-drina` has a full case study; other projects show the short template. News articles show the teaser only.
-- Smoke-tested all routes at 1280px and 390px (no horizontal scroll, filters/load-more/forms work).
+## Update (real content imported)
+- energoprojekt.rs answers over plain **http://** only (https resets) and needs a browser User-Agent; it is a WordPress site
+  with the REST API open. `web/scripts/import_content.py` (`fetch` then `build`) turns it into
+  `web/src/content/data/*.json` (229 project references, 92 news stories, 341 PDF notices, financial reports, page texts)
+  and resized photos in `web/public/images/` (~54 MB). Re-run it to refresh.
+- `web/src/data.js` adapts that data for the pages; `content/images.js` picks hero photos; `content/pages.js` holds the few
+  hand-written bits (investor chart values transcribed from the old site's chart images).
+- Pages: Home, O nama (real texts, subsidiaries table, history, board, markets), Usluge (new), Za investitore (real reports,
+  notices, charts), Odrzivost, Projekti (229, filters + search), Projekat, Vesti (stories + PDF notices), Vest, Karijera
+  (open application form; the old site has no job listings), Kontakt (real addresses of subsidiaries and foreign offices), 404.
+- Still placeholder: "Gradimo zajedno" hero slogan and the sustainability teaser copy on Home (from the design), maps.
+  Projects without a sector category on the old site get a keyword-guessed sector/region (see the importer).
 
 ## Next steps
-1. Allow `energoprojekt.rs` in the network policy, then crawl: sitemap, page texts, news, project references, photos
-   (to `web/public/images/`).
-2. Replace placeholder content in `content/site.js` and `content/pages.js` with the real content; set `image` fields.
-3. Add any old-site pages not covered yet (Usluge, Real estate, full search results page).
-4. Work lives on branch `feat/home-page` (draft PR open). Continue there.
+1. Review the content with the client; fix wrong sector guesses; add English if needed (the old site has /en copies).
+2. Maps (Kontakt, O nama), real hero photos where the picked project photo is a poor fit.
+3. Deploy `web/dist` (`npm run build`) to any static host.
+4. Work lives on branch `feat/home-page` (draft PR open).
 
 ---
 

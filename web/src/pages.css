@@ -224,3 +224,6 @@
 a.ir-row { display: block; text-decoration: none; color: inherit; }
 a.ir-row:hover .t { color: var(--red); }
 a.pdf-row { display: flex; }
+
+/* Aspect-ratio slots size themselves; avoid percent-height resolving against grid rows. */
+.img-slot.ar-4-3, .img-slot.ar-3-2, .img-slot.ar-16-9 { height: auto; }

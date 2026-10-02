@@ -22,7 +22,7 @@ export default function Projekat() {
         <Crumbs trail={[['Projekti', '/projekti'], [p.title]]} />
         <div className="eyebrow" style={{ marginBottom: 16 }}>{p.sector}{p.location ? ` | ${p.location}` : ''}</div>
         <div className="page-head">
-          <h1 className="h1">{p.title}</h1>
+          <h1 className="h1" style={{ fontSize: "clamp(30px, 3.6vw, 44px)" }}>{p.title}</h1>
           {p.service && <p className="lead">{p.service}</p>}
         </div>
       </div>
