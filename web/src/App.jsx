@@ -1,18 +1,19 @@
-import { useEffect } from 'react'
+import { Suspense, lazy, useEffect } from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import ONama from './pages/ONama'
-import Investitori from './pages/Investitori'
-import Odrzivost from './pages/Odrzivost'
-import Projekti from './pages/Projekti'
-import Projekat from './pages/Projekat'
-import Karijera from './pages/Karijera'
-import Vesti from './pages/Vesti'
-import Vest from './pages/Vest'
-import Kontakt from './pages/Kontakt'
-import NotFound from './pages/NotFound'
+const ONama = lazy(() => import('./pages/ONama'))
+const Investitori = lazy(() => import('./pages/Investitori'))
+const Odrzivost = lazy(() => import('./pages/Odrzivost'))
+const Projekti = lazy(() => import('./pages/Projekti'))
+const Projekat = lazy(() => import('./pages/Projekat'))
+const Karijera = lazy(() => import('./pages/Karijera'))
+const Vesti = lazy(() => import('./pages/Vesti'))
+const Vest = lazy(() => import('./pages/Vest'))
+const Kontakt = lazy(() => import('./pages/Kontakt'))
+const Usluge = lazy(() => import('./pages/Usluge'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -25,10 +26,12 @@ export default function App() {
     <>
       <ScrollToTop />
       <Header />
+      <Suspense fallback={<div style={{ minHeight: '60vh' }} />}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="o-nama" element={<ONama />} />
         <Route path="investitori" element={<Investitori />} />
+        <Route path="usluge" element={<Usluge />} />
         <Route path="odrzivost" element={<Odrzivost />} />
         <Route path="projekti" element={<Projekti />} />
         <Route path="projekti/:slug" element={<Projekat />} />
@@ -38,6 +41,7 @@ export default function App() {
         <Route path="kontakt" element={<Kontakt />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </Suspense>
       <Footer />
     </>
   )

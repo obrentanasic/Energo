@@ -2,57 +2,52 @@ import { Link, useParams } from 'react-router-dom'
 import Crumbs from '../components/Crumbs'
 import ImageSlot from '../components/ImageSlot'
 import ProjectCard from '../components/ProjectCard'
-import { projectDetails, projectList } from '../content/pages'
+import { projectList } from '../data'
 import NotFound from './NotFound'
 
 export default function Projekat() {
   const { slug } = useParams()
   const p = projectList.find(x => x.slug === slug)
   if (!p) return <NotFound />
-  const d = projectDetails[slug]
-  const related = d ? d.related.map(s => projectList.find(x => x.slug === s)) : projectList.filter(x => x.sector === p.sector && x.slug !== slug).slice(0, 3)
-  const headline = d?.headline ?? p.title
-  const summary = d?.summary ?? `${p.sector} · ${p.location}. Detaljan opis projekta biće dodat.`
+
+  const facts = [
+    ['Klijent', p.client], ['Zemlja', p.country], ['Region', p.regions.join(', ')],
+    ['Sektor', p.sectors.join(', ')], ['Status', p.status],
+  ].filter(([, v]) => v)
+  const related = projectList.filter(x => x.slug !== slug && x.sectors.some(s => p.sectors.includes(s)) && x.image).slice(0, 3)
 
   return (
     <main>
       <div className="page-top">
         <Crumbs trail={[['Projekti', '/projekti'], [p.title]]} />
-        <div className="eyebrow" style={{ marginBottom: 16 }}>{p.sector} | {p.location}</div>
+        <div className="eyebrow" style={{ marginBottom: 16 }}>{p.sector}{p.location ? ` | ${p.location}` : ''}</div>
         <div className="page-head">
-          <h1 className="h1">{headline}</h1>
-          <p className="lead">{summary}</p>
+          <h1 className="h1">{p.title}</h1>
+          {p.service && <p className="lead">{p.service}</p>}
         </div>
       </div>
-      <div className="wide-hero"><ImageSlot src={p.image} placeholder="Hero fotografija projekta" /></div>
+      <div className="wide-hero"><ImageSlot src={p.image} alt={p.title} placeholder="Fotografija projekta" /></div>
 
-      {d && (
-        <>
-          <section className="bg-grey">
-            <dl className="facts">
-              {d.facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}
-            </dl>
-          </section>
-          <article className="prose top">
-            <h2>Izazov</h2>
-            {d.challenge.map(t => <p key={t}>{t}</p>)}
-          </article>
-          <div className="section" style={{ paddingTop: 56, paddingBottom: 56 }}>
-            <div className="ar-16-9"><ImageSlot placeholder="Široka fotografija projekta" /></div>
-          </div>
-          <article className="prose">
-            <blockquote>„{d.quote.text}“<footer>{d.quote.by}</footer></blockquote>
-            <h2>Rešenje</h2>
-            <p>{d.solution}</p>
-          </article>
-          <section className="gallery">
-            {[1, 2, 3].map(i => <div className="ar-4-3" key={i}><ImageSlot placeholder={`Galerija ${i}`} /></div>)}
-          </section>
-        </>
+      <section className="bg-grey">
+        <dl className="facts">{facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>
+      </section>
+
+      {p.tech && (
+        <article className="prose top">
+          <h2>Tehnički podaci</h2>
+          <p>{p.tech}</p>
+          {p.service && <><h2>Usluga</h2><p>{p.service}</p></>}
+        </article>
+      )}
+
+      {p.gallery.length > 0 && (
+        <section className="gallery">
+          {p.gallery.map((g, i) => <div className="ar-4-3" key={g}><ImageSlot src={g} alt={`${p.title} – fotografija ${i + 2}`} /></div>)}
+        </section>
       )}
 
       {related.length > 0 && (
-        <section className="bg-grey">
+        <section className="bg-grey" style={{ marginTop: p.gallery.length ? 0 : 'var(--section-y)' }}>
           <div className="section">
             <h2 className="h2 mb">Povezani projekti</h2>
             <div className="related-grid">{related.map(r => <ProjectCard key={r.slug} p={r} />)}</div>

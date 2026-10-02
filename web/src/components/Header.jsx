@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
-import { megaMenu, nav, offices, searchIndex } from '../content/site'
+import { megaMenu, nav } from '../content/site'
+import { offices, searchIndex } from '../data'
 
 function CloseButton({ onClick, small }) {
   return (
@@ -13,7 +14,7 @@ function SearchOverlay({ onClose }) {
   const [q, setQ] = useState('')
   const needle = q.trim().toLowerCase()
   const groups = searchIndex
-    .map(g => ({ ...g, items: needle ? g.items.filter(i => i.toLowerCase().includes(needle)) : g.items.slice(0, 3) }))
+    .map(g => ({ ...g, items: (needle ? g.items.filter(i => i.label.toLowerCase().includes(needle)) : g.items.slice(0, 3)).slice(0, 8) }))
     .filter(g => g.items.length)
 
   return (
@@ -32,7 +33,9 @@ function SearchOverlay({ onClose }) {
           {groups.map(g => (
             <div key={g.group}>
               <div className="eyebrow search-group-title">{g.group} ({g.items.length})</div>
-              {g.items.map(item => <Link key={item} to={g.to}>{item}</Link>)}
+              {g.items.map(item => item.href
+                ? <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
+                : <Link key={item.to} to={item.to} onClick={onClose}>{item.label}</Link>)}
             </div>
           ))}
         </div>

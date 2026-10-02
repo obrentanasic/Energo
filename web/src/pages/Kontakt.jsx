@@ -1,33 +1,25 @@
 import { useState } from 'react'
 import Crumbs from '../components/Crumbs'
+import Linkify from '../components/Linkify'
 import Tabs from '../components/Tabs'
-import { contact as c } from '../content/pages'
-import { footer } from '../content/site'
+import { abroadCountries, contactData } from '../data'
 
-function Person({ p }) {
-  const [open, setOpen] = useState(false)
+const [hq, ...subs] = contactData.domestic
+const short = n => n.replace(/^Energoprojekt /, '').replace(/ (a\.d\.|d\.o\.o\.)$/, '')
+
+function Entity({ e }) {
   return (
-    <div className="person-card">
-      <div className="eyebrow">{p.dept}</div>
-      <div className="person-name">{p.name}</div>
-      <div className="person-role">{p.role}</div>
-      <button className="btn-outline sm" aria-expanded={open} onClick={() => setOpen(o => !o)}>{open ? 'Sakrij kontakt' : 'Prikaži kontakt'}</button>
-      {open && (
-        <div className="reveal">
-          <a href={`tel:${p.tel.replace(/\s/g, '')}`}>{p.tel}</a>
-          <a href={`mailto:${p.mail}`}>{p.mail}</a>
-        </div>
-      )}
+    <div className="entity">
+      <div className="n">{e.name}</div>
+      {e.lines.map((l, i) => <div key={i}><Linkify text={l} /></div>)}
     </div>
   )
 }
 
 export default function Kontakt() {
-  const names = c.subsidiaries.map(s => s[0])
-  const [sub, setSub] = useState(names[0])
-  const [region, setRegion] = useState('Srbija')
-  const idx = names.indexOf(sub)
-  const { hq } = footer
+  const [sub, setSub] = useState(short(subs[0].name))
+  const [country, setCountry] = useState(abroadCountries[0])
+  const current = subs.find(s => short(s.name) === sub)
 
   return (
     <main className="page-wrap">
@@ -36,31 +28,39 @@ export default function Kontakt() {
 
       <div className="contact-top">
         <div className="hq-card">
-          <div className="eyebrow">{c.hq.dept}</div>
-          <h2>{c.hq.name}</h2>
-          <div className="addr">{hq.street}<br />{hq.city}</div>
-          <div className="link-stack"><a href={hq.phoneHref}>{hq.phone}</a><a href={`mailto:${hq.email}`}>{hq.email}</a></div>
+          <div className="eyebrow">Sedište</div>
+          <h2>{hq.name}</h2>
+          <div className="addr">{hq.lines.slice(0, 2).map(l => <div key={l}>{l}</div>)}</div>
+          <div className="link-stack">
+            <a href="tel:+381113101010">+381 11 3101010</a>
+            <a href="mailto:ep@energoprojekt.rs">ep@energoprojekt.rs</a>
+          </div>
         </div>
         <div className="map-box dark">Mapa – Novi Beograd</div>
       </div>
 
-      <h2 className="h2 mb-md">Kontakt osobe</h2>
-      <div className="people-grid">{c.people.map(p => <Person key={p.name} p={p} />)}</div>
+      <h2 className="h2 mb-md">Mediji</h2>
+      <div className="people-grid">
+        <div className="person-card">
+          <div className="eyebrow">Zahtev za intervju</div>
+          <p className="lead" style={{ fontSize: 17, marginBottom: 16 }}>Zahtev za intervju sa generalnim direktorom, izvršnim direktorima, direktorima preduzeća iz Sistema Energoprojekt i članovima Nadzornog odbora pošaljite na e-mail.</p>
+          <a className="btn-outline sm" href="mailto:pr@energoprojekt.rs">pr@energoprojekt.rs</a>
+        </div>
+        <div className="person-card">
+          <div className="eyebrow">Zahtev za snimanje</div>
+          <p className="lead" style={{ fontSize: 17, marginBottom: 16 }}>Novinari i foto i filmske ekipe zainteresovane za snimanje poslovne zgrade, objekata u vlasništvu Energoprojekta ili gradilišta šalju zahtev za svako pojedinačno snimanje.</p>
+          <a className="btn-outline sm" href="mailto:pr@energoprojekt.rs">pr@energoprojekt.rs</a>
+        </div>
+      </div>
 
       <h2 className="h2 mb-sm">Zavisna društva</h2>
-      <Tabs rule items={names} value={sub} onChange={setSub} />
-      <div className="sub-info" style={{ marginTop: 32 }}>
-        <div><div className="big">Energoprojekt {sub}</div><div>{hq.street}, Beograd</div></div>
-        <div><div className="eyebrow">Telefon</div>+381 11 3101 {500 + idx * 10}</div>
-        <div><div className="eyebrow">E-mail</div>{c.subsidiaries[idx][1]}@energoprojekt.rs</div>
-      </div>
+      <Tabs rule items={subs.map(s => short(s.name))} value={sub} onChange={setSub} />
+      <div className="entity-grid" style={{ marginBottom: 'var(--section-y)' }}>{current && <Entity e={current} />}</div>
 
-      <h2 className="h2 mb-sm">Regionalne kancelarije</h2>
-      <div className="segmented">
-        {Object.keys(c.offices).map(r => <button key={r} aria-pressed={r === region} onClick={() => setRegion(r)}>{r}</button>)}
-      </div>
-      <div className="office-grid">
-        {c.offices[region].map(([city, addr]) => <div className="office" key={city}><div className="c">{city}</div><div className="a">{addr}</div></div>)}
+      <h2 className="h2 mb-sm">Predstavništva i filijale u inostranstvu</h2>
+      <Tabs rule items={abroadCountries} value={country} onChange={setCountry} />
+      <div className="entity-grid">
+        {contactData.abroad.filter(e => e.country === country).map(e => <Entity key={e.name + e.lines[0]} e={e} />)}
       </div>
     </main>
   )

@@ -74,25 +74,16 @@ export const about = {
   },
 }
 
-const bars = (t, vals) => ({ title: t, vals })
+// Values transcribed from the three "Poslovni rezultati" charts on the old /investitori page (2021–2025, in 000 EUR).
 export const investors = {
   intro: 'Akcije Energoprojekt holdinga kotiraju se na Prime Listing tržištu Beogradske berze pod oznakom ENHL.',
   kpis: [
-    bars('Poslovni prihodi', [28400, 31200, 33900, 36100, 40450]),
-    bars('Neto dobit', [1210, 1480, 1390, 1720, 2010]),
-    bars('Ugovoreni poslovi', [35000, 41800, 38600, 47200, 52900]),
-    bars('EBITDA', [2900, 3350, 3420, 3980, 4560]),
+    { title: 'Konsolidovani prihod', vals: [193916, 149691, 110936, 98633, 103827] },
+    { title: 'Konsolidovana bruto dobit', vals: [10945, 1906, 933, 1853, 13401] },
+    { title: 'Ugovaranje', vals: [50907, 90765, 62272, 74400, 65269] },
   ],
-  subpages: ['Akcije i Beogradska berza', 'Skupština akcionara', 'Korporativno upravljanje', 'Finansijski kalendar', 'Obaveštenja akcionarima', 'Finansijski izveštaji'],
   reportTypes: ['Sve vrste', 'Godišnji', 'Polugodišnji', 'Kvartalni'],
-  reportYears: ['Sve godine', '2026', '2025', '2024'],
-  reports: [
-    { year: '2026', date: '28. avg 2026.', type: 'Polugodišnji', title: 'Polugodišnji izveštaj 2026', docs: ['Konsolidovani izveštaj', 'Izveštaj revizora'] },
-    { year: '2026', date: '29. maj 2026.', type: 'Kvartalni', title: 'Kvartalni izveštaj Q1 2026', docs: ['Konsolidovani izveštaj'] },
-    { year: '2025', date: '30. apr 2026.', type: 'Godišnji', title: 'Godišnji izveštaj 2025', docs: ['Godišnji izveštaj', 'Izveštaj revizora'] },
-    { year: '2025', date: '28. avg 2025.', type: 'Polugodišnji', title: 'Polugodišnji izveštaj 2025', docs: ['Konsolidovani izveštaj'] },
-    { year: '2024', date: '30. apr 2025.', type: 'Godišnji', title: 'Godišnji izveštaj 2024', docs: ['Godišnji izveštaj', 'Izveštaj revizora'] },
-  ],
+  noticeKinds: ['Sva obaveštenja', 'Skupština', 'Izveštaj', 'Saopštenje'],
 }
 
 export const careers = {

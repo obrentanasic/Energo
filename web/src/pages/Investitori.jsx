@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import Crumbs from '../components/Crumbs'
 import Meta from '../components/Meta'
 import Select from '../components/Select'
 import { investors } from '../content/pages'
+import { fmtDate, notices, reportYears, reports } from '../data'
 
 function Kpi({ k }) {
   const max = Math.max(...k.vals)
@@ -11,24 +11,31 @@ function Kpi({ k }) {
     <div className="kpi">
       <div className="t">{k.title}</div>
       <div className="v">{k.vals[4].toLocaleString('sr-RS')}</div>
-      <div className="u">mil. RSD, 2025.</div>
+      <div className="u">u 000 EUR, 2025.</div>
       <div className="bars">
-        {k.vals.map((v, i) => <div key={i} title={v} style={{ height: `${Math.round(v / max * 100)}%` }} />)}
+        {k.vals.map((v, i) => <div key={i} title={v.toLocaleString('sr-RS')} style={{ height: `${Math.round(v / max * 100)}%` }} />)}
       </div>
       <div className="bar-years">{['21', '22', '23', '24', '25'].map(y => <span key={y}>{y}</span>)}</div>
     </div>
   )
 }
 
-const Pdf = ({ children }) => (
-  <a href="#/investitori" className="doc-link"><span className="pdf-badge">PDF</span>{children}</a>
+const Pdf = ({ href, children }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" className="doc-link"><span className="pdf-badge">PDF</span>{children}</a>
 )
+
+const NOTICE_PAGE = 10
 
 export default function Investitori() {
   const [type, setType] = useState('Sve vrste')
   const [year, setYear] = useState('Sve godine')
-  const list = investors.reports.filter(r => (type === 'Sve vrste' || r.type === type) && (year === 'Sve godine' || r.year === year))
+  const [kind, setKind] = useState('Sva obaveštenja')
+  const [n, setN] = useState(NOTICE_PAGE)
+
+  const list = reports.filter(r => (type === 'Sve vrste' || r.type === type) && (year === 'Sve godine' || r.year === year))
   const years = [...new Set(list.map(r => r.year))]
+  const nlist = notices.filter(x => kind === 'Sva obaveštenja' || x.noticeKind === kind)
+  const go = id => e => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }) }
 
   return (
     <main>
@@ -42,16 +49,14 @@ export default function Investitori() {
 
       <section className="bg-grey">
         <div className="section" style={{ paddingTop: 'clamp(56px,7vw,96px)', paddingBottom: 'clamp(56px,7vw,96px)' }}>
-          <h2 className="h2 mb">Ključni pokazatelji 2021–2025</h2>
+          <h2 className="h2 mb">Poslovni rezultati 2021–2025</h2>
           <div className="kpi-grid">{investors.kpis.map(k => <Kpi key={k.title} k={k} />)}</div>
         </div>
       </section>
 
       <section className="section tight-top sub-links">
-        {investors.subpages.map(s => (
-          <a key={s} href="#izvestaji" onClick={e => { e.preventDefault(); document.getElementById('izvestaji')?.scrollIntoView({ behavior: 'smooth' }) }}>
-            {s}<span className="box" aria-hidden="true">→</span>
-          </a>
+        {[['Finansijski izveštaji', 'izvestaji'], ['Obaveštenja akcionarima', 'obavestenja']].map(([s, id]) => (
+          <a key={id} href={`#${id}`} onClick={go(id)}>{s}<span className="box" aria-hidden="true">→</span></a>
         ))}
       </section>
 
@@ -59,7 +64,7 @@ export default function Investitori() {
         <h2 className="h2 mb-md">Finansijski izveštaji</h2>
         <div className="filters" style={{ marginBottom: 48 }}>
           <Select label="Vrsta izveštaja" options={investors.reportTypes} value={type} onChange={setType} />
-          <Select label="Godina" options={investors.reportYears} value={year} onChange={setYear} />
+          <Select label="Godina" options={['Sve godine', ...reportYears]} value={year} onChange={setYear} />
         </div>
         {!list.length && <div className="empty-box">Nema izveštaja za izabrane filtere.</div>}
         {years.map(y => (
@@ -67,19 +72,36 @@ export default function Investitori() {
             <h3>{y}</h3>
             <div className="report-stack">
               {list.filter(r => r.year === y).map(r => (
-                <div className="report" key={r.title}>
-                  <Meta parts={[r.date, r.type]} />
-                  <h4>{r.title}</h4>
-                  <div className="report-cols">
-                    <div><div className="eyebrow">Priloženi dokumenti</div>{r.docs.map(d => <Pdf key={d}>{d}</Pdf>)}</div>
-                    <div><div className="eyebrow">Prezentacije</div><Pdf>Prezentacija rezultata</Pdf></div>
-                  </div>
+                <div className="report" key={r.pdf}>
+                  <Meta parts={[r.type, r.consolidated ? 'Konsolidovani' : 'Pojedinačni']} />
+                  <h4 style={{ marginBottom: 12 }}>{r.title}</h4>
+                  <Pdf href={r.pdf}>Preuzmite izveštaj</Pdf>
                 </div>
               ))}
             </div>
           </div>
         ))}
-        <Link to="/kontakt" className="link-u">Pitanja za odnose sa investitorima</Link>
+      </section>
+
+      <section id="obavestenja" className="bg-grey">
+        <div className="section">
+          <h2 className="h2 mb-md">Obaveštenja akcionarima</h2>
+          <div className="filters" style={{ marginBottom: 32 }}>
+            <Select label="Vrsta" options={investors.noticeKinds} value={kind} onChange={v => { setKind(v); setN(NOTICE_PAGE) }} />
+          </div>
+          <div className="report-stack">
+            {nlist.slice(0, n).map(x => (
+              <div className="report" style={{ background: 'var(--white)' }} key={x.slug}>
+                <Meta parts={[fmtDate(x.date), x.noticeKind]} />
+                <h4 style={{ margin: '6px 0 12px', fontSize: 20 }}>{x.title}</h4>
+                {x.pdf && <Pdf href={x.pdf}>Preuzmite dokument</Pdf>}
+              </div>
+            ))}
+          </div>
+          {nlist.length > n && (
+            <div className="load-more"><button className="btn-outline" onClick={() => setN(v => v + NOTICE_PAGE)}>Učitaj još ({nlist.length - n})</button></div>
+          )}
+        </div>
       </section>
     </main>
   )
