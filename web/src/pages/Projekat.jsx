@@ -26,7 +26,9 @@ export default function Projekat() {
           {p.service && <p className="lead">{p.service}</p>}
         </div>
       </div>
-      <div className="wide-hero"><ImageSlot src={p.image} alt={p.title} placeholder="Fotografija projekta" /></div>
+      {p.imageW >= 1400 || !p.image
+        ? <div className="wide-hero"><ImageSlot src={p.image} alt={p.title} placeholder="Fotografija projekta" /></div>
+        : <div className="section no-bottom" style={{ paddingTop: 0 }}><div className="contained-hero"><ImageSlot src={p.image} alt={p.title} /></div></div>}
 
       <section className="bg-grey">
         <dl className="facts">{facts.map(([k, v]) => <div key={k}><dt>{k}</dt><dd>{v}</dd></div>)}</dl>

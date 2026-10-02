@@ -16,6 +16,7 @@
   "tech": "Zapremina skladišta vode: 135.000.000 m3",
   "status": "U toku",
   "image": "images/projects/podzemno-skladistenje-vode-u-zapremini-od-135-miliona-kubnih-metara.jpg",
+  "imageW": 676,
   "gallery": []
  },
  {
@@ -35,6 +36,7 @@
   "tech": "Građevinski radovi na rekonstrukciji  puta Mitiana – Mobende u dužini od 86km i rehabilitaciji 14 km gradskih saobraćajnica u gradu Mitiana",
   "status": "U toku",
   "image": "images/projects/rehabilitacija-100-km-puta-mityana-mubende-i-nadogradnja-gradskih-saob.jpg",
+  "imageW": 1080,
   "gallery": [
    "images/projects/rehabilitacija-100-km-puta-mityana-mubende-i-nadogradnja-gradskih-saob-1.jpg",
    "images/projects/rehabilitacija-100-km-puta-mityana-mubende-i-nadogradnja-gradskih-saob-2.jpg"
@@ -57,6 +59,7 @@
   "tech": "HE snage 600 MW, betonska gravitaciona brana h=17m",
   "status": "U toku",
   "image": "images/projects/karuma.jpg",
+  "imageW": 756,
   "gallery": []
  },
  {
@@ -76,6 +79,7 @@
   "tech": "Površina objekata: 25.992 m2; Spratnost: Po+Pr+1+Povučeni sprat",
   "status": "U toku",
   "image": "images/projects/stambeni-kompleks-kosa-kvart-blok-24-bezanijska-kosa-beograd.jpg",
+  "imageW": 2560,
   "gallery": [
    "images/projects/stambeni-kompleks-kosa-kvart-blok-24-bezanijska-kosa-beograd-1.jpg",
    "images/projects/stambeni-kompleks-kosa-kvart-blok-24-bezanijska-kosa-beograd-2.jpg"
@@ -98,6 +102,7 @@
   "tech": "Rezervoar za visokopećni gas 200.000m3; Koračna peć 250 t/h; Aglo mašina 1.782 mil t/g;",
   "status": "u toku",
   "image": "images/projects/modernizacija-fabrike-celika-smederevo-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/modernizacija-fabrike-celika-smederevo-srbija-1.jpg",
    "images/projects/modernizacija-fabrike-celika-smederevo-srbija-2.jpg"
@@ -120,6 +125,7 @@
   "tech": "Hotel i stambena kula visine 168m; Površina: 65.815 m²; Spratnost: 2Po+ P+40",
   "status": "u toku",
   "image": "images/projects/beograd-na-vodi-parcela-19-1-kula-beograd-beograd-srbija.jpg",
+  "imageW": 1764,
   "gallery": [
    "images/projects/beograd-na-vodi-parcela-19-1-kula-beograd-beograd-srbija-1.jpg",
    "images/projects/beograd-na-vodi-parcela-19-1-kula-beograd-beograd-srbija-2.jpg"
@@ -142,6 +148,7 @@
   "tech": "Građevinski radovi na rehabilitaciji i održavanju puta Kapmala – Jinja u dužini od 72km, drenažni radovi i izrada kompletne vertikalne i horizontalne signalizacije",
   "status": "U toku",
   "image": "images/projects/rehabilitacija-i-odrzavanje-72-km-puta-kampala-jinja.jpg",
+  "imageW": 1200,
   "gallery": [
    "images/projects/rehabilitacija-i-odrzavanje-72-km-puta-kampala-jinja-1.jpg",
    "images/projects/rehabilitacija-i-odrzavanje-72-km-puta-kampala-jinja-2.jpg"
@@ -165,6 +172,7 @@
   "tech": "I faza projekta uključuje: izgradnju 24 betonska rezervoara zapremine cca 10 milioma m3, 280km (DN 1200-1600) magistralnih cevovoda i 200km (DN 900-1600) distributivnih cevovoda",
   "status": "u toku",
   "image": "images/projects/izgradnja-mega-rezervoara-u-cilju-unapredjenje-rezervi-pitke-vode-katr.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/izgradnja-mega-rezervoara-u-cilju-unapredjenje-rezervi-pitke-vode-katr-1.jpg",
    "images/projects/izgradnja-mega-rezervoara-u-cilju-unapredjenje-rezervi-pitke-vode-katr-2.jpg"
@@ -187,6 +195,7 @@
   "tech": "",
   "status": "U toku",
   "image": "images/projects/projekat-ku-fit-fabrika-kontinental-kolubara.jpg",
+  "imageW": 559,
   "gallery": []
  },
  {
@@ -207,6 +216,7 @@
   "tech": "",
   "status": "U toku",
   "image": null,
+  "imageW": null,
   "gallery": []
  },
  {
@@ -226,6 +236,7 @@
   "tech": "Površina objekta: 68.660 m2, Spratnost : 2Po+Pr+17",
   "status": "U toku",
   "image": "images/projects/stambeno-poslovni-objekat-na-kp-gp4-blok-26-novi-beograd.jpg",
+  "imageW": 1603,
   "gallery": []
  },
  {
@@ -245,6 +256,7 @@
   "tech": "",
   "status": "U toku",
   "image": "images/projects/povecanje-supstitucije-alternativnih-goriva-u-fabrici-lafarge.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/povecanje-supstitucije-alternativnih-goriva-u-fabrici-lafarge-1.jpg",
    "images/projects/povecanje-supstitucije-alternativnih-goriva-u-fabrici-lafarge-2.jpg"
@@ -268,6 +280,7 @@
   "tech": "Konsultantske usluge za proširenje kapaciteta elektroprenosnog sistema Katara – Faza XIII, ukljucujuci izgradnju i instalaciju novih",
   "status": "U toku",
   "image": "images/projects/prosirenje-elektro-energetskog-sistema-katara-faza-xiii-c-028-qa-17-ka.jpg",
+  "imageW": 1600,
   "gallery": [
    "images/projects/prosirenje-elektro-energetskog-sistema-katara-faza-xiii-c-028-qa-17-ka-1.jpg",
    "images/projects/prosirenje-elektro-energetskog-sistema-katara-faza-xiii-c-028-qa-17-ka-2.jpg"
@@ -291,6 +304,7 @@
   "tech": "Konsultantske usluge za proširenje kapaciteta elektroprenosnog sistema Katara – Faza XII, ukljucujuci izgradnju i instalaciju novih",
   "status": "U toku",
   "image": "images/projects/prosirenje-kapaciteta-elektroprenosnog-sistema-katara-faza-xii-katar.jpg",
+  "imageW": 2592,
   "gallery": [
    "images/projects/prosirenje-kapaciteta-elektroprenosnog-sistema-katara-faza-xii-katar-1.jpg"
   ]
@@ -313,6 +327,7 @@
   "tech": "1.000.000.000 tableta / godišnje (čvrste forme); 1.000.000 l sirupa / godišnje 5.000.000 l infuzionih rastvora / godišnje neto površine P =11.000 m2;",
   "status": "2022.",
   "image": "images/projects/fabrika-za-proizvodnju-farmaceutskih-proizvoda-akra-gana.jpg",
+  "imageW": 2560,
   "gallery": [
    "images/projects/fabrika-za-proizvodnju-farmaceutskih-proizvoda-akra-gana-1.jpg",
    "images/projects/fabrika-za-proizvodnju-farmaceutskih-proizvoda-akra-gana-2.jpg"
@@ -335,6 +350,7 @@
   "tech": "",
   "status": "U toku",
   "image": "images/projects/toranj-aerodromske-kontrole-letenja-aerodrom-konstantin-veliki-nis.jpg",
+  "imageW": 800,
   "gallery": []
  },
  {
@@ -355,6 +371,7 @@
   "tech": "Terminalna zgrada: Rekonstrukcija i dogradnja do 2020: 41.200 m²",
   "status": "u toku",
   "image": "images/projects/aerodrom-nikola-tesla-beograd-rekonstrukcija-i-dogradnja-terminalne-zg.jpg",
+  "imageW": 1163,
   "gallery": []
  },
  {
@@ -375,6 +392,7 @@
   "tech": "Betonski, otvoreni i zatvoreni rezervoari, pumpno postrojenje, tehničke prostorije, server soba, laboratorije.",
   "status": "2022",
   "image": "images/projects/postrojenje-za-tretman-otpadnih-voda-u-fabrici-heineken-zajecar.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/postrojenje-za-tretman-otpadnih-voda-u-fabrici-heineken-zajecar-1.jpg",
    "images/projects/postrojenje-za-tretman-otpadnih-voda-u-fabrici-heineken-zajecar-2.jpg"
@@ -397,6 +415,7 @@
   "tech": "Ukupna površina: 20.162,34 m²",
   "status": "U toku",
   "image": "images/projects/nacionalna-akademija-za-obuku-clanova-posade-brodova-u-beogradu.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -416,6 +435,7 @@
   "tech": "Poslovni kompleks: Spratnost: Su+P+2, Ukupna BRGP 12.760 m², Spoljno uređenje: 11.000 m",
   "status": "2023",
   "image": "images/projects/naucno-tehnoloski-park-cacak.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -435,6 +455,7 @@
   "tech": "Poslovni kompleks od 7 objekata, ukupna BRGP: 10.908 m²",
   "status": "2023",
   "image": "images/projects/regionalni-industrijsko-tehnoloski-park-krusevac.jpg",
+  "imageW": 1442,
   "gallery": [
    "images/projects/regionalni-industrijsko-tehnoloski-park-krusevac-1.jpg",
    "images/projects/regionalni-industrijsko-tehnoloski-park-krusevac-2.jpg"
@@ -457,6 +478,7 @@
   "tech": "Novi objekti – Površina objekata: 20.200 m² UP: 56.000 m²",
   "status": "2023",
   "image": "images/projects/naucno-tehnoloski-park-u-beogradu.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/naucno-tehnoloski-park-u-beogradu-1.jpg",
    "images/projects/naucno-tehnoloski-park-u-beogradu-2.jpg"
@@ -479,6 +501,7 @@
   "tech": "Uređenje prostora površine: 1.000 m²; zatvorena površina objekta vizitorskog centra: 200 m²",
   "status": "2023.",
   "image": "images/projects/stakleni-vidikovac-na-kablaru.jpg",
+  "imageW": 1471,
   "gallery": [
    "images/projects/stakleni-vidikovac-na-kablaru-1.jpg",
    "images/projects/stakleni-vidikovac-na-kablaru-2.jpg"
@@ -501,6 +524,7 @@
   "tech": "Površina objekta: 12.218,79 m², Spratnost: Su+P+ 3",
   "status": "2023.",
   "image": "images/projects/zgrada-pravosudnih-organa-u-krusevcu.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/zgrada-pravosudnih-organa-u-krusevcu-1.jpg",
    "images/projects/zgrada-pravosudnih-organa-u-krusevcu-2.jpg"
@@ -523,6 +547,7 @@
   "tech": "Površina: 29.282 m",
   "status": "2021.",
   "image": "images/projects/stambeno-poslovni-objekat-park-11-blok-11a-novi-beograd-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/stambeno-poslovni-objekat-park-11-blok-11a-novi-beograd-srbija-1.jpg",
    "images/projects/stambeno-poslovni-objekat-park-11-blok-11a-novi-beograd-srbija-2.jpg"
@@ -545,6 +570,7 @@
   "tech": "Bruto površina 24.601 m2, uređenje kompleksa površine 8.560 m2, Spratnost: 2Po+ P+3+Pk",
   "status": "2017.",
   "image": "images/projects/stambeno-poslovni-kompleks-sunnyville-visnjicko-polje-beograd-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/stambeno-poslovni-kompleks-sunnyville-visnjicko-polje-beograd-srbija-1.jpg",
    "images/projects/stambeno-poslovni-kompleks-sunnyville-visnjicko-polje-beograd-srbija-2.jpg"
@@ -567,6 +593,7 @@
   "tech": "65.000m² pod saobraćajnicama,parkinzima, trotoarima na novom carinskom i putničkom terminalu; nova fekalna, atmosferska, vodovodna i PP mreža;  nova ETK mreža;  nova EEN mreža sa trafostanicom;  objekat garderobno-sanitarnog bloka;  3 naplatne kućice",
   "status": "U toku",
   "image": "images/projects/aerodrom-konstantin-veliki-nis-rekonstrukcija-i-izgradnja-interne-saob.jpg",
+  "imageW": 1214,
   "gallery": [
    "images/projects/aerodrom-konstantin-veliki-nis-rekonstrukcija-i-izgradnja-interne-saob-1.jpg"
   ]
@@ -588,6 +615,7 @@
   "tech": "11 objekata, Površina: 22.047m², Spratnost od P do P+2",
   "status": "2022.",
   "image": "images/projects/kompleks-objekata-specijalne-namene-naselje-petrovac-kragujevac.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/kompleks-objekata-specijalne-namene-naselje-petrovac-kragujevac-1.jpg",
    "images/projects/kompleks-objekata-specijalne-namene-naselje-petrovac-kragujevac-2.jpg"
@@ -611,6 +639,7 @@
   "tech": "Aneks zgrade Po+P+3, Novi toranj Po+P+16, visine 75 m, ukupna površina: 7.400 m",
   "status": "2022.",
   "image": "images/projects/aneks-zgrade-centra-kontrole-letenja-sa-tornjem-aerodromske-kontrole-l.jpg",
+  "imageW": 2485,
   "gallery": [
    "images/projects/aneks-zgrade-centra-kontrole-letenja-sa-tornjem-aerodromske-kontrole-l-1.jpg",
    "images/projects/aneks-zgrade-centra-kontrole-letenja-sa-tornjem-aerodromske-kontrole-l-2.jpg"
@@ -631,6 +660,7 @@
   "tech": "5* Hotel, Ukupna površina: 63.934m2, Spratnost: Po+P+ 5 do 16",
   "status": "2022.",
   "image": "images/projects/medjunarodni-kongresni-centar-i-hotel-hyatt-regency-rostov-don-plaza-f.jpg",
+  "imageW": 1024,
   "gallery": [
    "images/projects/medjunarodni-kongresni-centar-i-hotel-hyatt-regency-rostov-don-plaza-f-1.jpg",
    "images/projects/medjunarodni-kongresni-centar-i-hotel-hyatt-regency-rostov-don-plaza-f-2.jpg"
@@ -654,6 +684,7 @@
   "tech": "",
   "status": "U toku",
   "image": "images/projects/projekat-snabdevanja-grada-beograda-toplotnom-energijom-iz-te-nikola-t.jpg",
+  "imageW": 1201,
   "gallery": [
    "images/projects/projekat-snabdevanja-grada-beograda-toplotnom-energijom-iz-te-nikola-t-1.jpg"
   ]
@@ -676,6 +707,7 @@
   "tech": "TE  350MW na ugalj, TS 110/6kV  i DV 110kV",
   "status": "U toku",
   "image": "images/projects/izgradnja-te-kostolac-b3-srbija.jpg",
+  "imageW": 1920,
   "gallery": [
    "images/projects/izgradnja-te-kostolac-b3-srbija-1.jpg",
    "images/projects/izgradnja-te-kostolac-b3-srbija-2.jpg"
@@ -699,6 +731,7 @@
   "tech": "Gasno kogenerativno postrojenje snage 200 MW",
   "status": "U toku",
   "image": "images/projects/te-to-pancevo-konsultantske-usluge-na-izgradnji-te-to-u-sklopu-rafiner.jpg",
+  "imageW": 1280,
   "gallery": [
    "images/projects/te-to-pancevo-konsultantske-usluge-na-izgradnji-te-to-u-sklopu-rafiner-1.jpg"
   ]
@@ -720,6 +753,7 @@
   "tech": "Kogenerativno postrojenje za energetsko iskorišćenje komunalnog otpada, instalisanog kapaciteta 340.000 tona otpada godišnje, instalisane električne snage 30 MW i instalisanog kapaciteta daljinskog grejanja grada Beograda snage 56.5 MW",
   "status": "U toku",
   "image": "images/projects/izrada-projektne-dokumentacije-za-izgradnju-spalionice-komunalnog-otpa.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/izrada-projektne-dokumentacije-za-izgradnju-spalionice-komunalnog-otpa-1.jpg",
    "images/projects/izrada-projektne-dokumentacije-za-izgradnju-spalionice-komunalnog-otpa-2.jpg"
@@ -743,6 +777,7 @@
   "tech": "Betonska lučna brana visine h=220 m; Hidroelektrana instalisane snage 3 x 120 MW",
   "status": "U toku",
   "image": "images/projects/modernizacija-i-revitalizacija-hidroelektrane-piva-crna-gora.jpg",
+  "imageW": 545,
   "gallery": [
    "images/projects/modernizacija-i-revitalizacija-hidroelektrane-piva-crna-gora-1.jpg",
    "images/projects/modernizacija-i-revitalizacija-hidroelektrane-piva-crna-gora-2.jpg"
@@ -765,6 +800,7 @@
   "tech": "Hidroelektrana instalisane snage 307 MW",
   "status": "U toku / 2020.",
   "image": "images/projects/modernizacija-i-revitalizacija-hidroelektrane-perucica-faza-ii-crna-go.jpg",
+  "imageW": 679,
   "gallery": [
    "images/projects/modernizacija-i-revitalizacija-hidroelektrane-perucica-faza-ii-crna-go-1.jpg",
    "images/projects/modernizacija-i-revitalizacija-hidroelektrane-perucica-faza-ii-crna-go-2.jpg"
@@ -788,6 +824,7 @@
   "tech": "Nasuta brana visine  90 m, sa akumulacijom zapremine 108 miliona m3;",
   "status": "U toku / 2021.",
   "image": "images/projects/reverzibilna-he-bistrica.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/reverzibilna-he-bistrica-1.jpg",
    "images/projects/reverzibilna-he-bistrica-2.jpg"
@@ -810,6 +847,7 @@
   "tech": "15 malih hidroelektrana instalisane snage od 0.06 MW do 6.4 MW",
   "status": "U toku",
   "image": "images/projects/revitalizacija-i-modernizacija-mini-hidroelektrana-u-vlasnistvu-eps-a.jpg",
+  "imageW": 687,
   "gallery": []
  },
  {
@@ -829,6 +867,7 @@
   "tech": "Proširenje kapaciteta elektroprenosnog sistema Katara – Faza XI (etapa 1 i Aneks)",
   "status": "2021.",
   "image": "images/projects/prosirenje-kapaciteta-elektroprenosnog-sistema-katara-faza-xi-etapa-1.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/prosirenje-kapaciteta-elektroprenosnog-sistema-katara-faza-xi-etapa-1-1.jpg",
    "images/projects/prosirenje-kapaciteta-elektroprenosnog-sistema-katara-faza-xi-etapa-1-2.jpg"
@@ -852,6 +891,7 @@
   "tech": "Elektrana na ugalj, 350 MW",
   "status": "2021.",
   "image": "images/projects/te-kolubara-b-350-mw.jpg",
+  "imageW": 1084,
   "gallery": []
  },
  {
@@ -870,6 +910,7 @@
   "tech": "Gravitaciona betonska brana visine 55,1 m. Mašinska zgrada sa 3 Kaplan agregata, ukupne instalisane snage 114,6 MW",
   "status": "2021.",
   "image": "images/projects/he-buk-bijela.jpg",
+  "imageW": 935,
   "gallery": []
  },
  {
@@ -889,6 +930,7 @@
   "tech": "Nasuta brana visine 68 m i dužine u kruni 211 m",
   "status": "U toku",
   "image": "images/projects/brana-arilje-profil-svrackovo.jpg",
+  "imageW": 1536,
   "gallery": [
    "images/projects/brana-arilje-profil-svrackovo-1.jpg"
   ]
@@ -910,6 +952,7 @@
   "tech": "2 nasute brane visine 22,5 m i 17 m sa retenzijama",
   "status": "U toku",
   "image": "images/projects/brane-i-retenzije-bistrica-i-trbusnica.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -929,6 +972,7 @@
   "tech": "Nasuta brana sa centralnim glinenim jezgrom visine 30 m i dužine u kruni 245 m",
   "status": "2019. / U toku",
   "image": "images/projects/brana-pambukovica-i-sistem-za-navodnjavanje-srbija.jpg",
+  "imageW": 1050,
   "gallery": []
  },
  {
@@ -948,6 +992,7 @@
   "tech": "Brana od kamenog nabačaja visine 33,5m",
   "status": "u toku",
   "image": "images/projects/brana-sidi-naceur-alzir.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -967,6 +1012,7 @@
   "tech": "Seklafa betonska brana (h=47m)",
   "status": "u toku",
   "image": "images/projects/brana-seklafa-alzir.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/brana-seklafa-alzir-1.jpg",
    "images/projects/brana-seklafa-alzir-2.jpg"
@@ -989,6 +1035,7 @@
   "tech": "Nasuta brana, visina h=60m",
   "status": "u toku",
   "image": "images/projects/brana-tarzout-alzir.jpg",
+  "imageW": 1209,
   "gallery": [
    "images/projects/brana-tarzout-alzir-1.jpg"
   ]
@@ -1010,6 +1057,7 @@
   "tech": "Nasuta brana sa betonskim ekranom (CFRD), visina 60 m",
   "status": "u toku",
   "image": "images/projects/djedra-brana-alzir.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/djedra-brana-alzir-1.jpg",
    "images/projects/djedra-brana-alzir-2.jpg"
@@ -1032,6 +1080,7 @@
   "tech": "Nasuta brana sa centralnim glinenim jezgrom, visina h=66m",
   "status": "u toku",
   "image": "images/projects/brana-beni-slimane-alzir.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/brana-beni-slimane-alzir-1.jpg",
    "images/projects/brana-beni-slimane-alzir-2.jpg"
@@ -1054,6 +1103,7 @@
   "tech": "",
   "status": "2022.",
   "image": "images/projects/izgradnja-bambi-istrazivacko-razvojnog-centra-u-okviru-fabrickog-kompl.jpg",
+  "imageW": 670,
   "gallery": []
  },
  {
@@ -1073,6 +1123,7 @@
   "tech": "",
   "status": "2022.",
   "image": "images/projects/rekonstrukcija-i-novogradnja-pogona-za-proizvodnju-pastoznih-glet-masa.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/rekonstrukcija-i-novogradnja-pogona-za-proizvodnju-pastoznih-glet-masa-1.jpg",
    "images/projects/rekonstrukcija-i-novogradnja-pogona-za-proizvodnju-pastoznih-glet-masa-2.jpg"
@@ -1096,6 +1147,7 @@
   "tech": "14 km irigacionog kanala",
   "status": "2023",
   "image": "images/projects/irigacioni-sistem-san-antonio-huarango-jaen.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/irigacioni-sistem-san-antonio-huarango-jaen-1.jpg",
    "images/projects/irigacioni-sistem-san-antonio-huarango-jaen-2.jpg"
@@ -1118,6 +1170,7 @@
   "tech": "Zona projekta obuhvata površinu od 300 000km2",
   "status": "2022.",
   "image": "images/projects/studija-obezbedjenja-vodnih-resursa-u-regionima-zapad-centar-i-istok-a.jpg",
+  "imageW": 942,
   "gallery": []
  },
  {
@@ -1137,6 +1190,7 @@
   "tech": "Nasuta brana sa betonskim ekranom (CFRD), visina 80m",
   "status": "2021.",
   "image": "images/projects/brana-kufranja-jordan.jpg",
+  "imageW": 1034,
   "gallery": [
    "images/projects/brana-kufranja-jordan-1.jpg",
    "images/projects/brana-kufranja-jordan-2.jpg"
@@ -1159,6 +1213,7 @@
   "tech": "Zaštitni nasipi ukupne dužine 16 km",
   "status": "2021.",
   "image": "images/projects/rekonstrukcija-sistema-zastite-od-poplava-macva-srbija.jpg",
+  "imageW": 1784,
   "gallery": [
    "images/projects/rekonstrukcija-sistema-zastite-od-poplava-macva-srbija-1.jpg",
    "images/projects/rekonstrukcija-sistema-zastite-od-poplava-macva-srbija-2.jpg"
@@ -1181,6 +1236,7 @@
   "tech": "Približni ukupni kapacitet koji je potreban za svaku fazu deponovanja iznosi: stara deponija: 11.840.000 m",
   "status": "U toku",
   "image": "images/projects/epc-ugovor-za-projektovanje-i-izvodjenje-dela-radova-na-projektu-jpp-z.jpg",
+  "imageW": 1021,
   "gallery": [
    "images/projects/epc-ugovor-za-projektovanje-i-izvodjenje-dela-radova-na-projektu-jpp-z-1.jpg",
    "images/projects/epc-ugovor-za-projektovanje-i-izvodjenje-dela-radova-na-projektu-jpp-z-2.jpg"
@@ -1203,6 +1259,7 @@
   "tech": "Izgradnja višenamenskog železničkog terminala za prijem i distribuciju putnika i roba uključujući infrastrukturu za servisiranje i održavanje železničkih transportnih sredstava",
   "status": "U toku",
   "image": "images/projects/izgradnja-nove-putnicko-tehnicke-zeleznicke-stanice-zemun.jpg",
+  "imageW": 1107,
   "gallery": [
    "images/projects/izgradnja-nove-putnicko-tehnicke-zeleznicke-stanice-zemun-1.jpg",
    "images/projects/izgradnja-nove-putnicko-tehnicke-zeleznicke-stanice-zemun-2.jpg"
@@ -1225,6 +1282,7 @@
   "tech": "Površina: 23.000 m², Spratnost: 2Po+Pr+Međusprat+8+Ps",
   "status": "2021.",
   "image": "images/projects/izgradnja-poslovne-zgrade-delta-holding-beograd.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/izgradnja-poslovne-zgrade-delta-holding-beograd-1.jpg",
    "images/projects/izgradnja-poslovne-zgrade-delta-holding-beograd-2.jpg"
@@ -1248,6 +1306,7 @@
   "tech": "Izgradnja dela obilaznog puta oko Zrenjanina u dužini od 4 km (od 4+915.11 do km 8 +600.84 sa dve kružne raskrsnice i izgradnjom mosta preko kanala Begej",
   "status": "2022",
   "image": "images/projects/obilazni-put-oko-zrenjanina.jpg",
+  "imageW": 1024,
   "gallery": [
    "images/projects/obilazni-put-oko-zrenjanina-1.jpg",
    "images/projects/obilazni-put-oko-zrenjanina-2.jpg"
@@ -1270,6 +1329,7 @@
   "tech": "Postrojenje za odloženo koksovanje (S-5300, DCU); sistem transporta koksa (S-5600, CHS) i prateća postrojenja/objekti za potrebe DCU",
   "status": "2020.",
   "image": "images/projects/modernizacije-preradjivackog-kompleksa-u-nis-rafineriji-nafte-pancevo.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/modernizacije-preradjivackog-kompleksa-u-nis-rafineriji-nafte-pancevo-1.jpg",
    "images/projects/modernizacije-preradjivackog-kompleksa-u-nis-rafineriji-nafte-pancevo-2.jpg"
@@ -1292,6 +1352,7 @@
   "tech": "35.000 m², Spratnost: 2Po+P+7+Ps",
   "status": "2020.",
   "image": "images/projects/kineski-kulturni-centar-u-beogradu-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/kineski-kulturni-centar-u-beogradu-srbija-1.jpg",
    "images/projects/kineski-kulturni-centar-u-beogradu-srbija-2.jpg"
@@ -1315,6 +1376,7 @@
   "tech": "Rekonstrukcija železničke pruge u dužini od 58 km (od km 9+896 do km 67+800) i rekonstrukcija železničke stanice „Mala Krsna“",
   "status": "2022.",
   "image": "images/projects/deonica-pruge-strazevica-tunel-ulaz-jajinci-mala-krsna-na-pruzi-beogra.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/deonica-pruge-strazevica-tunel-ulaz-jajinci-mala-krsna-na-pruzi-beogra-1.jpg",
    "images/projects/deonica-pruge-strazevica-tunel-ulaz-jajinci-mala-krsna-na-pruzi-beogra-2.jpg"
@@ -1337,6 +1399,7 @@
   "tech": "Površina: 50.000 m",
   "status": "2020.",
   "image": "images/projects/poslovni-objekat-navigator-business-center-2-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/poslovni-objekat-navigator-business-center-2-srbija-1.jpg",
    "images/projects/poslovni-objekat-navigator-business-center-2-srbija-2.jpg"
@@ -1359,6 +1422,7 @@
   "tech": "Nasuta brana sa centralinim glinenim jezgorm, visina 70m",
   "status": "2019.",
   "image": "images/projects/brana-rekhouche.jpg",
+  "imageW": 833,
   "gallery": []
  },
  {
@@ -1378,6 +1442,7 @@
   "tech": "Površina: 29.282 m",
   "status": "2020.",
   "image": "images/projects/park-11-projektovanje-i-izgradnja-stambeno-poslovnog-objekta-blok-11a.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/park-11-projektovanje-i-izgradnja-stambeno-poslovnog-objekta-blok-11a-1.jpg",
    "images/projects/park-11-projektovanje-i-izgradnja-stambeno-poslovnog-objekta-blok-11a-2.jpg"
@@ -1398,6 +1463,7 @@
   "tech": "Osnovni i pomoćni stadion za igranje hokeja sa loptom na ledu, spoljno uređenje, tribine za oko 9.000 gledalaca",
   "status": "2021.",
   "image": "images/projects/rekonstrukcija-republickog-stadiona-siktivkar-rf.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/rekonstrukcija-republickog-stadiona-siktivkar-rf-1.jpg",
    "images/projects/rekonstrukcija-republickog-stadiona-siktivkar-rf-2.jpg"
@@ -1420,6 +1486,7 @@
   "tech": "Kapacitet: 8.080 sedišta",
   "status": "2020.",
   "image": "images/projects/fudbalski-stadion-sa-pomocnim-terenom-i-glavnim-objektom-kraljevo.jpg",
+  "imageW": 2835,
   "gallery": [
    "images/projects/fudbalski-stadion-sa-pomocnim-terenom-i-glavnim-objektom-kraljevo-1.jpg",
    "images/projects/fudbalski-stadion-sa-pomocnim-terenom-i-glavnim-objektom-kraljevo-2.jpg"
@@ -1442,6 +1509,7 @@
   "tech": "Rekonstrukcija gradskih ulica uključujući kompletnu podzemnu instalacionu infrastrukturu i postojeće tramvajske linije.",
   "status": "2021.",
   "image": "images/projects/uredjenje-saobracajnica-u-beogradu-kraljice-marije-27-marta-dzordza-va.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -1461,6 +1529,7 @@
   "tech": "Izvođenje radova na rekonstrukciji Karađorđeve ulice (600 m) i Savskog keja uz Karađorđevu ulicu (10.000 m",
   "status": "2021",
   "image": "images/projects/rekonstrukcija-karadjordjeve-ulice-i-savskog-keja-uz-karadjordjevu-uli.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -1480,6 +1549,7 @@
   "tech": "Rekonstrukcija i dogradnja univerzitetskog kompleksa Narksoz; P objekta: 33.000m2; P spoljnog uređenja: 19.000m2",
   "status": "u toku",
   "image": "images/projects/univerzitetski-kompleks-narhoz-almati-kazahstan.jpg",
+  "imageW": 1920,
   "gallery": [
    "images/projects/univerzitetski-kompleks-narhoz-almati-kazahstan-1.jpg",
    "images/projects/univerzitetski-kompleks-narhoz-almati-kazahstan-2.jpg"
@@ -1502,6 +1572,7 @@
   "tech": "Zeleni prsten dužine 10,5 km",
   "status": "2021",
   "image": "images/projects/formiranje-zelenog-prstena-oko-povrsinskog-kopa-radljevo.jpg",
+  "imageW": 876,
   "gallery": []
  },
  {
@@ -1521,6 +1592,7 @@
   "tech": "Zeleni prsten dužine 13.7 km",
   "status": "2021.",
   "image": "images/projects/formiranje-zelenog-prstena-u-zoni-te-nikola-tesla-a.jpg",
+  "imageW": 907,
   "gallery": []
  },
  {
@@ -1540,6 +1612,7 @@
   "tech": "Dvostepena brodska prevodnica dimezija 34 m x 310 m",
   "status": "2019 / 2021 / 2022",
   "image": "images/projects/rekonstrukcija-brodske-prevodnice-na-he-djerdap-1.jpg",
+  "imageW": 591,
   "gallery": [
    "images/projects/rekonstrukcija-brodske-prevodnice-na-he-djerdap-1-1.jpg"
   ]
@@ -1562,6 +1635,7 @@
   "tech": "Objekat se sastoji se od betonskog i zemljanog dela i brodske prevodnice za brodove do 1000 t nosivosti",
   "status": "U toku",
   "image": "images/projects/unapredjenju-uslova-za-prevodjenje-brodova-u-okviru-brane-na-tisi.jpg",
+  "imageW": 1036,
   "gallery": []
  },
  {
@@ -1581,6 +1655,7 @@
   "tech": "Jednostepena brodska prevodnica dimezija 34 m x 310 m/",
   "status": "U toku",
   "image": "images/projects/rekonstrukcija-brodske-prevodnice-na-he-djerdap-2.jpg",
+  "imageW": 660,
   "gallery": []
  },
  {
@@ -1600,6 +1675,7 @@
   "tech": "Sanacija 13 lokacija (od km 40+645.28 do km 53+139) ukupne dužine 12,49km",
   "status": "2019.",
   "image": "images/projects/autoput-e-763-deonica-iv-ub-lajkovac.jpg",
+  "imageW": 2560,
   "gallery": []
  },
  {
@@ -1619,6 +1695,7 @@
   "tech": "Nasuta brana sa glinenim jezgrom visine 20 m i dužine u kruni 424 m",
   "status": "2019.",
   "image": "images/projects/brana-kamenica-i-sistem-za-navodnjavanje-srbija.jpg",
+  "imageW": 1052,
   "gallery": []
  },
  {
@@ -1638,6 +1715,7 @@
   "tech": "Površina: 94.000 m², Spratnost: 3Po+ P+4",
   "status": "2019",
   "image": "images/projects/trzni-centar-ada-mall-u-beogradu-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/trzni-centar-ada-mall-u-beogradu-srbija-1.jpg",
    "images/projects/trzni-centar-ada-mall-u-beogradu-srbija-2.jpg"
@@ -1660,6 +1738,7 @@
   "tech": "Površina: 76,785 m²; Spratnost: 2Po+P+23+Teh",
   "status": "2018",
   "image": "images/projects/beograd-na-vodi-parcela-21-dve-stambene-kule-beograd-srbija.jpg",
+  "imageW": 1024,
   "gallery": []
  },
  {
@@ -1679,6 +1758,7 @@
   "tech": "Površina: 65,815 m²; Spratnost: 2Po+P+23+Teh",
   "status": "2018",
   "image": "images/projects/beograd-na-vodi-parcela-18-dva-stambena-objekta-vista-parkview-beograd.jpg",
+  "imageW": 1228,
   "gallery": []
  },
  {
@@ -1698,6 +1778,7 @@
   "tech": "spratova 20",
   "status": "2018",
   "image": "images/projects/beograd-na-vodi-parcela-14-stambeno-poslovni-objekat-stambene-kule-a-i.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/beograd-na-vodi-parcela-14-stambeno-poslovni-objekat-stambene-kule-a-i-1.jpg",
    "images/projects/beograd-na-vodi-parcela-14-stambeno-poslovni-objekat-stambene-kule-a-i-2.jpg"
@@ -1718,6 +1799,7 @@
   "tech": "Ukupna površina: 27.000m",
   "status": "2017",
   "image": "images/projects/poslovni-objekat-gazprom-transgas.jpg",
+  "imageW": 2269,
   "gallery": [
    "images/projects/poslovni-objekat-gazprom-transgas-1.jpg",
    "images/projects/poslovni-objekat-gazprom-transgas-2.jpg"
@@ -1740,6 +1822,7 @@
   "tech": "Površina apartmana: 10.500 m",
   "status": "2017",
   "image": "images/projects/rezidencijalni-apartmani-i-spa-centar-objekta-talan-towers-ritz-carlto.jpg",
+  "imageW": 1359,
   "gallery": [
    "images/projects/rezidencijalni-apartmani-i-spa-centar-objekta-talan-towers-ritz-carlto-1.jpg",
    "images/projects/rezidencijalni-apartmani-i-spa-centar-objekta-talan-towers-ritz-carlto-2.jpg"
@@ -1762,6 +1845,7 @@
   "tech": "Ukupna površina: 30.300m2; Spratnost: 2Po+P+13",
   "status": "2017",
   "image": "images/projects/poslovna-zgrada-ecobanke-akra-gana.jpg",
+  "imageW": 1471,
   "gallery": [
    "images/projects/poslovna-zgrada-ecobanke-akra-gana-1.jpg",
    "images/projects/poslovna-zgrada-ecobanke-akra-gana-2.jpg"
@@ -1784,6 +1868,7 @@
   "tech": "Površina: 13.500 m²,",
   "status": "2017",
   "image": "images/projects/administrativni-kompleks-greenwich-centre-u-temi-gana.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -1803,6 +1888,7 @@
   "tech": "Bruto površina 24.593 m",
   "status": "2017",
   "image": "images/projects/projektovanje-i-izgradnja-za-trziste-stambeno-poslovnog-kompleksa-sunn.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/projektovanje-i-izgradnja-za-trziste-stambeno-poslovnog-kompleksa-sunn-1.jpg",
    "images/projects/projektovanje-i-izgradnja-za-trziste-stambeno-poslovnog-kompleksa-sunn-2.jpg"
@@ -1825,6 +1911,7 @@
   "tech": "Površina: 1.100 m²",
   "status": "2017",
   "image": "images/projects/prostor-za-registraciju-putnika-na-terminalu-1-aerodroma-nikola-tesla.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/prostor-za-registraciju-putnika-na-terminalu-1-aerodroma-nikola-tesla-1.jpg",
    "images/projects/prostor-za-registraciju-putnika-na-terminalu-1-aerodroma-nikola-tesla-2.jpg"
@@ -1847,6 +1934,7 @@
   "tech": "",
   "status": "2017",
   "image": "images/projects/adaptacija-i-rekonstrukcija-poslovnog-prostora-u-objektima-banca-intes.jpg",
+  "imageW": 1024,
   "gallery": [
    "images/projects/adaptacija-i-rekonstrukcija-poslovnog-prostora-u-objektima-banca-intes-1.jpg",
    "images/projects/adaptacija-i-rekonstrukcija-poslovnog-prostora-u-objektima-banca-intes-2.jpg"
@@ -1869,6 +1957,7 @@
   "tech": "Nasuta brana sa centralnim glinenim jezgrom, visina 67m",
   "status": "2018",
   "image": "images/projects/brana-soubella-alzir.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/brana-soubella-alzir-1.jpg",
    "images/projects/brana-soubella-alzir-2.jpg"
@@ -1891,6 +1980,7 @@
   "tech": "Čišćenje korita reke u dužini od 17 km, zaštita obale kamenom 20.000 m",
   "status": "2018.",
   "image": "images/projects/preventivno-ciscenje-reke-cire-peru.jpg",
+  "imageW": 1599,
   "gallery": [
    "images/projects/preventivno-ciscenje-reke-cire-peru-1.jpg",
    "images/projects/preventivno-ciscenje-reke-cire-peru-2.jpg"
@@ -1913,6 +2003,7 @@
   "tech": "Nasuta brana sa glinenim jezgrom visine 48m +3m i dužine u kruni 8455m",
   "status": "2017",
   "image": "images/projects/projekat-nadvisenja-postojece-brane-poechos-peru.jpg",
+  "imageW": 639,
   "gallery": []
  },
  {
@@ -1932,6 +2023,7 @@
   "tech": "Nadvišenje postojeće kombinovane brane (centralni deo od valjanog betona sa nasutim delom na krajevima) sa sadšnjih 52m na oko 67m",
   "status": "2016",
   "image": "images/projects/nadvisenje-brane-wala.jpg",
+  "imageW": 1432,
   "gallery": [
    "images/projects/nadvisenje-brane-wala-1.jpg"
   ]
@@ -1953,6 +2045,7 @@
   "tech": "Betonska brana od valjanog betona (RCC), visina h=76,5m",
   "status": "2013",
   "image": "images/projects/brana-bouzina.jpg",
+  "imageW": 1268,
   "gallery": []
  },
  {
@@ -1973,6 +2066,7 @@
   "tech": "Nasuta brana visine 40m i dužine u kruni 380m",
   "status": "2012",
   "image": "images/projects/brana-ourkiss-alzir.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/brana-ourkiss-alzir-1.jpg",
    "images/projects/brana-ourkiss-alzir-2.jpg"
@@ -1996,6 +2090,7 @@
   "tech": "Rekonstrukcija brane, optočnog tunela i slapišta",
   "status": "2011",
   "image": "images/projects/rekonstrukcija-brane-chavimochic-peru.jpg",
+  "imageW": 1600,
   "gallery": [
    "images/projects/rekonstrukcija-brane-chavimochic-peru-1.jpg",
    "images/projects/rekonstrukcija-brane-chavimochic-peru-2.jpg"
@@ -2019,6 +2114,7 @@
   "tech": "Izvođenje građevinskih radova na izgradnji puta (od km 53+139.91 do km 77+118.23), dužina: 24 km, Izgradnja 4 saobraćajne i 3 zaustavne trake, 9 mostova, 6 nadvožnjaka, saobraćajna petlja „Ljig“, tunela „Brančići“ sa 2 tunelske cevi dužine od po 940 m i regulacija rečnih tokova",
   "status": "2019.",
   "image": "images/projects/izvodjenje-gradjevinskih-radova-na-projektu-izgradnje-autoputa-e-763-d.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/izvodjenje-gradjevinskih-radova-na-projektu-izgradnje-autoputa-e-763-d-1.jpg",
    "images/projects/izvodjenje-gradjevinskih-radova-na-projektu-izgradnje-autoputa-e-763-d-2.jpg"
@@ -2042,6 +2138,7 @@
   "tech": "Izgradnja 2,7 km nove tramvajske pruge i rekonstrukcija 1km postojeće pruge",
   "status": "2019.",
   "image": "images/projects/izvodjenje-tramvajske-pruge-na-mostu-na-adi-srbija.jpg",
+  "imageW": 1280,
   "gallery": [
    "images/projects/izvodjenje-tramvajske-pruge-na-mostu-na-adi-srbija-1.jpg",
    "images/projects/izvodjenje-tramvajske-pruge-na-mostu-na-adi-srbija-2.jpg"
@@ -2065,6 +2162,7 @@
   "tech": "Dužina deonice: 58 km, rehabilitacija postojećih i izgradnja 3 nova mosta",
   "status": "2021.",
   "image": "images/projects/izvodjenje-radova-na-rehabilitaciji-i-rekonstrukciji-deonice-puta-puer.jpg",
+  "imageW": 641,
   "gallery": [
    "images/projects/izvodjenje-radova-na-rehabilitaciji-i-rekonstrukciji-deonice-puta-puer-1.jpg",
    "images/projects/izvodjenje-radova-na-rehabilitaciji-i-rekonstrukciji-deonice-puta-puer-2.jpg"
@@ -2087,6 +2185,7 @@
   "tech": "Kapacitet proizvodnje pitke vode – 6,000m3/dan, Kapacitet proizvodnje električne energije: 65MW",
   "status": "2011",
   "image": "images/projects/postrojenje-za-desalinizaciju-i-proizvodnju-elektricne-energije-in-duq.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/postrojenje-za-desalinizaciju-i-proizvodnju-elektricne-energije-in-duq-1.jpg"
   ]
@@ -2109,6 +2208,7 @@
   "tech": "Visina: 74,5m; Dužina: 430m",
   "status": "2010",
   "image": "images/projects/izgradnja-brane-i-akumulacije-rovni-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/izgradnja-brane-i-akumulacije-rovni-srbija-1.jpg"
   ]
@@ -2130,6 +2230,7 @@
   "tech": "Dužina: 64 km",
   "status": "2017",
   "image": "images/projects/rekonstrukciji-puta-mpigi-kanoni.jpg",
+  "imageW": 2672,
   "gallery": [
    "images/projects/rekonstrukciji-puta-mpigi-kanoni-1.jpg",
    "images/projects/rekonstrukciji-puta-mpigi-kanoni-2.jpg"
@@ -2152,6 +2253,7 @@
   "tech": "Dužina deonice 17,7 km",
   "status": "2017",
   "image": "images/projects/rekonstrukcija-zeleznicke-pruge-na-juznom-delu-koridora-10-deonica-vra.jpg",
+  "imageW": 1134,
   "gallery": [
    "images/projects/rekonstrukcija-zeleznicke-pruge-na-juznom-delu-koridora-10-deonica-vra-1.jpg",
    "images/projects/rekonstrukcija-zeleznicke-pruge-na-juznom-delu-koridora-10-deonica-vra-2.jpg"
@@ -2175,6 +2277,7 @@
   "tech": "Dužine korita reke 2,6 km i 1,8 km, izgradnja mostova, vodozahvata, crpne stanice, 2,9 km cevovoda i 3,4 km pristupnog puta",
   "status": "2017",
   "image": "images/projects/izmestanje-i-regulacija-korita-reke-kolubare-ii-faza-sa-pritokom-pesta.jpg",
+  "imageW": 1417,
   "gallery": [
    "images/projects/izmestanje-i-regulacija-korita-reke-kolubare-ii-faza-sa-pritokom-pesta-1.jpg",
    "images/projects/izmestanje-i-regulacija-korita-reke-kolubare-ii-faza-sa-pritokom-pesta-2.jpg"
@@ -2197,6 +2300,7 @@
   "tech": "Dužina: asfaltiranje 166 km, rehabilitacija 42 km",
   "status": "2016",
   "image": "images/projects/asfaltiranje-puta-kawempe-kafu-166-km-i-rehabilitacija-deonice-puta-ka.jpg",
+  "imageW": 2695,
   "gallery": [
    "images/projects/asfaltiranje-puta-kawempe-kafu-166-km-i-rehabilitacija-deonice-puta-ka-1.jpg",
    "images/projects/asfaltiranje-puta-kawempe-kafu-166-km-i-rehabilitacija-deonice-puta-ka-2.jpg"
@@ -2220,6 +2324,7 @@
   "tech": "Dužina tunela : 883 m i 887 m",
   "status": "2016",
   "image": "images/projects/izvodjenje-radova-na-izgradnji-autoputa-e-763-beograd-juzni-jadran-sek.jpg",
+  "imageW": 960,
   "gallery": [
    "images/projects/izvodjenje-radova-na-izgradnji-autoputa-e-763-beograd-juzni-jadran-sek-1.jpg",
    "images/projects/izvodjenje-radova-na-izgradnji-autoputa-e-763-beograd-juzni-jadran-sek-2.jpg"
@@ -2243,6 +2348,7 @@
   "tech": "površina: 100.000m",
   "status": "2016",
   "image": "images/projects/izvodjenje-radova-na-rekonstrukciji-kapaciteta-za-prijem-otpremu-i-upr.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/izvodjenje-radova-na-rekonstrukciji-kapaciteta-za-prijem-otpremu-i-upr-1.jpg",
    "images/projects/izvodjenje-radova-na-rekonstrukciji-kapaciteta-za-prijem-otpremu-i-upr-2.jpg"
@@ -2266,6 +2372,7 @@
   "tech": "Ukupna dužina trasa 65,7 km;",
   "status": "2016",
   "image": "images/projects/rekonstrukcija-zeleznicke-pruge-na-koridoru-10-tri-deonice-sopot-kosma.jpg",
+  "imageW": 2083,
   "gallery": [
    "images/projects/rekonstrukcija-zeleznicke-pruge-na-koridoru-10-tri-deonice-sopot-kosma-1.jpg",
    "images/projects/rekonstrukcija-zeleznicke-pruge-na-koridoru-10-tri-deonice-sopot-kosma-2.jpg"
@@ -2289,6 +2396,7 @@
   "tech": "Dužina: 14,858 km",
   "status": "2016",
   "image": "images/projects/izgradnja-donjeg-stroja-na-drugom-zeleznickom-koloseku-na-deonici-panc.jpg",
+  "imageW": 1201,
   "gallery": [
    "images/projects/izgradnja-donjeg-stroja-na-drugom-zeleznickom-koloseku-na-deonici-panc-1.jpg",
    "images/projects/izgradnja-donjeg-stroja-na-drugom-zeleznickom-koloseku-na-deonici-panc-2.jpg"
@@ -2311,6 +2419,7 @@
   "tech": "Dužina: 55 km (JV)",
   "status": "2015",
   "image": "images/projects/rehabilitacija-i-rekonstrukcija-puta-chamaya-jaen-san-ignacio-rio-sanc.jpg",
+  "imageW": 1134,
   "gallery": [
    "images/projects/rehabilitacija-i-rekonstrukcija-puta-chamaya-jaen-san-ignacio-rio-sanc-1.jpg",
    "images/projects/rehabilitacija-i-rekonstrukcija-puta-chamaya-jaen-san-ignacio-rio-sanc-2.jpg"
@@ -2334,6 +2443,7 @@
   "tech": "Dužina mosta : 176 m",
   "status": "2015",
   "image": "images/projects/izgradnja-mosta-preko-kanala-dunav-tisa-dunav-sa-prilaznim-montaznim-m.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/izgradnja-mosta-preko-kanala-dunav-tisa-dunav-sa-prilaznim-montaznim-m-1.jpg",
    "images/projects/izgradnja-mosta-preko-kanala-dunav-tisa-dunav-sa-prilaznim-montaznim-m-2.jpg"
@@ -2357,6 +2467,7 @@
   "tech": "Dužina: 9 km",
   "status": "2015",
   "image": "images/projects/projekat-autoputa-e-75-m-22-od-beograda-do-novog-sada-deonica-km-10800.jpg",
+  "imageW": 1346,
   "gallery": [
    "images/projects/projekat-autoputa-e-75-m-22-od-beograda-do-novog-sada-deonica-km-10800-1.jpg",
    "images/projects/projekat-autoputa-e-75-m-22-od-beograda-do-novog-sada-deonica-km-10800-2.jpg"
@@ -2379,6 +2490,7 @@
   "tech": "Dužina: EPNG 13,217 km, Conalvias 18,64 km",
   "status": "2014",
   "image": "images/projects/rehabilitacija-i-rekonstrukcija-puta-chongoyape-cochabamba-cajamarca-d.jpg",
+  "imageW": 1276,
   "gallery": [
    "images/projects/rehabilitacija-i-rekonstrukcija-puta-chongoyape-cochabamba-cajamarca-d-1.jpg",
    "images/projects/rehabilitacija-i-rekonstrukcija-puta-chongoyape-cochabamba-cajamarca-d-2.jpg"
@@ -2401,6 +2513,7 @@
   "tech": "Dužina odbrambenog nasipa : 18 km;",
   "status": "2014",
   "image": "images/projects/radovi-na-ojacanju-i-nadvisenju-odbrambenih-nasipa-na-levoj-obali-reke.jpg",
+  "imageW": 881,
   "gallery": [
    "images/projects/radovi-na-ojacanju-i-nadvisenju-odbrambenih-nasipa-na-levoj-obali-reke-1.jpg",
    "images/projects/radovi-na-ojacanju-i-nadvisenju-odbrambenih-nasipa-na-levoj-obali-reke-2.jpg"
@@ -2423,6 +2536,7 @@
   "tech": "Dužina: 8,9 km",
   "status": "2013",
   "image": "images/projects/rekonstrukcija-ulica-u-kampali-faza-i-deonica-bukoto-kisasi-deonica-ka.jpg",
+  "imageW": 1240,
   "gallery": [
    "images/projects/rekonstrukcija-ulica-u-kampali-faza-i-deonica-bukoto-kisasi-deonica-ka-1.jpg"
   ]
@@ -2445,6 +2559,7 @@
   "tech": "Dužina kanala : 6,9 km;",
   "status": "2013",
   "image": "images/projects/rekonstrukcija-infrastrukture-navodnjavanja-kanala-ramal-nuevo-el-aren.jpg",
+  "imageW": 2083,
   "gallery": [
    "images/projects/rekonstrukcija-infrastrukture-navodnjavanja-kanala-ramal-nuevo-el-aren-1.jpg"
   ]
@@ -2467,6 +2582,7 @@
   "tech": "Postojenja za preradu pitke i otpadne vode, generatori, telekomunikaciona infrastruktura; elektromašinski sistemi",
   "status": "2012/2013",
   "image": "images/projects/stambeno-naselje-twin-lake-estate-faza-i-a.jpg",
+  "imageW": 640,
   "gallery": [
    "images/projects/stambeno-naselje-twin-lake-estate-faza-i-a-1.jpg",
    "images/projects/stambeno-naselje-twin-lake-estate-faza-i-a-2.jpg"
@@ -2490,6 +2606,7 @@
   "tech": "Dužina tunela : 745 m i 115 m",
   "status": "2012",
   "image": "images/projects/tunel-strazevica-izgradnja-autoputa-e-75-deonica-dobanovci-bubanj-poto.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/tunel-strazevica-izgradnja-autoputa-e-75-deonica-dobanovci-bubanj-poto-1.jpg",
    "images/projects/tunel-strazevica-izgradnja-autoputa-e-75-deonica-dobanovci-bubanj-poto-2.jpg"
@@ -2513,6 +2630,7 @@
   "tech": "Dužina: 44,3 km",
   "status": "2011",
   "image": "images/projects/rekonstrukcija-i-ojacanje-puta-kampala-gayaza-zirobwe.jpg",
+  "imageW": 1620,
   "gallery": [
    "images/projects/rekonstrukcija-i-ojacanje-puta-kampala-gayaza-zirobwe-1.jpg",
    "images/projects/rekonstrukcija-i-ojacanje-puta-kampala-gayaza-zirobwe-2.jpg"
@@ -2536,6 +2654,7 @@
   "tech": "Dužina bulevara : 950 m",
   "status": "2011",
   "image": "images/projects/izgradnja-saobracajnice-mirijevski-bulevar-sa-pripadajucom-infrastrukt.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/izgradnja-saobracajnice-mirijevski-bulevar-sa-pripadajucom-infrastrukt-1.jpg",
    "images/projects/izgradnja-saobracajnice-mirijevski-bulevar-sa-pripadajucom-infrastrukt-2.jpg"
@@ -2559,6 +2678,7 @@
   "tech": "Dužina stanica : 870 m",
   "status": "2010",
   "image": "images/projects/izgradnja-dve-metro-stanice-almaly-i-abay.jpg",
+  "imageW": 1024,
   "gallery": [
    "images/projects/izgradnja-dve-metro-stanice-almaly-i-abay-1.jpg",
    "images/projects/izgradnja-dve-metro-stanice-almaly-i-abay-2.jpg"
@@ -2582,6 +2702,7 @@
   "tech": "Dužina: 100 km",
   "status": "2010",
   "image": "images/projects/rehabilitacija-puta-luwero-kafu-uganda.jpg",
+  "imageW": 484,
   "gallery": [
    "images/projects/rehabilitacija-puta-luwero-kafu-uganda-1.jpg"
   ]
@@ -2603,6 +2724,7 @@
   "tech": "Dužina odbrambenog nasipa : 14.941,9 m",
   "status": "2010",
   "image": "images/projects/izgradnja-odbrambenih-nasipa-na-reci-zarumilla.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/izgradnja-odbrambenih-nasipa-na-reci-zarumilla-1.jpg",
    "images/projects/izgradnja-odbrambenih-nasipa-na-reci-zarumilla-2.jpg"
@@ -2625,6 +2747,7 @@
   "tech": "površina: 100.000m",
   "status": "2010",
   "image": "images/projects/rekonstrukcija-5-i-6-stanicnog-koloseka-na-zeleznickoj-stanici-beograd.jpg",
+  "imageW": 800,
   "gallery": [
    "images/projects/rekonstrukcija-5-i-6-stanicnog-koloseka-na-zeleznickoj-stanici-beograd-1.jpg",
    "images/projects/rekonstrukcija-5-i-6-stanicnog-koloseka-na-zeleznickoj-stanici-beograd-2.jpg"
@@ -2648,6 +2771,7 @@
   "tech": "Dužina mosta : 188 m",
   "status": "2010",
   "image": "images/projects/rekonstrukcija-ulice-jurija-gagarina-na-delu-ispod-zeleznicke-pruge-u.jpg",
+  "imageW": 584,
   "gallery": [
    "images/projects/rekonstrukcija-ulice-jurija-gagarina-na-delu-ispod-zeleznicke-pruge-u-1.jpg",
    "images/projects/rekonstrukcija-ulice-jurija-gagarina-na-delu-ispod-zeleznicke-pruge-u-2.jpg"
@@ -2671,6 +2795,7 @@
   "tech": "Čvrste forme 12,8 mil. pak./god. Polučvrste forme 0,76 mil. pak. / god. Cefalosporini 5,4 mil. pak. / god. Sterilne tečnosti 3,15 mil. pak / god. 14.950 m²",
   "status": "u toku",
   "image": "images/projects/izgradnja-fabrike-lekova-liliam-pharmaceutical-i-a-faza-cefalosporini.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -2690,6 +2815,7 @@
   "tech": "",
   "status": "",
   "image": "images/projects/ani-nacionalni-institut-za-zakonodavne-studije.jpg",
+  "imageW": 1920,
   "gallery": [
    "images/projects/ani-nacionalni-institut-za-zakonodavne-studije-1.jpg",
    "images/projects/ani-nacionalni-institut-za-zakonodavne-studije-2.jpg"
@@ -2712,6 +2838,7 @@
   "tech": "Fermentori kapaciteta 6×4000 hl",
   "status": "2016",
   "image": "images/projects/objekat-novih-fermentora-u-okviru-kompleksa-pivare-heineken-u-zajecaru.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/objekat-novih-fermentora-u-okviru-kompleksa-pivare-heineken-u-zajecaru-1.jpg",
    "images/projects/objekat-novih-fermentora-u-okviru-kompleksa-pivare-heineken-u-zajecaru-2.jpg"
@@ -2734,6 +2861,7 @@
   "tech": "Kapacitet: 800.000t/godišnje",
   "status": "2015",
   "image": "images/projects/drobilicno-sortirni-kompleks-za-preradu-i-sortiranje-sljake-rafinisani.jpg",
+  "imageW": 1098,
   "gallery": [
    "images/projects/drobilicno-sortirni-kompleks-za-preradu-i-sortiranje-sljake-rafinisani-1.jpg"
   ]
@@ -2756,6 +2884,7 @@
   "tech": "4 kompresorske stanice: projektovani kapacitet HPA–(3+1) x 30 MW, kompresorske stanice na trasi C Azijskog gasovoda Kazahstan – Kina – očekivana max.proizvodnja: 18,7 + 6,3 milijarde m3 /godišnje.",
   "status": "2015",
   "image": "images/projects/cetiri-kompresorkse-stanice-na-trasi-c-azijskog-gasovoda-kazahstan-kin.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/cetiri-kompresorkse-stanice-na-trasi-c-azijskog-gasovoda-kazahstan-kin-1.jpg",
    "images/projects/cetiri-kompresorkse-stanice-na-trasi-c-azijskog-gasovoda-kazahstan-kin-2.jpg"
@@ -2778,6 +2907,7 @@
   "tech": "Površina: 65.815 m²,",
   "status": "",
   "image": "images/projects/beograd-na-vodi-parcela-19-1-kula-beograd-beograd.jpg",
+  "imageW": 2300,
   "gallery": [
    "images/projects/beograd-na-vodi-parcela-19-1-kula-beograd-beograd-1.jpg"
   ]
@@ -2800,6 +2930,7 @@
   "tech": "Kontrolna zgrada, sušilica, peć za topljenje bakra, WHB i ESP, rezervoar hladne vode, cevni most i filter",
   "status": "2015",
   "image": "images/projects/izgradnja-topionice-bakra-u-rtb-bor-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/izgradnja-topionice-bakra-u-rtb-bor-srbija-1.jpg",
    "images/projects/izgradnja-topionice-bakra-u-rtb-bor-srbija-2.jpg"
@@ -2823,6 +2954,7 @@
   "tech": "PS Konvektori, transporteri, gas za pećnicu za topljenje bakra i rukovanje konverterima tipa Pirs Smit, WESP, odeljak za kontakt, konvertor, tornjevi za apsorbciju, kompresor 4MW, predgrevač, razmenjivači toplote, građevina za jaku kiselinu, kompresor i MCC zgrada[/vc_column_text][vc_column_text css=“.vc_custom_1539788181324{margin-top: -20px !important;}“]",
   "status": "2015",
   "image": "images/projects/izgradnja-nove-fabrike-sumporne-kiseline-u-rtb-bor-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/izgradnja-nove-fabrike-sumporne-kiseline-u-rtb-bor-srbija-1.jpg",
    "images/projects/izgradnja-nove-fabrike-sumporne-kiseline-u-rtb-bor-srbija-2.jpg"
@@ -2845,6 +2977,7 @@
   "tech": "Površina 1600m2",
   "status": "2015",
   "image": "images/projects/pogon-za-proizvodnju-medicinskih-sredstava-i-hemikalija-zorka-pharma-s.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/pogon-za-proizvodnju-medicinskih-sredstava-i-hemikalija-zorka-pharma-s-1.jpg"
   ]
@@ -2864,6 +2997,7 @@
   "tech": "Proizvodna baza: 15.000m2",
   "status": "2014",
   "image": "images/projects/schlumberger-proizvodna-baza-soljanka-astrahanska-oblast-ruska-federac.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/schlumberger-proizvodna-baza-soljanka-astrahanska-oblast-ruska-federac-1.jpg",
    "images/projects/schlumberger-proizvodna-baza-soljanka-astrahanska-oblast-ruska-federac-2.jpg"
@@ -2886,6 +3020,7 @@
   "tech": "Kapacitet bloka №1: 2×4500 m3/h i bloka №2: 1x1000m3/h",
   "status": "2014",
   "image": "images/projects/dva-bloka-povratnog-snabdevanja-rashladnom-vodom-u-rafineriji-nafte-at.jpg",
+  "imageW": 800,
   "gallery": [
    "images/projects/dva-bloka-povratnog-snabdevanja-rashladnom-vodom-u-rafineriji-nafte-at-1.jpg"
   ]
@@ -2907,6 +3042,7 @@
   "tech": "Kapacitet: 3.500.000l/godišnje; Površina:  12.000m2",
   "status": "2012",
   "image": "images/projects/vinarija-i-zona-za-odmor-vila-juko-sariagas-kazahstan.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/vinarija-i-zona-za-odmor-vila-juko-sariagas-kazahstan-1.jpg",
    "images/projects/vinarija-i-zona-za-odmor-vila-juko-sariagas-kazahstan-2.jpg"
@@ -2929,6 +3065,7 @@
   "tech": "Površina: 11.270m2",
   "status": "2012",
   "image": "images/projects/schlumberger-naftna-servisna-baza-aktau-kazahstan.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/schlumberger-naftna-servisna-baza-aktau-kazahstan-1.jpg",
    "images/projects/schlumberger-naftna-servisna-baza-aktau-kazahstan-2.jpg"
@@ -2951,6 +3088,7 @@
   "tech": "Kapacitet: 49.750 t Površina: 55.750m2",
   "status": "2011",
   "image": "images/projects/rekonstrukcija-naftne-baze-sa-rezervoarima-industrijski-reon-pavlodar.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/rekonstrukcija-naftne-baze-sa-rezervoarima-industrijski-reon-pavlodar-1.jpg",
    "images/projects/rekonstrukcija-naftne-baze-sa-rezervoarima-industrijski-reon-pavlodar-2.jpg"
@@ -2971,6 +3109,7 @@
   "tech": "Kapacitet: 50.000l/dan; Površina: 3.500m2.",
   "status": "2011",
   "image": "images/projects/mlekara-laktasi-industrijska-zona-aleksandrovac-bosna-i-hercegovina.jpg",
+  "imageW": 1600,
   "gallery": [
    "images/projects/mlekara-laktasi-industrijska-zona-aleksandrovac-bosna-i-hercegovina-1.jpg"
   ]
@@ -2993,6 +3132,7 @@
   "tech": "11 objekata (na 5 lokacija) i infrastruktura. Rekonstrukcija šest objekata. Površina: 30.000m2 (zatvoreni prostor), 60.000m2 (otvoreni prostor)",
   "status": "2010",
   "image": "images/projects/fabrika-papira-step-siktivkar-rusija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/fabrika-papira-step-siktivkar-rusija-1.jpg",
    "images/projects/fabrika-papira-step-siktivkar-rusija-2.jpg"
@@ -3015,6 +3155,7 @@
   "tech": "Površina:  8.000m2",
   "status": "2010",
   "image": "images/projects/rekonstrukcija-fabrike-jugoremedija-zrenjanin-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/rekonstrukcija-fabrike-jugoremedija-zrenjanin-srbija-1.jpg"
   ]
@@ -3036,6 +3177,7 @@
   "tech": "Površina: 60ha",
   "status": "2008",
   "image": "images/projects/veletrznica-astana-kazahstan.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -3055,6 +3197,7 @@
   "tech": "Površina: 35.120 m",
   "status": "2016",
   "image": "images/projects/administrativni-kompleks-ao-forte-banke-astana.jpg",
+  "imageW": 1024,
   "gallery": [
    "images/projects/administrativni-kompleks-ao-forte-banke-astana-1.jpg",
    "images/projects/administrativni-kompleks-ao-forte-banke-astana-2.jpg"
@@ -3077,6 +3220,7 @@
   "tech": "Površina 8.000 m",
   "status": "2016",
   "image": "images/projects/hotel-ridge-royal-cape-coast-gana.jpg",
+  "imageW": 1280,
   "gallery": [
    "images/projects/hotel-ridge-royal-cape-coast-gana-1.jpg",
    "images/projects/hotel-ridge-royal-cape-coast-gana-2.jpg"
@@ -3099,6 +3243,7 @@
   "tech": "Površina kompleksa cca 17.200 m",
   "status": "2016",
   "image": "images/projects/sportski-kompleks-centar-boksa-aktau.jpg",
+  "imageW": 1920,
   "gallery": [
    "images/projects/sportski-kompleks-centar-boksa-aktau-1.jpg",
    "images/projects/sportski-kompleks-centar-boksa-aktau-2.jpg"
@@ -3121,6 +3266,7 @@
   "tech": "Površina: 24.000 m²",
   "status": "2016",
   "image": "images/projects/centar-hematologije-ust-kamenogorsk-kazahstan.jpg",
+  "imageW": 1920,
   "gallery": [
    "images/projects/centar-hematologije-ust-kamenogorsk-kazahstan-1.jpg",
    "images/projects/centar-hematologije-ust-kamenogorsk-kazahstan-2.jpg"
@@ -3144,6 +3290,7 @@
   "tech": "Ukupna površina: 21.300m",
   "status": "2016",
   "image": "images/projects/kargo-centar-ganskog-aerodroma-i-poslovni-objekat-na-kotoka-medjunarod.jpg",
+  "imageW": 3008,
   "gallery": [
    "images/projects/kargo-centar-ganskog-aerodroma-i-poslovni-objekat-na-kotoka-medjunarod-1.jpg",
    "images/projects/kargo-centar-ganskog-aerodroma-i-poslovni-objekat-na-kotoka-medjunarod-2.jpg"
@@ -3166,6 +3313,7 @@
   "tech": "Ukupna površina: 5.300m",
   "status": "2016",
   "image": "images/projects/stambeno-poslovni-objekat-u-ulici-cara-nikolaja-ii-br-75-77-beograd-sr.jpg",
+  "imageW": 1543,
   "gallery": [
    "images/projects/stambeno-poslovni-objekat-u-ulici-cara-nikolaja-ii-br-75-77-beograd-sr-1.jpg",
    "images/projects/stambeno-poslovni-objekat-u-ulici-cara-nikolaja-ii-br-75-77-beograd-sr-2.jpg"
@@ -3189,6 +3337,7 @@
   "tech": "Ukupna površina: 11.600m",
   "status": "2015",
   "image": "images/projects/bolnica-sofie-medgroup-kazahstan.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/bolnica-sofie-medgroup-kazahstan-1.jpg",
    "images/projects/bolnica-sofie-medgroup-kazahstan-2.jpg"
@@ -3211,6 +3360,7 @@
   "tech": "Ukupna površina: 18.000m",
   "status": "2015",
   "image": "images/projects/gotovinski-centar-banke-gane.jpg",
+  "imageW": 1280,
   "gallery": [
    "images/projects/gotovinski-centar-banke-gane-1.jpg",
    "images/projects/gotovinski-centar-banke-gane-2.jpg"
@@ -3233,6 +3383,7 @@
   "tech": "Ukupna površina: 22.000m",
   "status": "2015",
   "image": "images/projects/poslovni-objekat-communication-tower.jpg",
+  "imageW": 719,
   "gallery": [
    "images/projects/poslovni-objekat-communication-tower-1.jpg",
    "images/projects/poslovni-objekat-communication-tower-2.jpg"
@@ -3255,6 +3406,7 @@
   "tech": "Površina kompleksa: 5.500m",
   "status": "2015",
   "image": "images/projects/ambasada-republike-srbije.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/ambasada-republike-srbije-1.jpg",
    "images/projects/ambasada-republike-srbije-2.jpg"
@@ -3278,6 +3430,7 @@
   "tech": "7 objekata, ukupna površina: 64.650 m²",
   "status": "2019.",
   "image": "images/projects/ani-nacionalni-institut-za-zakonodavne-studije-nigerija.jpg",
+  "imageW": 1226,
   "gallery": [
    "images/projects/ani-nacionalni-institut-za-zakonodavne-studije-nigerija-1.jpg",
    "images/projects/ani-nacionalni-institut-za-zakonodavne-studije-nigerija-2.jpg"
@@ -3301,6 +3454,7 @@
   "tech": "4 glavna objekta, pomoćni i verski objekti, infrastruktura",
   "status": "2017.",
   "image": "images/projects/anr-rezidencija-narodne-skupstine-nigerija.jpg",
+  "imageW": 1600,
   "gallery": [
    "images/projects/anr-rezidencija-narodne-skupstine-nigerija-1.jpg"
   ]
@@ -3322,6 +3476,7 @@
   "tech": "Površina 400 m",
   "status": "2015",
   "image": "images/projects/air-serbia-lounge-na-aerodromu-nikola-tesla-srbija.jpg",
+  "imageW": 2464,
   "gallery": [
    "images/projects/air-serbia-lounge-na-aerodromu-nikola-tesla-srbija-1.jpg",
    "images/projects/air-serbia-lounge-na-aerodromu-nikola-tesla-srbija-2.jpg"
@@ -3342,6 +3497,7 @@
   "tech": "Ukupna površina: 64.000m2; Spratnost: Po+P+ 5 do 16",
   "status": "2015",
   "image": "images/projects/medjunarodni-kongresni-centar-i-hotel-hyatt-regency-rostov-don-plaza-r.jpg",
+  "imageW": 1800,
   "gallery": [
    "images/projects/medjunarodni-kongresni-centar-i-hotel-hyatt-regency-rostov-don-plaza-r-1.jpg",
    "images/projects/medjunarodni-kongresni-centar-i-hotel-hyatt-regency-rostov-don-plaza-r-2.jpg"
@@ -3362,6 +3518,7 @@
   "tech": "Ukupna površina 18.000 m",
   "status": "2014",
   "image": "images/projects/stambeni-kompleks-horizont-na-raskrsnici-ulica-komarova-i-mira-ruska-f.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/stambeni-kompleks-horizont-na-raskrsnici-ulica-komarova-i-mira-ruska-f-1.jpg",
    "images/projects/stambeni-kompleks-horizont-na-raskrsnici-ulica-komarova-i-mira-ruska-f-2.jpg"
@@ -3382,6 +3539,7 @@
   "tech": "Ukupna površina: 22.000m",
   "status": "2014",
   "image": "images/projects/stambeni-objekat-20-51-mikrorejon-ezva.jpg",
+  "imageW": 2560,
   "gallery": [
    "images/projects/stambeni-objekat-20-51-mikrorejon-ezva-1.jpg",
    "images/projects/stambeni-objekat-20-51-mikrorejon-ezva-2.jpg"
@@ -3405,6 +3563,7 @@
   "tech": "Kapacitet: 40.000 sedišta",
   "status": "2014",
   "image": "images/projects/novi-sportski-kompleks-stadion-ust-40-000-sedista.jpg",
+  "imageW": 750,
   "gallery": [
    "images/projects/novi-sportski-kompleks-stadion-ust-40-000-sedista-1.jpg",
    "images/projects/novi-sportski-kompleks-stadion-ust-40-000-sedista-2.jpg"
@@ -3427,6 +3586,7 @@
   "tech": "Ukupna površina: 4.400m",
   "status": "2013",
   "image": "images/projects/restoran-i-nocni-klub.jpg",
+  "imageW": 1632,
   "gallery": [
    "images/projects/restoran-i-nocni-klub-1.jpg",
    "images/projects/restoran-i-nocni-klub-2.jpg"
@@ -3449,6 +3609,7 @@
   "tech": "Ukupna površina: 6.000 m",
   "status": "2013",
   "image": "images/projects/poslovni-objekat-emerald-house-gana.jpg",
+  "imageW": 3648,
   "gallery": [
    "images/projects/poslovni-objekat-emerald-house-gana-1.jpg"
   ]
@@ -3470,6 +3631,7 @@
   "tech": "Ukupna površina: 11.000 m",
   "status": "2013",
   "image": "images/projects/atlantic-tower-faza-i-gana.jpg",
+  "imageW": 1877,
   "gallery": [
    "images/projects/atlantic-tower-faza-i-gana-1.jpg",
    "images/projects/atlantic-tower-faza-i-gana-2.jpg"
@@ -3490,6 +3652,7 @@
   "tech": "Ukupna pobršina: 27.000m",
   "status": "2012",
   "image": "images/projects/stambeni-kompleks-ruska-federacija.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/stambeni-kompleks-ruska-federacija-1.jpg",
    "images/projects/stambeni-kompleks-ruska-federacija-2.jpg"
@@ -3512,6 +3675,7 @@
   "tech": "Ukupna površina: 25.000m",
   "status": "2012",
   "image": "images/projects/hotel-sa-5-zvezdica-caspian-riviere-grand-palace-kazahstan.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/hotel-sa-5-zvezdica-caspian-riviere-grand-palace-kazahstan-1.jpg",
    "images/projects/hotel-sa-5-zvezdica-caspian-riviere-grand-palace-kazahstan-2.jpg"
@@ -3534,6 +3698,7 @@
   "tech": "Ukupna površina: 4.800 m²",
   "status": "2012",
   "image": "images/projects/poslovni-objekat-kompanije-ep-ghana-ltd.jpg",
+  "imageW": 692,
   "gallery": [
    "images/projects/poslovni-objekat-kompanije-ep-ghana-ltd-1.jpg"
   ]
@@ -3555,6 +3720,7 @@
   "tech": "",
   "status": "2009 / 2012 / 2013",
   "image": "images/projects/palata-guvernera-faza-ii-nigerija.jpg",
+  "imageW": 2848,
   "gallery": [
    "images/projects/palata-guvernera-faza-ii-nigerija-1.jpg",
    "images/projects/palata-guvernera-faza-ii-nigerija-2.jpg"
@@ -3577,6 +3743,7 @@
   "tech": "Ukupna površina: 12.000 m",
   "status": "2012",
   "image": "images/projects/stambeni-objekat-a4-na-lokaciji-kasarne-stepa-stepanovic-na-vozdovcu-s.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/stambeni-objekat-a4-na-lokaciji-kasarne-stepa-stepanovic-na-vozdovcu-s-1.jpg",
    "images/projects/stambeni-objekat-a4-na-lokaciji-kasarne-stepa-stepanovic-na-vozdovcu-s-2.jpg"
@@ -3599,6 +3766,7 @@
   "tech": "",
   "status": "2011",
   "image": "images/projects/kompleks-nacionalne-skupstine-deo-ii-faza-iii.jpg",
+  "imageW": 1600,
   "gallery": [
    "images/projects/kompleks-nacionalne-skupstine-deo-ii-faza-iii-1.jpg",
    "images/projects/kompleks-nacionalne-skupstine-deo-ii-faza-iii-2.jpg"
@@ -3621,6 +3789,7 @@
   "tech": "Dužina: 66 km, širine 7 m, sa bermom širine 2 m",
   "status": "2009",
   "image": "images/projects/rehabilitacija-puta-kawempe-luwero.jpg",
+  "imageW": 1280,
   "gallery": []
  },
  {
@@ -3640,6 +3809,7 @@
   "tech": "Ukupni kapacitet: 800MWac; povezivanje na 2×220 kV i na 1×220 kV mrežu",
   "status": "U toku",
   "image": "images/projects/dve-solarne-elektrane-za-katar-petroleum-u-industrijskim-gradovima-ras.jpg",
+  "imageW": 653,
   "gallery": []
  },
  {
@@ -3659,6 +3829,7 @@
   "tech": "Solarna elektrana kapaciteta 1.500 MW; približno 4 miliona solarnih panela; povezivanje na 400 kV mrežu",
   "status": "U toku",
   "image": "images/projects/povezivanje-solarne-elekrana-u-al-dhafrah-na-prenosnu-mrezu-istocna-re.jpg",
+  "imageW": 813,
   "gallery": []
  },
  {
@@ -3678,6 +3849,7 @@
   "tech": "Solarna elektrana kapaciteta: 800MWac; povezivanje na 1×220 kV i na 2×132 kV",
   "status": "U toku",
   "image": "images/projects/solarna-elektrana-800-mw-u-al-kharsaa.jpg",
+  "imageW": 798,
   "gallery": []
  },
  {
@@ -3698,6 +3870,7 @@
   "tech": "Instalisana snaga 96.6 MW + 71.4 MW; 23+17 vetroturbina",
   "status": "2021.",
   "image": "images/projects/izgradnja-3-vetroelektane-banat-banat-2-i-banat-3.jpg",
+  "imageW": 5443,
   "gallery": []
  },
  {
@@ -3718,6 +3891,7 @@
   "tech": "Instalisana snaga 66 MW; 20 vetroturbina",
   "status": "U toku",
   "image": "images/projects/projekat-izgradnje-vetroelektrane-kostolac-vetroelektrana.jpg",
+  "imageW": 800,
   "gallery": []
  },
  {
@@ -3737,6 +3911,7 @@
   "tech": "Instalisana snaga 300 MW; 50 vetroturbina",
   "status": "U toku",
   "image": "images/projects/vetroelektrana-vetrozelena.jpg",
+  "imageW": 572,
   "gallery": []
  },
  {
@@ -3757,6 +3932,7 @@
   "tech": "Instalisana snaga 85 MW; 15 vetroturbina",
   "status": "2022.",
   "image": "images/projects/izgradnja-vetroparka-u-basaidu.jpg",
+  "imageW": 700,
   "gallery": []
  },
  {
@@ -3776,6 +3952,7 @@
   "tech": "Vetroelektrana ukupne instalisane snage 158 MW se sastoji od 57 turbina na energiju vetra pojedinačne snage  2.78 MW. Generatori vetroturbina su povezani 35kV mrežom kablova na 35/400kV trafostanicu i dalje na elektroprenosni sistem Srbije",
   "status": "2016.",
   "image": "images/projects/vetroelektrana-cibuk-1-158-mw.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/vetroelektrana-cibuk-1-158-mw-1.jpg",
    "images/projects/vetroelektrana-cibuk-1-158-mw-2.jpg"
@@ -3799,6 +3976,7 @@
   "tech": "Poboljšanje energetske efikasnosti; infrastrukturni objekti za novu deponiju uglja u RB Kolubara na površinskom kopu Tamnava-Zapadno polje",
   "status": "2019",
   "image": "images/projects/rb-kolubara-nova-deponija-za-ugalj-paket-c2-infrastruktura-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/rb-kolubara-nova-deponija-za-ugalj-paket-c2-infrastruktura-srbija-1.jpg",
    "images/projects/rb-kolubara-nova-deponija-za-ugalj-paket-c2-infrastruktura-srbija-2.jpg"
@@ -3821,6 +3999,7 @@
   "tech": "TS 110/33 kV",
   "status": "2018",
   "image": "images/projects/izgradnja-transformatorske-stanice-110-33-kv-gabiro-ruanda.jpg",
+  "imageW": 800,
   "gallery": []
  },
  {
@@ -3841,6 +4020,7 @@
   "tech": "Dvostruki dalekovod: 132kV; Dužina: 24+18km",
   "status": "2018",
   "image": "images/projects/dva-dvostruka-dalekovoda-132kv-afam-trans-amadi-elenwo-rukpokwu-port-h.jpg",
+  "imageW": 1600,
   "gallery": [
    "images/projects/dva-dvostruka-dalekovoda-132kv-afam-trans-amadi-elenwo-rukpokwu-port-h-1.jpg"
   ]
@@ -3863,6 +4043,7 @@
   "tech": "DV: 2×400 KV, dužina 70 km",
   "status": "2017",
   "image": "images/projects/izgradnja-dalekovoda-2x400-kv-pancevo-2-granica-rumunije.jpg",
+  "imageW": 1920,
   "gallery": [
    "images/projects/izgradnja-dalekovoda-2x400-kv-pancevo-2-granica-rumunije-1.jpg",
    "images/projects/izgradnja-dalekovoda-2x400-kv-pancevo-2-granica-rumunije-2.jpg"
@@ -3886,6 +4067,7 @@
   "tech": "Rehabilitacija 348.5 MW bloka uključujući: zamenu cevnog sistema kotla i instralaciju primarnih deNOx mera ; rehabilitaciju turbinskog postrojenja; zamenu glavnih cevovoda; rekonstrukciju elektrofiltarskog postrojenja; ugradnju sistema za odsumporavanje",
   "status": "2017",
   "image": "images/projects/rehabilitacija-bloka-b1-i-projekat-izgradnje-postrojenja-za-odsumporav.jpg",
+  "imageW": 2500,
   "gallery": [
    "images/projects/rehabilitacija-bloka-b1-i-projekat-izgradnje-postrojenja-za-odsumporav-1.jpg",
    "images/projects/rehabilitacija-bloka-b1-i-projekat-izgradnje-postrojenja-za-odsumporav-2.jpg"
@@ -3909,6 +4091,7 @@
   "tech": "Kapacitet proizvodnje el. energije: 2.400 MW; Kapacitet proizvodnje pitke vode: 590.000 m3/dan",
   "status": "2016",
   "image": "images/projects/izgradnja-postrojenja-d-za-proizvodnju-elektricne-energije-i-pitke-vod.jpg",
+  "imageW": 1571,
   "gallery": [
    "images/projects/izgradnja-postrojenja-d-za-proizvodnju-elektricne-energije-i-pitke-vod-1.jpg",
    "images/projects/izgradnja-postrojenja-d-za-proizvodnju-elektricne-energije-i-pitke-vod-2.jpg"
@@ -3931,6 +4114,7 @@
   "tech": "Hidroelektrana instalisane snage 101,4 MW, vodozahvat 68 m3/s",
   "status": "2016",
   "image": "images/projects/rekonstrukcija-hidroelektrane-machu-picchu-faza-ii-etapa-ii.jpg",
+  "imageW": 3648,
   "gallery": [
    "images/projects/rekonstrukcija-hidroelektrane-machu-picchu-faza-ii-etapa-ii-1.jpg",
    "images/projects/rekonstrukcija-hidroelektrane-machu-picchu-faza-ii-etapa-ii-2.jpg"
@@ -3954,6 +4138,7 @@
   "tech": "Snaga svake HE po 20MW",
   "status": "2016",
   "image": "images/projects/izvodjenje-gradjevinskih-radova-na-izgradnji-hidroelektrana-chancay-i.jpg",
+  "imageW": 960,
   "gallery": [
    "images/projects/izvodjenje-gradjevinskih-radova-na-izgradnji-hidroelektrana-chancay-i-1.jpg",
    "images/projects/izvodjenje-gradjevinskih-radova-na-izgradnji-hidroelektrana-chancay-i-2.jpg"
@@ -3976,6 +4161,7 @@
   "tech": "Ukupna površina: 3.800m²",
   "status": "2011",
   "image": "images/projects/auto-centar-stojanovic.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/auto-centar-stojanovic-1.jpg",
    "images/projects/auto-centar-stojanovic-2.jpg"
@@ -3998,6 +4184,7 @@
   "tech": "Ukupna površina: 12.465m²",
   "status": "2010",
   "image": "images/projects/poslovni-objekat-kazmortransflot-kazahstan.jpg",
+  "imageW": 900,
   "gallery": []
  },
  {
@@ -4017,6 +4204,7 @@
   "tech": "Ukupna površina: 5.000m²",
   "status": "2010",
   "image": "images/projects/poslovni-objekat-amerigan-resources-gana.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/poslovni-objekat-amerigan-resources-gana-1.jpg",
    "images/projects/poslovni-objekat-amerigan-resources-gana-2.jpg"
@@ -4039,6 +4227,7 @@
   "tech": "Ukupna površina: 49.000m²; Spoljni radovi: 4.8Ha",
   "status": "2009",
   "image": "images/projects/trgovinsko-rekreativni-kompleks-kazahstan.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/trgovinsko-rekreativni-kompleks-kazahstan-1.jpg",
    "images/projects/trgovinsko-rekreativni-kompleks-kazahstan-2.jpg"
@@ -4061,6 +4250,7 @@
   "tech": "Ukupna površina: 50.700 m²",
   "status": "2009[/vc_column_text][/vc_column][/vc_row][vc_row css=“.vc_custom_1538508645277{margin-top: -10px !important;}“][vc_column]",
   "image": "images/projects/poslovni-objekat-blue-centar-i-zgrada-sertifikovana-po-breeam-standard.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/poslovni-objekat-blue-centar-i-zgrada-sertifikovana-po-breeam-standard-1.jpg",
    "images/projects/poslovni-objekat-blue-centar-i-zgrada-sertifikovana-po-breeam-standard-2.jpg"
@@ -4084,6 +4274,7 @@
   "tech": "Stambeni objekat 10.000m²; Poslovni objekat 20.000m²; podzemna garaža 7.000m²",
   "status": "2009",
   "image": "images/projects/belville-univerzitetsko-naselje-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/belville-univerzitetsko-naselje-srbija-1.jpg",
    "images/projects/belville-univerzitetsko-naselje-srbija-2.jpg"
@@ -4106,6 +4297,7 @@
   "tech": "Blok 6: 15.000m², 162 apartmana; Blok 12: 3.800m², 39 apartmana; Blok 23: 3.800m², 56 apartmana;",
   "status": "2008/2009[/vc_column_text][/vc_column][/vc_row][vc_row css=“.vc_custom_1538508645277{margin-top: -10px !important;}“][vc_column]",
   "image": "images/projects/rezidencijalni-kompleks-blokovi-6-12-23-bezanisjka-kosa-beograd-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/rezidencijalni-kompleks-blokovi-6-12-23-bezanisjka-kosa-beograd-srbija-1.jpg",
    "images/projects/rezidencijalni-kompleks-blokovi-6-12-23-bezanisjka-kosa-beograd-srbija-2.jpg"
@@ -4128,6 +4320,7 @@
   "tech": "Kapacitet bloka A3: 305 MW",
   "status": "2015",
   "image": "images/projects/rekonstrukcija-elektrofilterskog-postrojenja-na-bloku-a3-termoelektran.jpg",
+  "imageW": 3000,
   "gallery": [
    "images/projects/rekonstrukcija-elektrofilterskog-postrojenja-na-bloku-a3-termoelektran-1.jpg",
    "images/projects/rekonstrukcija-elektrofilterskog-postrojenja-na-bloku-a3-termoelektran-2.jpg"
@@ -4151,6 +4344,7 @@
   "tech": "Zamena provodnika na dva dalekovoda na prelazu preko Dunava, 220kV DV(TS Beograd 8 – TS HIP 2, Pančevo) i 400 kV DV (TS Beograd 8 – TS Pančevo 2)",
   "status": "2015",
   "image": "images/projects/zamena-postojeceg-specijalnog-provodnika-na-prelazu-dalekovoda-preko-d.jpg",
+  "imageW": 3420,
   "gallery": [
    "images/projects/zamena-postojeceg-specijalnog-provodnika-na-prelazu-dalekovoda-preko-d-1.jpg",
    "images/projects/zamena-postojeceg-specijalnog-provodnika-na-prelazu-dalekovoda-preko-d-2.jpg"
@@ -4171,6 +4365,7 @@
   "tech": "Protočna HE instalisane snage 15 MW",
   "status": "2015",
   "image": "images/projects/hidroelektrana-cijevna-3-bosna-i-hercegovina.jpg",
+  "imageW": 729,
   "gallery": []
  },
  {
@@ -4188,6 +4383,7 @@
   "tech": "Površina hotela: 17.785m²; univerzalni bazen: 14.630m²",
   "status": "2008",
   "image": "images/projects/hotelski-kompleks-sa-bazenom-ruska-federacija.jpg",
+  "imageW": 724,
   "gallery": [
    "images/projects/hotelski-kompleks-sa-bazenom-ruska-federacija-1.jpg"
   ]
@@ -4209,6 +4405,7 @@
   "tech": "Ukupna površina: 7.500m²; spoljno uređenje 3.500m²",
   "status": "2008",
   "image": "images/projects/poslovni-objekat-dennis-house-gana.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/poslovni-objekat-dennis-house-gana-1.jpg",
    "images/projects/poslovni-objekat-dennis-house-gana-2.jpg"
@@ -4231,6 +4428,7 @@
   "tech": "Ukupna površina: 22.000m²; 108 apartmana;",
   "status": "2008[/vc_column_text][/vc_column][/vc_row][vc_row css=“.vc_custom_1538508645277{margin-top: -10px !important;}“][vc_column]",
   "image": "images/projects/apartmansko-naselje-savina.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/apartmansko-naselje-savina-1.jpg",
    "images/projects/apartmansko-naselje-savina-2.jpg"
@@ -4253,6 +4451,7 @@
   "tech": "Ukupna površina: 31.450m²; 362 stana;",
   "status": "2007[/vc_column_text][/vc_column][/vc_row][vc_row css=“.vc_custom_1538508645277{margin-top: -10px !important;}“][vc_column]",
   "image": "images/projects/stambeno-komercijalni-kompleks-blok-15-bezanijska-kosa-beograd-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/stambeno-komercijalni-kompleks-blok-15-bezanijska-kosa-beograd-srbija-1.jpg",
    "images/projects/stambeno-komercijalni-kompleks-blok-15-bezanijska-kosa-beograd-srbija-2.jpg"
@@ -4275,6 +4474,7 @@
   "tech": "Konsultantske usluge za prosirenje kapaciteta elektroprenosnog sistema Katara",
   "status": "2014",
   "image": "images/projects/prosirenje-kapaciteta-elektroprenosnog-sistema-faze-vii-viii-ix.jpg",
+  "imageW": 2592,
   "gallery": [
    "images/projects/prosirenje-kapaciteta-elektroprenosnog-sistema-faze-vii-viii-ix-1.jpg",
    "images/projects/prosirenje-kapaciteta-elektroprenosnog-sistema-faze-vii-viii-ix-2.jpg"
@@ -4298,6 +4498,7 @@
   "tech": "Dva dvostruka dalekovoda: 2x162km",
   "status": "2015",
   "image": "images/projects/dvostruki-dalekovod-330kv-erukan-omotosho-lot-1-nigerija.jpg",
+  "imageW": 3648,
   "gallery": [
    "images/projects/dvostruki-dalekovod-330kv-erukan-omotosho-lot-1-nigerija-1.jpg",
    "images/projects/dvostruki-dalekovod-330kv-erukan-omotosho-lot-1-nigerija-2.jpg"
@@ -4321,6 +4522,7 @@
   "tech": "Razvodno postrojenje Ugwuaji (1 x 150MVA 330/132kV i 1 x 60MVA 132/33kV) i dvostruki dalekovod 300 kV New Haven – Ugwuaji, Enugu dužine 9km",
   "status": "2014/2015",
   "image": "images/projects/izgradnja-razvodnog-postrojenja-ugwuaji-i-330kv-dvostrukog-dalekovoda.jpg",
+  "imageW": 987,
   "gallery": [
    "images/projects/izgradnja-razvodnog-postrojenja-ugwuaji-i-330kv-dvostrukog-dalekovoda-1.jpg",
    "images/projects/izgradnja-razvodnog-postrojenja-ugwuaji-i-330kv-dvostrukog-dalekovoda-2.jpg"
@@ -4344,6 +4546,7 @@
   "tech": "dvostruki DV: 132 kV",
   "status": "2014",
   "image": "images/projects/dvostruki-dalekovod-132kv-i-podzemnni-kabl-katampe-novi-stadion.jpg",
+  "imageW": 1024,
   "gallery": [
    "images/projects/dvostruki-dalekovod-132kv-i-podzemnni-kabl-katampe-novi-stadion-1.jpg",
    "images/projects/dvostruki-dalekovod-132kv-i-podzemnni-kabl-katampe-novi-stadion-2.jpg"
@@ -4367,6 +4570,7 @@
   "tech": "HE Brodarevo 1 (betonska brana visine 39 m, HE instalisane snage 26 MW) HE Brodarevo 2 (betonska brana visine 46 m, HE instalisane snage 32 MW)",
   "status": "2014",
   "image": "images/projects/hidroelektrana-brodarevo-1-i-hidroelektrana-brodarevo-2.jpg",
+  "imageW": 523,
   "gallery": [
    "images/projects/hidroelektrana-brodarevo-1-i-hidroelektrana-brodarevo-2-1.jpg"
   ]
@@ -4389,6 +4593,7 @@
   "tech": "Dužina pristupnih puteva : 4 km",
   "status": "2013",
   "image": "images/projects/izvodjenje-gradjevinskih-radova-na-izgradnji-hidroelektrana-chancay-i.jpg",
+  "imageW": 960,
   "gallery": [
    "images/projects/izvodjenje-gradjevinskih-radova-na-izgradnji-hidroelektrana-chancay-i-1.jpg",
    "images/projects/izvodjenje-gradjevinskih-radova-na-izgradnji-hidroelektrana-chancay-i-2.jpg"
@@ -4412,6 +4617,7 @@
   "tech": "Razvodno postrojenje: 2x300MVA; 330/132kV; 2X60MVA, 132/33kV",
   "status": "2013",
   "image": "images/projects/trafostanica-oke-aro-erukan.jpg",
+  "imageW": 1667,
   "gallery": [
    "images/projects/trafostanica-oke-aro-erukan-1.jpg",
    "images/projects/trafostanica-oke-aro-erukan-2.jpg"
@@ -4434,6 +4640,7 @@
   "tech": "Hidroelektrana instalisane snage 4 x 109 MW",
   "status": "2013",
   "image": "images/projects/rehabilitacija-he-bajina-basta.jpg",
+  "imageW": 897,
   "gallery": []
  },
  {
@@ -4452,6 +4659,7 @@
   "tech": "Hidroelektrana instalisane snage 35 MW i nasuta brana visine h=75 m;",
   "status": "2013",
   "image": "images/projects/hidroelektrana-sutjeska.jpg",
+  "imageW": 899,
   "gallery": []
  },
  {
@@ -4471,6 +4679,7 @@
   "tech": "Revitalizacija agregata broj 4 (205 MW) i broj 6 (205 MW)",
   "status": "2013",
   "image": "images/projects/revitalizacija-hidroagregata-u-hidroelektrani-djerdap-1-srbija.jpg",
+  "imageW": 1500,
   "gallery": []
  },
  {
@@ -4490,6 +4699,7 @@
   "tech": "Hidroelektrana instalisane snage 101.4 MW, vodozahvat 68m3/s",
   "status": "2012",
   "image": "images/projects/rekonstrukcija-hidroelektrane-machu-picchu-faza-ii-etapa-i-peru.jpg",
+  "imageW": 3648,
   "gallery": [
    "images/projects/rekonstrukcija-hidroelektrane-machu-picchu-faza-ii-etapa-i-peru-1.jpg",
    "images/projects/rekonstrukcija-hidroelektrane-machu-picchu-faza-ii-etapa-i-peru-2.jpg"
@@ -4510,6 +4720,7 @@
   "tech": "Betonska lučna brana, visina h=69 m; HE instalisane snage 2 x 22,5 MW",
   "status": "2012",
   "image": "images/projects/hidroelektrana-sveta-petka.jpg",
+  "imageW": 1000,
   "gallery": [
    "images/projects/hidroelektrana-sveta-petka-1.jpg"
   ]
@@ -4532,6 +4743,7 @@
   "tech": "Kapacitet 32 MW, 3 kotla za toplu vodu, toplotna podstanica, centralni parni kotao, CMS (centralni sistem nadzora), 8 unutrašnjih topotnih instalacija, 1.8 km gradskog toplovoda, 18 podstanica",
   "status": "2012",
   "image": "images/projects/novo-energetsko-snabdevanje-klinickog-centra-nis.jpg",
+  "imageW": 3872,
   "gallery": [
    "images/projects/novo-energetsko-snabdevanje-klinickog-centra-nis-1.jpg",
    "images/projects/novo-energetsko-snabdevanje-klinickog-centra-nis-2.jpg"
@@ -4555,6 +4767,7 @@
   "tech": "Instalisana snaga blok B2: 348.5 MW",
   "status": "2012",
   "image": "images/projects/rehabilitacija-bloka-b2-i-rekonstrukcija-elektrofiltera-na-termoelektr.jpg",
+  "imageW": 2734,
   "gallery": [
    "images/projects/rehabilitacija-bloka-b2-i-rekonstrukcija-elektrofiltera-na-termoelektr-1.jpg",
    "images/projects/rehabilitacija-bloka-b2-i-rekonstrukcija-elektrofiltera-na-termoelektr-2.jpg"
@@ -4577,6 +4790,7 @@
   "tech": "",
   "status": "2012",
   "image": "images/projects/rekonstrukcija-toplane-novi-beograd.jpg",
+  "imageW": 3872,
   "gallery": [
    "images/projects/rekonstrukcija-toplane-novi-beograd-1.jpg",
    "images/projects/rekonstrukcija-toplane-novi-beograd-2.jpg"
@@ -4599,6 +4813,7 @@
   "tech": "Ukupna površina: 6.000m²; Kapacitet: 3.000 sedišta",
   "status": "2007",
   "image": "images/projects/sportska-hala-igalo-crna-gora.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/sportska-hala-igalo-crna-gora-1.jpg",
    "images/projects/sportska-hala-igalo-crna-gora-2.jpg"
@@ -4621,6 +4836,7 @@
   "tech": "Površina 16.200 m",
   "status": "2007",
   "image": "images/projects/poslovno-komercijalni-centar-uraljsk-uraljsk-kazahstan.jpg",
+  "imageW": 1000,
   "gallery": [
    "images/projects/poslovno-komercijalni-centar-uraljsk-uraljsk-kazahstan-1.jpg",
    "images/projects/poslovno-komercijalni-centar-uraljsk-uraljsk-kazahstan-2.jpg"
@@ -4641,6 +4857,7 @@
   "tech": "14.460 m",
   "status": "2007",
   "image": "images/projects/hotelsko-poslovni-kompleks-avalon-siktivkar-ruska-federacija.jpg",
+  "imageW": 720,
   "gallery": [
    "images/projects/hotelsko-poslovni-kompleks-avalon-siktivkar-ruska-federacija-1.jpg",
    "images/projects/hotelsko-poslovni-kompleks-avalon-siktivkar-ruska-federacija-2.jpg"
@@ -4663,6 +4880,7 @@
   "tech": "Površina 68.390m2, 548 stanova;",
   "status": "2006[/vc_column_text][/vc_column][/vc_row][vc_row css=“.vc_custom_1538508645277{margin-top: -10px !important;}“][vc_column]",
   "image": "images/projects/stambeno-komercijalni-kompleks-blok-29-novi-beograd.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/stambeno-komercijalni-kompleks-blok-29-novi-beograd-1.jpg",
    "images/projects/stambeno-komercijalni-kompleks-blok-29-novi-beograd-2.jpg"
@@ -4685,6 +4903,7 @@
   "tech": "Površina 16.000 m",
   "status": "2005[/vc_column_text][/vc_column][/vc_row][vc_row css=“.vc_custom_1538508645277{margin-top: -10px !important;}“][vc_column]",
   "image": "images/projects/poslovno-komercijalni-centar-atirau-atirau-kazahstan.jpg",
+  "imageW": 2268,
   "gallery": [
    "images/projects/poslovno-komercijalni-centar-atirau-atirau-kazahstan-1.jpg",
    "images/projects/poslovno-komercijalni-centar-atirau-atirau-kazahstan-2.jpg"
@@ -4707,6 +4926,7 @@
   "tech": "površina 180.600 m2",
   "status": "1998/2002/2004[/vc_column_text][/vc_column][/vc_row][vc_row css=“.vc_custom_1538508645277{margin-top: -10px !important;}“][vc_column]",
   "image": "images/projects/yubc-blok-12-novi-beograd-srbija.jpg",
+  "imageW": 2000,
   "gallery": [
    "images/projects/yubc-blok-12-novi-beograd-srbija-1.jpg",
    "images/projects/yubc-blok-12-novi-beograd-srbija-2.jpg"
@@ -4730,6 +4950,7 @@
   "tech": "Dvostruki dalekovod: 400kV Dužina: 100km",
   "status": "2012",
   "image": "images/projects/dvostruki-dalekovod-400kv-leskovac-granica-bjr-makedonija-srbija.jpg",
+  "imageW": 2272,
   "gallery": [
    "images/projects/dvostruki-dalekovod-400kv-leskovac-granica-bjr-makedonija-srbija-1.jpg",
    "images/projects/dvostruki-dalekovod-400kv-leskovac-granica-bjr-makedonija-srbija-2.jpg"
@@ -4753,6 +4974,7 @@
   "tech": "Betonska lučna brana visine 185m, HE instalisane snage 4 x 75 MW",
   "status": "2009",
   "image": "images/projects/hidroelektrana-tekeze-etiopija.jpg",
+  "imageW": 1200,
   "gallery": [
    "images/projects/hidroelektrana-tekeze-etiopija-1.jpg"
   ]
@@ -4774,6 +4996,7 @@
   "tech": "",
   "status": "2008",
   "image": "images/projects/rekonstruckija-i-pojacavanje-toplane-konjarnik-srbija.jpg",
+  "imageW": 1600,
   "gallery": [
    "images/projects/rekonstruckija-i-pojacavanje-toplane-konjarnik-srbija-1.jpg",
    "images/projects/rekonstruckija-i-pojacavanje-toplane-konjarnik-srbija-2.jpg"
@@ -4797,6 +5020,7 @@
   "tech": "Kapacitet: 1,8MWe i 1,8MWt; tri vrelovodna kotla od po 40MW, pumpna stanica daljinskog grejanja, parni kotlovi (6t/h), pomoćna kotlarnica sa 2 parna kotla (2×2,5t/h), centralni sistem upravljanja",
   "status": "2008",
   "image": "images/projects/novo-energetsko-snabdevanje-kcs-beograd-kogeneracija-postrojenje-za-ko.jpg",
+  "imageW": 2272,
   "gallery": [
    "images/projects/novo-energetsko-snabdevanje-kcs-beograd-kogeneracija-postrojenje-za-ko-1.jpg",
    "images/projects/novo-energetsko-snabdevanje-kcs-beograd-kogeneracija-postrojenje-za-ko-2.jpg"
@@ -4820,6 +5044,7 @@
   "tech": "Instalisana snaga bloka A5 – 110MW",
   "status": "2009",
   "image": "images/projects/rekonstrukcija-elektrofiltera-i-sistema-za-otpepeljavanje-na-bloku-a5.jpg",
+  "imageW": 2136,
   "gallery": [
    "images/projects/rekonstrukcija-elektrofiltera-i-sistema-za-otpepeljavanje-na-bloku-a5-1.jpg",
    "images/projects/rekonstrukcija-elektrofiltera-i-sistema-za-otpepeljavanje-na-bloku-a5-2.jpg"
@@ -4843,6 +5068,7 @@
   "tech": "Dvostruki dalekovod: 400kV Dužina: 40km",
   "status": "2009",
   "image": "images/projects/dvostruki-dalekovod-400kv-nis-leskovac.jpg",
+  "imageW": 2304,
   "gallery": [
    "images/projects/dvostruki-dalekovod-400kv-nis-leskovac-1.jpg"
   ]
@@ -4864,6 +5090,7 @@
   "tech": "Jednostepena brodska prevodnica dimezija 34 m x 310 m",
   "status": "2019.",
   "image": "images/projects/rekonstrukcija-brodske-prevodnice-he-djerdap-2.jpg",
+  "imageW": 1250,
   "gallery": []
  },
  {
@@ -4883,6 +5110,7 @@
   "tech": "Dvostepena brodska prevodnica dimezija 34 m x 310 m",
   "status": "2019. / 2021. / u toku",
   "image": "images/projects/sanacija-gradjevinskih-objekata-brodske-prevodnice-he-djerdap-1.jpg",
+  "imageW": 2000,
   "gallery": []
  },
  {
@@ -4902,6 +5130,7 @@
   "tech": "Regionalna deponija za 11 opština (380,000 stanovnika), površine 40 ha",
   "status": "2019.",
   "image": "images/projects/deponija-vinca-sa-postrojenjem-za-proizvodnju-energije-iz-otpada.jpg",
+  "imageW": 956,
   "gallery": []
  }
 ]

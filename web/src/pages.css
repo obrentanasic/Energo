@@ -227,3 +227,8 @@ a.pdf-row { display: flex; }
 
 /* Aspect-ratio slots size themselves; avoid percent-height resolving against grid rows. */
 .img-slot.ar-4-3, .img-slot.ar-3-2, .img-slot.ar-16-9 { height: auto; }
+
+/* Lower-resolution source photos: keep them at natural proportions instead of stretching full width. */
+.contained-hero { max-width: 880px; margin: 0 auto; }
+.contained-hero .img-slot { height: auto; }
+.contained-hero .img-slot > img { position: static; height: auto; }

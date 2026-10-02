@@ -85,6 +85,7 @@ def full_img(u):
 
 
 _seen = {}
+_dims = {}
 
 
 def save_image(url, name, width, quality=72):
@@ -99,10 +100,13 @@ def save_image(url, name, width, quality=72):
         except Exception as e:  # noqa: BLE001
             print('  image failed', url, e)
             return None
+        _dims[rel] = im.width
         if im.width > width:
             im = im.resize((width, round(im.height * width / im.width)), Image.LANCZOS)
         os.makedirs(os.path.dirname(path), exist_ok=True)
         im.save(path, 'JPEG', quality=quality, optimize=True, progressive=True)
+    if rel not in _dims:
+        _dims[rel] = Image.open(path).width
     _seen[rel] = rel
     return rel
 
@@ -225,20 +229,22 @@ def build(d):
     for pr in projects:
         imgs = pr['_imgs']
         if imgs:
-            jobs.append((imgs[0], f"projects/{pr['slug']}", 1100))
-        jobs += [(u, f"projects/{pr['slug']}-{i}", 760) for i, u in enumerate(imgs[1:3], 1)]
+            jobs.append((imgs[0], f"projects/{pr['slug']}", 1600))
+        jobs += [(u, f"projects/{pr['slug']}-{i}", 960) for i, u in enumerate(imgs[1:3], 1)]
     for n in news:
         if n['_img']:
-            jobs.append((n['_img'], f"news/{n['slug']}", 960))
+            jobs.append((n['_img'], f"news/{n['slug']}", 1200))
     with ThreadPoolExecutor(8) as ex:
-        done = list(ex.map(lambda j: save_image(*j, quality=68), jobs))
+        done = list(ex.map(lambda j: save_image(*j, quality=80), jobs))
     got = {j[1]: r for j, r in zip(jobs, done)}
     for pr in projects:
         imgs = pr.pop('_imgs')
         pr['image'] = got.get(f"projects/{pr['slug']}")
+        pr['imageW'] = _dims.get(pr['image'])
         pr['gallery'] = [got[k] for k in (f"projects/{pr['slug']}-{i}" for i in (1, 2)) if got.get(k)]
     for n in news:
         n['image'] = got.get(f"news/{n['slug']}")
+        n['imageW'] = _dims.get(n['image'])
         n.pop('_img')
 
     # pages

@@ -1,8 +1,9 @@
 // Photos picked from the imported project / news images for the page heroes (all paths come from the importer).
 import { newsList, projectList } from '../data'
 
-const proj = (re, fallback = 0) => projectList.filter(p => p.image).find(p => re.test(p.title))?.image ?? projectList.filter(p => p.image)[fallback]?.image ?? null
-const news = (re, fallback = 0) => newsList.filter(n => n.image).find(n => re.test(n.title))?.image ?? newsList.filter(n => n.image)[fallback]?.image ?? null
+const BIG = 1400 // only sharp photos go full-bleed
+const proj = (re, fallback = 0) => projectList.filter(p => p.image && p.imageW >= BIG).find(p => re.test(p.title))?.image ?? projectList.filter(p => p.image && p.imageW >= BIG)[fallback]?.image ?? null
+const news = (re, fallback = 0) => newsList.filter(n => n.image && n.imageW >= BIG).find(n => re.test(n.title))?.image ?? newsList.filter(n => n.image && n.imageW >= BIG)[fallback]?.image ?? null
 
 export const heroImages = {
   home: proj(/karuma/i, 0),

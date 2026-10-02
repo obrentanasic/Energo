@@ -17,7 +17,9 @@ export default function Vest() {
         <Meta parts={[n.dateLabel, n.cat]} />
         <h1 className="h1" style={{ marginTop: 16, maxWidth: 900 }}>{n.title}</h1>
       </div>
-      {n.image && <div className="wide-hero"><ImageSlot src={n.image} alt={n.title} /></div>}
+      {n.image && (n.imageW >= 1400
+        ? <div className="wide-hero"><ImageSlot src={n.image} alt={n.title} /></div>
+        : <div className="section no-bottom" style={{ paddingTop: 0 }}><div className="contained-hero"><ImageSlot src={n.image} alt={n.title} /></div></div>)}
       <article className="prose top">
         {n.body.map((t, i) => <p key={i}>{t}</p>)}
       </article>

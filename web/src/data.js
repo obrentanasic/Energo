@@ -39,7 +39,7 @@ const shorten = (t, n = 130) => (t.length <= n ? t : t.slice(0, n).replace(/\s+\
 
 const stories = newsRaw.map(n => ({
   slug: n.slug, title: shorten(n.title), cat: company(n.company), date: n.date, dateLabel: fmtDate(n.date),
-  text: excerpt(n.body), body: n.body, image: img(n.image), kind: 'story',
+  text: excerpt(n.body), body: n.body, image: img(n.image), imageW: n.imageW, kind: 'story',
 }))
 export const notices = noticesRaw.map(n => ({
   slug: n.slug, title: shorten(n.title), cat: 'Saopštenja', date: n.date, dateLabel: fmtDate(n.date),
