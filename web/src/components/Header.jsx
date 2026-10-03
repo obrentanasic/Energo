@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { megaMenu, nav } from '../content/site'
-import { offices, searchIndex } from '../data'
+import { matcher, offices, searchIndex } from '../data'
+import { OFFICE_PINS } from '../content/worldmap'
+import OfficeMap from './OfficeMap'
 
 function CloseButton({ onClick, small }) {
   return (
@@ -12,9 +14,10 @@ function CloseButton({ onClick, small }) {
 
 function SearchOverlay({ onClose }) {
   const [q, setQ] = useState('')
-  const needle = q.trim().toLowerCase()
+  const needle = q.trim()
+  const hit = matcher(needle)
   const groups = searchIndex
-    .map(g => ({ ...g, items: (needle ? g.items.filter(i => i.label.toLowerCase().includes(needle)) : g.items.slice(0, 3)).slice(0, 8) }))
+    .map(g => ({ ...g, items: (needle ? g.items.filter(i => hit(i.label)) : g.items.slice(0, 3)).slice(0, 8) }))
     .filter(g => g.items.length)
 
   return (
@@ -78,16 +81,29 @@ function MegaMenu({ onClose }) {
   )
 }
 
+// HQ first, then the abroad offices in map order; company names come from the old /kontakt page.
+const officeRows = OFFICE_PINS.map(p => ({
+  ...p,
+  name: p.city === 'Beograd' ? 'Energoprojekt Holding a.d. – sedište' : offices.find(o => o.city === p.country)?.country || '',
+}))
+
 function OfficesModal({ onClose }) {
+  const [active, setActive] = useState(null)
   return (
     <div className="overlay offices-ov" role="dialog" aria-modal="true" aria-labelledby="offices-title"
       onClick={e => { if (e.target === e.currentTarget) onClose() }}>
       <div className="offices-card">
-        <div className="offices-list">
-          <div className="head"><h2 id="offices-title">Naše kancelarije</h2><CloseButton small onClick={onClose} /></div>
-          {offices.map(o => <div className="office-row" key={o.city}><span>{o.city}</span><span>{o.country}</span></div>)}
-        </div>
-        <div className="offices-map eyebrow">Mapa lokacija</div>
+        <div className="offices-head"><h2 id="offices-title">Naše kancelarije</h2><CloseButton small onClick={onClose} /></div>
+        <OfficeMap active={active} onActive={setActive} />
+        <ul className="offices-list">
+          {officeRows.map(o => (
+            <li key={o.city} className={`office-row${o.city === active ? ' on' : ''}`} tabIndex={0}
+              onMouseEnter={() => setActive(o.city)} onMouseLeave={() => setActive(null)} onFocus={() => setActive(o.city)} onBlur={() => setActive(null)}>
+              <span className="where"><span className="country">{o.country}</span><span className="city">{o.city}</span></span>
+              <span className="name">{o.name}</span>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   )
@@ -98,8 +114,12 @@ export default function Header() {
   const [opened, setOpened] = useState(null) // { name: 'mega' | 'search' | 'offices', key }
   const [scrolled, setScrolled] = useState(false)
   const triggerRef = useRef(null)
-  const { key } = useLocation()
-  // history entries have unique keys, so back/forward never reopens an overlay
+  const { key: k, pathname } = useLocation()
+  // history entries have unique keys, so back/forward never reopens an overlay; the entry you land on
+  // (and any hand-typed hash change) all share key "default", so the path is part of the identity too
+  const key = `${pathname}|${k}`
+  const [seenKey, setSeenKey] = useState(key)
+  if (seenKey !== key) { setSeenKey(key); if (opened) setOpened(null) } // any navigation closes overlays
   const overlay = opened && opened.key === key ? opened.name : null
 
   useEffect(() => {

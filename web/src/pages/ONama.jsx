@@ -2,8 +2,10 @@ import { useState } from 'react'
 import Crumbs from '../components/Crumbs'
 import ImageSlot from '../components/ImageSlot'
 import Tabs from '../components/Tabs'
+import OfficeMap from '../components/OfficeMap'
 import { pages, projectList } from '../data'
 import { heroImages } from '../content/images'
+import { OFFICE_PINS } from '../content/worldmap'
 
 const about = pages.about
 const REGIONS = ['Evropa', 'Afrika', 'Bliski istok', 'Azija', 'Južna Amerika']
@@ -29,6 +31,7 @@ function values(ls) {
 
 export default function ONama() {
   const [region, setRegion] = useState('Afrika')
+  const [pin, setPin] = useState(null)
   const intro = about.ko_smo[0]
   const rows = subsidiaryRows(about.ko_smo)
   const vals = values(about.vizija)
@@ -118,8 +121,22 @@ export default function ONama() {
         <p className="lead" style={{ marginBottom: 32, maxWidth: 840 }}>{about.trzista[1]}</p>
         <Tabs rule items={REGIONS} value={region} onChange={setRegion} />
         <div className="markets">
-          <div className="map-box">Mapa sveta – {region}</div>
-          <div>{countriesIn(region).map(c => <div className="list-row" key={c}>{c}</div>)}</div>
+          <div>
+            <OfficeMap region={region} active={pin} onActive={setPin} className="framed" />
+            <div className="map-legend">
+              <span className="eyebrow">Kancelarije u regionu</span>
+              {OFFICE_PINS.filter(p => p.region === region).map(p => (
+                <button type="button" key={p.city} className={`chip${pin === p.city ? ' on' : ''}`}
+                  onMouseEnter={() => setPin(p.city)} onMouseLeave={() => setPin(null)} onFocus={() => setPin(p.city)} onBlur={() => setPin(null)}>
+                  {p.city}, {p.country}{p.city === 'Beograd' ? ' (sedište)' : ''}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div>
+            <div className="eyebrow" style={{ color: 'var(--muted)', marginBottom: 4 }}>Zemlje u kojima smo radili</div>
+            {countriesIn(region).map(c => <div className="list-row" key={c}>{c}</div>)}
+          </div>
         </div>
       </section>
 

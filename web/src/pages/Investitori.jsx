@@ -5,15 +5,22 @@ import Select from '../components/Select'
 import { investors } from '../content/pages'
 import { fmtDate, notices, reportYears, reports } from '../data'
 
+// Source figures are in thousands of EUR; show them in millions (103.827 → "103,8 mil. €").
+const mil = v => (v / 1000).toLocaleString('sr-RS', { minimumFractionDigits: 1, maximumFractionDigits: 1 })
+
 function Kpi({ k }) {
   const max = Math.max(...k.vals)
   return (
     <div className="kpi">
       <div className="t">{k.title}</div>
-      <div className="v">{k.vals[4].toLocaleString('sr-RS')}</div>
-      <div className="u">u 000 EUR, 2025.</div>
+      <div className="v">{mil(k.vals[4])} <span className="cur">mil. €</span></div>
+      <div className="u">u 2025. godini, u milionima evra</div>
       <div className="bars">
-        {k.vals.map((v, i) => <div key={i} title={v.toLocaleString('sr-RS')} style={{ height: `${Math.round(v / max * 100)}%` }} />)}
+        {k.vals.map((v, i) => (
+          <div key={i} className="col" title={`20${21 + i}: ${mil(v)} mil. €`}>
+            <span>{mil(v)}</span><i style={{ height: Math.max(2, Math.round(v / max * 100)) }} />
+          </div>
+        ))}
       </div>
       <div className="bar-years">{['21', '22', '23', '24', '25'].map(y => <span key={y}>{y}</span>)}</div>
     </div>
@@ -25,16 +32,20 @@ const Pdf = ({ href, children }) => (
 )
 
 const NOTICE_PAGE = 10
+const YEAR_PAGE = 3 // report years shown before "Učitaj starije"
 
 export default function Investitori() {
   const [type, setType] = useState('Sve vrste')
   const [year, setYear] = useState('Sve godine')
   const [kind, setKind] = useState('Sva obaveštenja')
   const [n, setN] = useState(NOTICE_PAGE)
+  const [ny, setNy] = useState(YEAR_PAGE)
   const [touched, setTouched] = useState(false)
 
   const list = reports.filter(r => (type === 'Sve vrste' || r.type === type) && (year === 'Sve godine' || r.year === year))
-  const years = [...new Set(list.map(r => r.year))]
+  const allYears = [...new Set(list.map(r => r.year))]
+  const years = allYears.slice(0, ny)
+  const hiddenReports = list.filter(r => !years.includes(r.year)).length
   const nlist = notices.filter(x => kind === 'Sva obaveštenja' || x.noticeKind === kind)
   const go = id => e => { e.preventDefault(); document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }) }
 
@@ -64,8 +75,8 @@ export default function Investitori() {
       <section id="izvestaji" className="section">
         <h2 className="h2 mb-md">Finansijski izveštaji</h2>
         <div className="filters" style={{ marginBottom: 48 }}>
-          <Select label="Vrsta izveštaja" options={investors.reportTypes} value={type} onChange={setType} />
-          <Select label="Godina" options={['Sve godine', ...reportYears]} value={year} onChange={setYear} />
+          <Select label="Vrsta izveštaja" options={investors.reportTypes} value={type} onChange={v => { setType(v); setNy(YEAR_PAGE) }} />
+          <Select label="Godina" options={['Sve godine', ...reportYears]} value={year} onChange={v => { setYear(v); setNy(YEAR_PAGE) }} />
         </div>
         {!list.length && <div className="empty-box">Nema izveštaja za izabrane filtere.</div>}
         {years.map(y => (
@@ -82,6 +93,9 @@ export default function Investitori() {
             </div>
           </div>
         ))}
+        {hiddenReports > 0 && (
+          <div className="load-more"><button className="btn-outline" onClick={() => setNy(v => v + YEAR_PAGE)}>Starije godine ({hiddenReports})</button></div>
+        )}
       </section>
 
       <section id="obavestenja" className="bg-grey">

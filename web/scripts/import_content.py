@@ -161,7 +161,8 @@ LABELS = ['Tehnički podaci', 'Usluga', 'Zemlja', 'Klijent', 'Investitor', 'Stat
 def facts(h):
     out = {}
     for m in re.finditer(r'<strong>\s*(' + '|'.join(LABELS) + r')\s*:?\s*</strong>\s*:?\s*([^<]*)', h):
-        v = html.unescape(m.group(2)).strip(' \xa0:')
+        v = re.sub(r'\[/?[a-z_0-9]+[^\]]*\]', ' ', m.group(2))  # WPBakery shortcodes trail some values
+        v = re.sub(r'\s+', ' ', html.unescape(v)).strip(' \xa0:')
         if v:
             out.setdefault(m.group(1), v)
     return out
@@ -267,6 +268,10 @@ def build(d):
         year = tab[:4]
         for m in re.finditer(r'<a [^>]*href="([^"]+\.pdf)"[^>]*>(.*?)</a>', tab, re.S):
             t = clean(m.group(2))
+            # the old site mislabels at least one link (2026 file titled "za 2025."); trust the year in the file name when it matches the tab
+            fy = re.search(r'za-(\d{4})-godinu', m.group(1))
+            if fy and fy.group(1) == year:
+                t = re.sub(r'za \d{4}\. godinu', f'za {year}. godinu', t)
             kind = 'Godišnji' if t.startswith(('Godišnji', 'Korigovani godišnji')) else 'Polugodišnji' if t.startswith('Polugodišnji') else 'Kvartalni'
             reports.append({'year': year, 'type': kind, 'title': t, 'pdf': full_img(m.group(1)), 'consolidated': 'onsolidovan' in t})
 

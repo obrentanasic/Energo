@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <main>
       <section className="hero" aria-label="Uvod">
-        <div className="hero-bg"><ImageSlot src={heroImages.home} placeholder={hero.placeholder} /></div>
+        <div className="hero-bg"><ImageSlot src={heroImages.home} mobileSrc={heroImages.homeMobile} eager alt="" placeholder={hero.placeholder} /></div>
         <div className="hero-body">
           <div className="hero-card">
             <div className="eyebrow">{hero.eyebrow}</div>
@@ -39,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         <nav className="sector-bar" aria-label="Sektori">
-          {sectors.map(s => <Link key={s} to="/projekti">{s}<span aria-hidden="true">→</span></Link>)}
+          {sectors.map(s => <Link key={s} to="/projekti" state={{ sector: s }}>{s}<span aria-hidden="true">→</span></Link>)}
         </nav>
       </section>
 

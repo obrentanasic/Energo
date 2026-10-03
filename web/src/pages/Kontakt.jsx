@@ -36,7 +36,8 @@ export default function Kontakt() {
             <a href="mailto:ep@energoprojekt.rs">ep@energoprojekt.rs</a>
           </div>
         </div>
-        <div className="map-box dark">Mapa – Novi Beograd</div>
+        <iframe className="map-frame" title="Mapa – Energoprojekt, Bulevar Mihajla Pupina 12, Beograd" loading="lazy"
+          src="https://maps.google.com/maps?q=Energoprojekt%2C%20Bulevar%20Mihajla%20Pupina%2012%2C%20Beograd&z=16&output=embed" />
       </div>
 
       <h2 className="h2 mb-md">Mediji</h2>
