@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Barlow Semi Condensed',sans-serif;color:#111;background:#fff}a{color:#111}a:hover{color:#C11717}*:focus-visible{outline:2px solid #111;outline-offset:2px}</style>
+</helmet>
+<dc-import name="Header" active="Kontakt" hint-size="100%,96px"></dc-import>
+<main style="font-family:'Barlow Semi Condensed',sans-serif;max-width:1184px;margin:0 auto;padding:40px clamp(20px,5vw,48px) clamp(64px,9vw,128px);">
+  <div style="font-size:14px;color:#575656;margin-bottom:32px;display:flex;gap:8px;"><a href="Home.dc.html" style="color:#575656;">Početna</a><span>/</span><span>Kontakt</span></div>
+  <h1 style="font-size:clamp(40px,5vw,56px);font-weight:400;line-height:1.08;margin:0 0 48px;">Povežite se sa nama</h1>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:24px;margin-bottom:clamp(64px,8vw,112px);">
+    <div style="background:#F2F2F2;padding:40px;">
+      <div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;">Sedište</div>
+      <h2 style="font-size:28px;font-weight:400;margin:0 0 20px;">Energoprojekt holding a.d.</h2>
+      <div style="font-size:18px;line-height:1.7;">Bulevar Mihajla Pupina 12<br>11070 Beograd, Srbija</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-top:20px;font-size:18px;">
+        <a href="tel:+381113101010" style="text-decoration:underline;text-decoration-color:#C11717;text-decoration-thickness:2px;text-underline-offset:4px;">+381 11 3101010</a>
+        <a href="mailto:ep@energoprojekt.rs" style="text-decoration:underline;text-decoration-color:#C11717;text-decoration-thickness:2px;text-underline-offset:4px;">ep@energoprojekt.rs</a>
+      </div>
+    </div>
+    <div style="background:#E1E1E1;min-height:300px;display:flex;align-items:center;justify-content:center;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">Mapa – Novi Beograd</div>
+  </div>
+  <h2 style="font-size:clamp(30px,3.4vw,40px);font-weight:400;margin:0 0 32px;">Kontakt osobe</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;margin-bottom:clamp(64px,8vw,112px);">
+    <sc-for list="{{ people }}" as="p" hint-placeholder-count="3">
+      <div style="background:#F2F2F2;padding:32px;">
+        <div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:12px;">{{ p.dept }}</div>
+        <div style="font-size:24px;">{{ p.name }}</div>
+        <div style="font-size:16px;font-style:italic;color:#575656;margin-bottom:20px;">{{ p.role }}</div>
+        <button onClick="{{ p.toggle }}" aria-expanded="{{ p.open }}" style="background:transparent;border:2px solid #C11717;padding:12px 20px;font-family:inherit;font-size:17px;cursor:pointer;">{{ p.btn }}</button>
+        <sc-if value="{{ p.open }}" hint-placeholder-val="{{ false }}">
+          <div style="margin-top:16px;display:flex;flex-direction:column;gap:6px;font-size:17px;"><a href="tel:{{ p.tel }}">{{ p.tel }}</a><a href="mailto:{{ p.mail }}">{{ p.mail }}</a></div>
+        </sc-if>
+      </div>
+    </sc-for>
+  </div>
+  <h2 style="font-size:clamp(30px,3.4vw,40px);font-weight:400;margin:0 0 24px;">Zavisna društva</h2>
+  <div role="tablist" style="display:flex;flex-wrap:wrap;align-items:center;row-gap:4px;border-bottom:1px solid #E1E1E1;padding-bottom:12px;margin-bottom:32px;">
+    <sc-for list="{{ subs }}" as="t" hint-placeholder-count="7">
+      <div style="display:flex;align-items:center;"><button role="tab" aria-selected="{{ t.active }}" onClick="{{ t.onClick }}" style="{{ t.style }}">{{ t.label }}</button><span style="width:1px;height:18px;background:#C4C4C4;"></span></div>
+    </sc-for>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px 40px;font-size:18px;line-height:1.6;margin-bottom:clamp(64px,8vw,112px);">
+    <div><div style="font-size:28px;margin-bottom:8px;">Energoprojekt {{ sub }}</div><div>Bulevar Mihajla Pupina 12, Beograd</div></div>
+    <div><div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">Telefon</div>+381 11 3101 {{ subExt }}</div>
+    <div><div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">E-mail</div>{{ subMail }}</div>
+  </div>
+  <h2 style="font-size:clamp(30px,3.4vw,40px);font-weight:400;margin:0 0 24px;">Regionalne kancelarije</h2>
+  <div style="display:flex;gap:4px;margin-bottom:24px;">
+    <sc-for list="{{ regions }}" as="r" hint-placeholder-count="2"><button onClick="{{ r.onClick }}" style="{{ r.style }}">{{ r.label }}</button></sc-for>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:0 32px;">
+    <sc-for list="{{ offices }}" as="o" hint-placeholder-count="6"><div style="padding:16px 0;border-bottom:1px solid #E1E1E1;"><div style="font-size:20px;">{{ o.c }}</div><div style="font-size:15px;color:#575656;">{{ o.a }}</div></div></sc-for>
+  </div>
+</main>
+<dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state={open:{},sub:'Hidroinženjering',region:'Srbija'};
+  renderVals(){
+    const {open,sub,region}=this.state;
+    const people=[['Odnosi sa javnošću','Ana Simić','Rukovodilac PR-a','+381 11 3101 210','pr@energoprojekt.rs'],['Odnosi sa investitorima','Milan Đorđević','Direktor za odnose sa investitorima','+381 11 3101 330','ir@energoprojekt.rs'],['Ljudski resursi','Ivana Popović','Menadžerka za zapošljavanje','+381 11 3101 415','karijera@energoprojekt.rs']]
+      .map(([dept,name,role,tel,mail],i)=>({dept,name,role,tel,mail,open:!!open[i],btn:open[i]?'Sakrij kontakt':'Prikaži kontakt',toggle:()=>this.setState({open:{...open,[i]:!open[i]}})}));
+    const tab=(label,a)=>({background:'none',border:0,fontFamily:'inherit',fontSize:'17px',padding:'10px 16px',minHeight:'44px',cursor:'pointer',color:'#111',fontWeight:a?500:400,textDecoration:a?'underline':'none',textDecorationColor:'#C11717',textDecorationThickness:'2px',textUnderlineOffset:'8px'});
+    const names=['Hidroinženjering','Urbanizam i arhitektura','Entel','Industrija','Visokogradnja','Izgradnja','Niskogradnja'];
+    const subs=names.map(label=>({label,active:label===sub,style:tab(label,label===sub),onClick:()=>this.setState({sub:label})}));
+    const idx=names.indexOf(sub);
+    const regions=['Srbija','Svet'].map(label=>({label,onClick:()=>this.setState({region:label}),style:{height:'48px',padding:'0 24px',border:'1px solid #111',background:label===region?'#111':'#fff',color:label===region?'#fff':'#111',fontFamily:'inherit',fontSize:'17px',cursor:'pointer'}}));
+    const offices=region==='Srbija'?[{c:'Beograd',a:'Bulevar Mihajla Pupina 12'},{c:'Novi Sad',a:'Bulevar oslobođenja 30'},{c:'Niš',a:'Obrenovićeva 18'}]:[{c:'Kampala, Uganda',a:'Plot 14, Kololo Hill'},{c:'Doha, Katar',a:'West Bay, Tower 3'},{c:'Lagos, Nigerija',a:'Victoria Island'},{c:'Lima, Peru',a:'Av. Javier Prado 450'},{c:'Moskva, Rusija',a:'Tverskaja 22'},{c:'Astana, Kazahstan',a:'Kabanbaj Batir 11'}];
+    return {people,subs,sub,subExt:String(500+idx*10),subMail:['hidro','urbanizam','entel','industrija','visokogradnja','izgradnja','niskogradnja'][idx]+'@energoprojekt.rs',regions,offices};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>body{margin:0;font-family:'Barlow Semi Condensed',sans-serif;color:#111;background:#fff}a{color:#111}a:hover{color:#C11717}*:focus-visible{outline:2px solid #111;outline-offset:2px}</style>
+</helmet>
+<dc-import name="Header" active="Karijera" hint-size="100%,96px"></dc-import>
+<main style="font-family:'Barlow Semi Condensed',sans-serif;">
+  <section style="position:relative;min-height:560px;display:flex;align-items:flex-end;background:#3a3a3a;">
+    <div style="position:absolute;inset:0;"><image-slot id="kar-hero" placeholder="Portret inženjerke na gradilištu" style="width:100%;height:100%;"></image-slot></div>
+    <div style="position:relative;background:#fff;margin:0 0 0 clamp(0px,8vw,128px);padding:clamp(32px,4vw,56px);max-width:560px;box-sizing:border-box;">
+      <div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;">Karijera</div>
+      <h1 style="font-size:clamp(40px,5vw,56px);font-weight:400;line-height:1.08;margin:0 0 16px;">Gradite karijeru koja ostaje</h1>
+      <p style="font-size:18px;line-height:1.5;margin:0 0 24px;">Pridružite se timu od 810 inženjera, arhitekata i stručnjaka koji rade na projektima u 15 zemalja.</p>
+      <a href="#poslovi" style="display:inline-block;background:#C11717;color:#fff;padding:16px 24px;font-size:18px;font-weight:500;text-decoration:none;" style-hover="background:#9E1212;color:#fff;">Slobodna radna mesta</a>
+    </div>
+  </section>
+  <section style="max-width:1184px;margin:0 auto;padding:clamp(64px,9vw,128px) clamp(20px,5vw,48px);">
+    <h2 style="font-size:clamp(30px,3.4vw,40px);font-weight:400;margin:0 0 48px;">Zašto Energoprojekt</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:40px 32px;">
+      <div style="border-top:2px solid #C11717;padding-top:16px;"><h3 style="font-size:24px;font-weight:400;margin:0 0 8px;">Projekti širom sveta</h3><p style="font-size:17px;line-height:1.5;margin:0;">Rad na gradilištima u Africi, Bliskom istoku, Južnoj Americi i Evropi.</p></div>
+      <div style="border-top:2px solid #C11717;padding-top:16px;"><h3 style="font-size:24px;font-weight:400;margin:0 0 8px;">Mentorstvo</h3><p style="font-size:17px;line-height:1.5;margin:0;">Svaki novi inženjer dobija iskusnog mentora za prvu godinu rada.</p></div>
+      <div style="border-top:2px solid #C11717;padding-top:16px;"><h3 style="font-size:24px;font-weight:400;margin:0 0 8px;">Licence i obuke</h3><p style="font-size:17px;line-height:1.5;margin:0;">Finansiramo stručne ispite, licence i specijalističke kurseve.</p></div>
+    </div>
+  </section>
+  <section style="background:#F2F2F2;">
+    <div style="max-width:1184px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,5vw,48px);">
+      <h2 style="font-size:clamp(30px,3.4vw,40px);font-weight:400;margin:0 0 48px;">Priče zaposlenih</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:40px 32px;">
+        <sc-for list="{{ stories }}" as="s" hint-placeholder-count="3">
+          <article>
+            <div style="aspect-ratio:4/3;margin-bottom:20px;"><image-slot id="{{ s.id }}" placeholder="Portret zaposlenog" style="width:100%;height:100%;"></image-slot></div>
+            <p style="font-size:22px;font-weight:300;line-height:1.35;margin:0 0 12px;">„{{ s.q }}“</p>
+            <div style="font-size:17px;font-weight:500;">{{ s.name }}</div>
+            <div style="font-size:15px;font-style:italic;color:#575656;">{{ s.role }}</div>
+          </article>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <section style="max-width:1184px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,5vw,48px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:48px;align-items:center;">
+    <div style="aspect-ratio:3/2;"><image-slot id="kar-praksa" placeholder="Studenti na praksi" style="width:100%;height:100%;"></image-slot></div>
+    <div>
+      <h2 style="font-size:clamp(28px,3vw,40px);font-weight:400;margin:0 0 16px;">Praksa i stipendije</h2>
+      <p style="font-size:18px;line-height:1.5;margin:0 0 24px;">Letnja praksa za studente završnih godina i stipendije za najbolje studente tehničkih fakulteta. Prijave su otvorene do 15. novembra.</p>
+      <a href="#poslovi" style="display:inline-block;background:#fff;border:2px solid #C11717;padding:14px 24px;font-size:18px;font-weight:500;text-decoration:none;">Saznajte više</a>
+    </div>
+  </section>
+  <section id="poslovi" style="max-width:1184px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,5vw,48px);">
+    <h2 style="font-size:clamp(30px,3.4vw,40px);font-weight:400;margin:0 0 32px;">Slobodna radna mesta</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-end;margin-bottom:32px;">
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:#575656;">Lokacija
+        <select value="{{ loc }}" onChange="{{ onLoc }}" style="height:48px;border:1px solid #111;border-radius:0;background:#fff;font-family:inherit;font-size:17px;padding:0 14px;min-width:200px;color:#111;"><option>Sve lokacije</option><option>Beograd</option><option>Uganda</option><option>Katar</option><option>Peru</option></select>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:#575656;">Sektor
+        <select value="{{ sec }}" onChange="{{ onSec }}" style="height:48px;border:1px solid #111;border-radius:0;background:#fff;font-family:inherit;font-size:17px;padding:0 14px;min-width:200px;color:#111;"><option>Svi sektori</option><option>Projektovanje</option><option>Izgradnja</option><option>Finansije</option></select>
+      </label>
+      <button onClick="{{ clear }}" style="height:48px;background:#fff;border:2px solid #C11717;padding:0 20px;font-family:inherit;font-size:17px;cursor:pointer;">Poništi filtere</button>
+    </div>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;font-size:17px;min-width:640px;">
+        <thead><tr style="text-align:left;border-bottom:1px solid #111;"><th style="padding:14px 12px 14px 0;font-weight:600;">Naziv</th><th style="padding:14px 12px;font-weight:600;">Uloga</th><th style="padding:14px 12px;font-weight:600;">Lokacija</th><th style="padding:14px 12px;font-weight:600;">Rok</th><th style="width:56px;"></th></tr></thead>
+        <tbody>
+          <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="5">
+            <tr style="border-bottom:1px solid #E1E1E1;">
+              <td style="padding:14px 12px 14px 0;font-weight:500;">{{ j.t }}</td><td style="padding:14px 12px;">{{ j.sec }}</td><td style="padding:14px 12px;">{{ j.loc }}</td><td style="padding:14px 12px;">{{ j.rok }}</td>
+              <td style="padding:8px 0;"><button onClick="{{ j.open }}" aria-label="Detalji oglasa" style="width:48px;height:48px;background:#C11717;color:#fff;border:0;font-size:20px;cursor:pointer;transition:transform .15s;" style-hover="transform:translateX(4px);">→</button></td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+    </div>
+    <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}"><div style="background:#F2F2F2;padding:40px;font-size:20px;margin-top:16px;">Nema otvorenih pozicija za izabrane filtere.</div></sc-if>
+  </section>
+</main>
+<sc-if value="{{ job }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeJob }}" style="position:fixed;inset:0;z-index:90;background:rgba(0,0,0,0.6);display:flex;justify-content:flex-end;font-family:'Barlow Semi Condensed',sans-serif;">
+    <div onClick="{{ stop }}" style="background:#fff;width:100%;max-width:640px;height:100%;overflow:auto;padding:40px clamp(20px,4vw,48px);box-sizing:border-box;">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;"><span style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;">{{ job.sec }} | {{ job.loc }}</span><button onClick="{{ closeJob }}" aria-label="Zatvori" style="width:48px;height:48px;border:0;background:#444;color:#fff;font-size:26px;cursor:pointer;">×</button></div>
+      <h2 style="font-size:40px;font-weight:400;line-height:1.1;margin:0 0 12px;">{{ job.t }}</h2>
+      <div style="font-size:15px;color:#575656;margin-bottom:24px;">Rok za prijavu: {{ job.rok }}</div>
+      <p style="font-size:18px;line-height:1.5;margin:0 0 32px;">Tražimo kolegu sa najmanje pet godina iskustva i licencom Inženjerske komore Srbije, spremnog za rad u multidisciplinarnom timu.</p>
+      <sc-if value="{{ applied }}" hint-placeholder-val="{{ false }}">
+        <div style="background:#F2F2F2;border-top:4px solid #C11717;padding:32px;"><div style="font-size:28px;margin-bottom:8px;">Prijava je poslata</div><p style="font-size:17px;line-height:1.5;margin:0;">Hvala na interesovanju. Kontaktiraćemo vas nakon isteka roka za prijavu.</p></div>
+      </sc-if>
+      <sc-if value="{{ notApplied }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ apply }}" noValidate="{{ true }}" style="display:flex;flex-direction:column;gap:24px;">
+          <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;color:#575656;">Ime i prezime*</span><input name="ime" value="{{ af.ime }}" onChange="{{ onAf }}" style="border:0;border-bottom:{{ errBorderIme }};font-family:inherit;font-size:18px;padding:8px 0;outline:none;"></label>
+          <label style="display:flex;flex-direction:column;gap:6px;"><span style="font-size:14px;color:#575656;">E-mail*</span><input name="email" value="{{ af.email }}" onChange="{{ onAf }}" style="border:0;border-bottom:{{ errBorderEmail }};font-family:inherit;font-size:18px;padding:8px 0;outline:none;"></label>
+          <label style="display:flex;align-items:center;gap:16px;border:1px dashed #575656;padding:20px;cursor:pointer;font-size:17px;"><span style="width:44px;height:44px;background:#C11717;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">↑</span><span>{{ cvLabel }}</span><input type="file" accept=".pdf,.doc,.docx" onChange="{{ onCv }}" style="display:none;"></label>
+          <label style="display:flex;gap:12px;font-size:15px;line-height:1.4;cursor:pointer;"><input type="checkbox" checked="{{ af.consent }}" onChange="{{ onAfConsent }}" style="width:22px;height:22px;accent-color:#C11717;margin:0;flex-shrink:0;">Saglasan/na sam sa obradom podataka u svrhu selekcije.</label>
+          <sc-if value="{{ applyErr }}" hint-placeholder-val="{{ false }}"><span style="font-size:15px;color:#C11717;">Popunite obavezna polja, priložite CV i potvrdite saglasnost.</span></sc-if>
+          <div><button type="submit" style="background:#C11717;color:#fff;border:0;padding:16px 32px;font-family:inherit;font-size:18px;font-weight:500;cursor:pointer;">Pošalji prijavu</button></div>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+<dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state={loc:'Sve lokacije',sec:'Svi sektori',job:null,af:{ime:'',email:'',consent:false,cv:''},applied:false,applyErr:false};
+  renderVals(){
+    const all=[['Vodeći inženjer hidrotehnike','Projektovanje','Beograd','31. okt 2026.'],['Rukovodilac gradilišta','Izgradnja','Uganda','15. nov 2026.'],['Inženjer elektroenergetike','Projektovanje','Katar','20. nov 2026.'],['Finansijski analitičar','Finansije','Beograd','30. okt 2026.'],['Geodeta','Izgradnja','Peru','1. dec 2026.']];
+    const {loc,sec,af}=this.state;
+    const jobs=all.filter(j=>(loc==='Sve lokacije'||j[2]===loc)&&(sec==='Svi sektori'||j[1]===sec)).map(([t,s,l,rok])=>{const o={t,sec:s,loc:l,rok};o.open=()=>this.setState({job:o,applied:false,applyErr:false,af:{ime:'',email:'',consent:false,cv:''}});return o;});
+    const err=this.state.applyErr;
+    return {jobs,loc,sec,empty:!jobs.length,job:this.state.job,af,applied:this.state.applied,notApplied:!this.state.applied,applyErr:err,
+      errBorderIme:err&&!af.ime?'2px solid #C11717':'1px solid #111',errBorderEmail:err&&!af.email?'2px solid #C11717':'1px solid #111',
+      cvLabel:af.cv||'Priložite CV (PDF ili DOC, do 5 MB)',
+      stories:[{id:'st1',q:'Za tri godine radila sam na dva kontinenta i naučila više nego za deset.',name:'Jelena Marković',role:'Inženjerka konstrukcija'},{id:'st2',q:'Mentor mi je pomogao da položim licencu već posle prve godine.',name:'Stefan Ilić',role:'Inženjer hidrotehnike'},{id:'st3',q:'Ponosan sam kad prođem autoputem koji smo gradili.',name:'Nikola Jovanović',role:'Rukovodilac gradilišta'}],
+      onLoc:e=>this.setState({loc:e.target.value}),onSec:e=>this.setState({sec:e.target.value}),clear:()=>this.setState({loc:'Sve lokacije',sec:'Svi sektori'}),
+      closeJob:()=>this.setState({job:null}),stop:e=>e.stopPropagation(),
+      onAf:e=>this.setState({af:{...af,[e.target.name]:e.target.value}}),onAfConsent:e=>this.setState({af:{...af,consent:e.target.checked}}),
+      onCv:e=>{const f=e.target.files[0];if(f)this.setState({af:{...af,cv:f.name}});},
+      apply:e=>{e.preventDefault();const ok=af.ime&&/^\S+@\S+\.\S+$/.test(af.email)&&af.cv&&af.consent;this.setState(ok?{applied:true}:{applyErr:true});}};
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Energoprojekt — Gradimo zajedno</title>
+<meta name="description" content="Inženjering, projektovanje i izgradnja energetskih, infrastrukturnih i objekata visokogradnje u Srbiji i svetu.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="main.js" defer></script>
+</head>
+<body>
+
+<!-- ============================== HEADER -->
+<header class="site-header" data-header>
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Energoprojekt početna"><img src="assets/logo.png" alt="Energoprojekt"></a>
+    <nav class="main-nav" aria-label="Glavna navigacija">
+      <a href="o-nama.html">O nama</a>
+      <a href="investitori.html">Za investitore</a>
+      <a href="o-nama.html">Održivost</a>
+      <a href="projekti.html">Projekti</a>
+      <a href="karijera.html">Karijera</a>
+      <a href="vesti.html">Vesti</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="header-tools">
+      <button class="icon-btn" type="button" aria-label="Kancelarije" aria-haspopup="dialog" data-open="offices">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      </button>
+      <button class="icon-btn" type="button" aria-label="Pretraga" aria-haspopup="dialog" data-open="search">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5L21 21"/></svg>
+      </button>
+      <button class="icon-btn dark" type="button" aria-label="Meni" aria-haspopup="dialog" data-open="mega">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Full-screen mega menu -->
+<div class="overlay mega" id="mega" role="dialog" aria-modal="true" aria-label="Meni" hidden>
+  <div class="mega-top">
+    <img src="assets/logo.png" alt="Energoprojekt">
+    <button class="close-btn" type="button" aria-label="Zatvori" data-close>×</button>
+  </div>
+  <div class="mega-grid">
+    <div class="mega-col"><a href="o-nama.html">O nama</a><ul>
+      <li><a href="o-nama.html">Ko smo</a></li><li><a href="o-nama.html">Misija, vizija, vrednosti</a></li><li><a href="o-nama.html">Istorijat</a></li><li><a href="o-nama.html">Organizacija</a></li><li><a href="o-nama.html">Tržišta</a></li><li><a href="o-nama.html">Publikacije</a></li>
+    </ul></div>
+    <div class="mega-col"><a href="projekti.html">Usluge</a><ul>
+      <li><a href="projekti.html">Energetika</a></li><li><a href="projekti.html">Visokogradnja</a></li><li><a href="projekti.html">Infrastruktura</a></li><li><a href="projekti.html">Vodoprivreda</a></li><li><a href="projekti.html">Industrija</a></li><li><a href="projekti.html">Real estate</a></li>
+    </ul></div>
+    <div class="mega-col"><a href="investitori.html">Za investitore</a><ul>
+      <li><a href="investitori.html">Finansijski izveštaji</a></li><li><a href="investitori.html">Akcije i Beogradska berza</a></li><li><a href="investitori.html">Skupština</a></li><li><a href="investitori.html">Korporativno upravljanje</a></li><li><a href="investitori.html">Finansijski kalendar</a></li><li><a href="investitori.html">Obaveštenja akcionarima</a></li>
+    </ul></div>
+    <div class="mega-col"><a href="projekti.html">Projekti</a><ul>
+      <li><a href="projekti.html">Svi projekti</a></li><li><a href="projekti.html">Izdvojeni projekti</a></li><li><a href="projekti.html">Real estate – Kosa Kvart</a></li>
+    </ul></div>
+    <div class="mega-col"><a href="karijera.html">Karijera</a><ul>
+      <li><a href="karijera.html">Zašto Energoprojekt</a></li><li><a href="karijera.html">Slobodna radna mesta</a></li><li><a href="karijera.html">Praksa i stipendije</a></li><li><a href="karijera.html">Priče zaposlenih</a></li>
+    </ul></div>
+    <div class="mega-col"><a href="vesti.html">Vesti</a><ul>
+      <li><a href="vesti.html">Sve vesti</a></li><li><a href="vesti.html">Saopštenja</a></li><li><a href="vesti.html">Mediji</a></li>
+    </ul></div>
+    <div class="mega-col"><a href="kontakt.html">Kontakt</a><ul>
+      <li><a href="kontakt.html">Sedište</a></li><li><a href="kontakt.html">Zavisna društva</a></li><li><a href="kontakt.html">Regionalne kancelarije</a></li>
+    </ul></div>
+  </div>
+</div>
+
+<!-- Search overlay -->
+<div class="overlay search-ov" id="search" role="dialog" aria-modal="true" aria-label="Pretraga" hidden>
+  <div class="search-panel"><div>
+    <div class="search-head">
+      <span class="eyebrow">Pretraga</span>
+      <button class="close-btn" type="button" aria-label="Zatvori" data-close>×</button>
+    </div>
+    <input class="search-input" type="search" placeholder="Šta tražite?" aria-label="Šta tražite?" data-search-input>
+    <p class="search-empty" data-search-empty hidden></p>
+    <div class="search-results" data-search-results></div>
+  </div></div>
+</div>
+
+<!-- Offices modal -->
+<div class="overlay offices-ov" id="offices" role="dialog" aria-modal="true" aria-labelledby="offices-title" hidden data-backdrop-close>
+  <div class="offices-card">
+    <div class="offices-list">
+      <div class="head"><h2 id="offices-title">Naše kancelarije</h2><button class="close-btn" type="button" aria-label="Zatvori" data-close>×</button></div>
+      <div class="office-row"><span>Beograd (sedište)</span><span>Srbija</span></div>
+      <div class="office-row"><span>Kampala</span><span>Uganda</span></div>
+      <div class="office-row"><span>Doha</span><span>Katar</span></div>
+      <div class="office-row"><span>Lagos</span><span>Nigerija</span></div>
+      <div class="office-row"><span>Lima</span><span>Peru</span></div>
+      <div class="office-row"><span>Moskva</span><span>Rusija</span></div>
+      <div class="office-row"><span>Astana</span><span>Kazahstan</span></div>
+      <div class="office-row"><span>Alžir</span><span>Alžir</span></div>
+    </div>
+    <div class="offices-map eyebrow">Mapa lokacija</div>
+  </div>
+</div>
+
+<main>
+  <!-- ============================== HERO -->
+  <section class="hero" aria-label="Uvod">
+    <div class="hero-bg"><div class="img-slot" data-placeholder="Hero fotografija – vetropark ili most"></div></div>
+    <div class="hero-body">
+      <div class="hero-card">
+        <div class="eyebrow">Od 1951.</div>
+        <h1 class="h1">Gradimo zajedno</h1>
+        <p class="lead">Inženjering, projektovanje i izgradnja energetskih, infrastrukturnih i objekata visokogradnje u Srbiji i svetu.</p>
+      </div>
+    </div>
+    <nav class="sector-bar" aria-label="Sektori">
+      <a href="projekti.html">Energetika<span aria-hidden="true">→</span></a>
+      <a href="projekti.html">Visokogradnja<span aria-hidden="true">→</span></a>
+      <a href="projekti.html">Infrastruktura<span aria-hidden="true">→</span></a>
+      <a href="projekti.html">Vodoprivreda<span aria-hidden="true">→</span></a>
+      <a href="projekti.html">Industrija<span aria-hidden="true">→</span></a>
+    </nav>
+  </section>
+
+  <!-- ============================== INTRO + COUNTERS -->
+  <section class="wrap intro">
+    <h2 class="h2">Vodeća srpska kompanija u oblasti inženjeringa i izgradnje</h2>
+    <div class="counters" data-counters>
+      <div><div class="counter-val" data-count="810">810</div><div class="counter-label eyebrow">Zaposlenih</div></div>
+      <div><div class="counter-val" data-count="75">75</div><div class="counter-label eyebrow">Godina iskustva</div></div>
+      <div><div class="counter-val" data-count="15">15</div><div class="counter-label eyebrow">Zemalja</div></div>
+    </div>
+  </section>
+
+  <!-- ============================== INVESTOR HIGHLIGHT -->
+  <section class="bg-grey">
+    <div class="highlight">
+      <div class="highlight-media ar-4-3"><div class="img-slot" data-placeholder="Skupština akcionara – fotografija"></div></div>
+      <div>
+        <div class="eyebrow">Za investitore</div>
+        <h2 class="h2">Redovna sednica skupštine akcionara 2026.</h2>
+        <p class="lead-strong">Sednica će biti održana 26. juna 2026. u sedištu kompanije, uz mogućnost praćenja putem vebkasta.</p>
+        <div class="check-links">
+          <a href="investitori.html" class="link-u"><span aria-hidden="true">✓</span>Poziv na sednicu skupštine</a>
+          <a href="investitori.html" class="link-u"><span aria-hidden="true">✓</span>Prijava za vebkast</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== NEWS -->
+  <section class="wrap news">
+    <h2 class="h2">Priče vredne pažnje</h2>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="img-slot ar-4-3" data-placeholder="Fotografija vesti"></div>
+        <div class="meta"><span>Energetika</span><span class="sep"></span><span>28. sep 2026.</span></div>
+        <h3>Potpisan ugovor za izgradnju hidroelektrane u Ugandi</h3>
+        <p>Energoprojekt Niskogradnja potpisala je ugovor vredan 84 miliona evra za izgradnju male hidroelektrane i pratećeg dalekovoda u zapadnom delu zemlje.</p>
+        <a href="vesti.html" class="link-u">Pročitajte više</a>
+      </article>
+      <article class="news-card">
+        <div class="img-slot ar-4-3" data-placeholder="Fotografija vesti"></div>
+        <div class="meta"><span>Saopštenja</span><span class="sep"></span><span>15. sep 2026.</span></div>
+        <h3>Rezultati poslovanja za prvo polugodište 2026.</h3>
+        <p>Konsolidovani poslovni prihodi grupe porasli su za 12% u odnosu na isti period prošle godine, uz stabilan portfolio ugovorenih poslova.</p>
+        <a href="vesti.html" class="link-u">Pročitajte više</a>
+      </article>
+      <article class="news-card">
+        <div class="img-slot ar-4-3" data-placeholder="Fotografija vesti"></div>
+        <div class="meta"><span>Održivost</span><span class="sep"></span><span>2. sep 2026.</span></div>
+        <h3>Uručene stipendije studentima tehničkih fakulteta</h3>
+        <p>Dvadeset studenata građevinskog, mašinskog i elektrotehničkog fakulteta dobilo je stipendiju i mentorstvo naših inženjera.</p>
+        <a href="vesti.html" class="link-u">Pročitajte više</a>
+      </article>
+    </div>
+    <a href="vesti.html" class="btn">Sve vesti</a>
+  </section>
+
+  <!-- ============================== SUSTAINABILITY FEATURE -->
+  <section class="feature">
+    <div>
+      <div class="img-slot ar-16-9" data-placeholder="Održivost – fotografija"></div>
+      <h3 class="h3">Održivo poslovanje i ISO standardi</h3>
+      <p class="lead">Integrisani sistem menadžmenta po standardima ISO 9001, 14001 i 45001 garantuje kvalitet, zaštitu životne sredine i bezbednost na svakom gradilištu.</p>
+      <a href="o-nama.html" class="btn">Politika održivosti</a>
+    </div>
+  </section>
+
+  <!-- ============================== ALTERNATING BLOCKS -->
+  <section class="wrap alts">
+    <div class="alt-row">
+      <div class="alt-media ar-4-3"><div class="img-slot" data-placeholder="Publikacije – fotografija"></div></div>
+      <div class="alt-text">
+        <h3 class="h3">Publikacije</h3>
+        <p class="lead">Monografije, brošure i katalozi referenci koji prate više od sedam decenija rada kompanije.</p>
+        <a href="o-nama.html" class="btn">Pogledajte publikacije</a>
+      </div>
+    </div>
+    <div class="alt-row reverse">
+      <div class="alt-media ar-4-3"><div class="img-slot" data-placeholder="Godišnji izveštaj – fotografija"></div></div>
+      <div class="alt-text">
+        <h3 class="h3">Godišnji izveštaj 2025</h3>
+        <p class="lead">Pregled poslovanja, finansijskih rezultata i ključnih projekata Energoprojekt grupe u protekloj godini.</p>
+        <a href="investitori.html" class="btn">Preuzmite izveštaj</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== INVESTOR CARDS -->
+  <section class="bg-grey">
+    <div class="wrap ir-cards">
+      <div class="ir-card">
+        <h3>Najnovija saopštenja</h3>
+        <div class="ir-row"><div class="t">Obaveštenje o sticanju sopstvenih akcija</div><div class="meta"><span>30. sep 2026.</span><span class="sep"></span><span>Saopštenje</span></div></div>
+        <div class="ir-row"><div class="t">Odluka o isplati dividende za 2025.</div><div class="meta"><span>1. jul 2026.</span><span class="sep"></span><span>Skupština</span></div></div>
+        <div class="ir-row"><div class="t">Promena u sastavu Izvršnog odbora</div><div class="meta"><span>12. jun 2026.</span><span class="sep"></span><span>Saopštenje</span></div></div>
+        <a href="vesti.html" class="arrow-btn" aria-label="Sva saopštenja">→</a>
+      </div>
+      <div class="ir-card">
+        <h3>Finansijski kalendar</h3>
+        <div class="ir-row cal-row"><div class="cal-day">30<div>okt</div></div><div class="t">Objava kvartalnog izveštaja Q3 2026</div></div>
+        <div class="ir-row cal-row"><div class="cal-day">12<div>nov</div></div><div class="t">Konferencija za investitore, Beograd</div></div>
+        <div class="ir-row cal-row"><div class="cal-day">27<div>feb</div></div><div class="t">Preliminarni rezultati za 2026.</div></div>
+        <a href="investitori.html" class="arrow-btn" aria-label="Finansijski kalendar">→</a>
+      </div>
+      <div class="ir-card">
+        <h3>Najnoviji finansijski izveštaji</h3>
+        <a href="investitori.html" class="ir-row pdf-row"><span class="pdf-badge">PDF</span><span class="t">Polugodišnji izveštaj 2026</span></a>
+        <a href="investitori.html" class="ir-row pdf-row"><span class="pdf-badge">PDF</span><span class="t">Kvartalni izveštaj Q1 2026</span></a>
+        <a href="investitori.html" class="ir-row pdf-row"><span class="pdf-badge">PDF</span><span class="t">Godišnji izveštaj 2025</span></a>
+        <a href="investitori.html" class="arrow-btn after-list" aria-label="Svi izveštaji">→</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== FEATURED PROJECTS -->
+  <section class="wrap projects">
+    <div class="projects-head">
+      <h2 class="h2">Izdvojeni projekti</h2>
+      <a href="projekti.html" class="link-u">Svi projekti</a>
+    </div>
+    <div class="proj-grid-big">
+      <a href="projekat.html" class="proj-card">
+        <h3>HE Gornja Drina</h3>
+        <div class="meta"><span>Bosna i Hercegovina</span><span class="sep"></span><span>Energetika</span></div>
+        <div class="img-slot ar-4-3" data-placeholder="Fotografija projekta"></div>
+      </a>
+      <a href="projekat.html" class="proj-card">
+        <h3>Autoput Pakovraće – Požega</h3>
+        <div class="meta"><span>Srbija</span><span class="sep"></span><span>Infrastruktura</span></div>
+        <div class="img-slot ar-4-3" data-placeholder="Fotografija projekta"></div>
+      </a>
+    </div>
+    <div class="proj-grid-small">
+      <a href="projekat.html" class="proj-card">
+        <h3>Poslovni centar Ušće 2</h3>
+        <div class="meta"><span>Beograd</span><span class="sep"></span><span>Visokogradnja</span></div>
+        <div class="img-slot ar-4-3" data-placeholder="Fotografija projekta"></div>
+      </a>
+      <a href="projekat.html" class="proj-card">
+        <h3>Vodovod Kampala</h3>
+        <div class="meta"><span>Uganda</span><span class="sep"></span><span>Vodoprivreda</span></div>
+        <div class="img-slot ar-4-3" data-placeholder="Fotografija projekta"></div>
+      </a>
+      <a href="projekat.html" class="proj-card">
+        <h3>Trafostanica Doha South</h3>
+        <div class="meta"><span>Katar</span><span class="sep"></span><span>Energetika</span></div>
+        <div class="img-slot ar-4-3" data-placeholder="Fotografija projekta"></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================== WIDE IMAGE + TEASERS -->
+  <section>
+    <div class="wide-media"><div class="img-slot" data-placeholder="Široka pejzažna fotografija – gradilište"></div></div>
+    <div class="wrap teasers">
+      <div class="teaser">
+        <div class="teaser-head"><div><h3>Za investitore</h3><p>Izveštaji, akcije i skupština.</p></div><a href="investitori.html" class="arrow-btn" aria-label="Za investitore">→</a></div>
+        <div class="img-slot ar-3-2" data-placeholder="Fotografija"></div>
+      </div>
+      <div class="teaser">
+        <div class="teaser-head"><div><h3>Karijera</h3><p>Gradite karijeru sa nama.</p></div><a href="karijera.html" class="arrow-btn" aria-label="Karijera">→</a></div>
+        <div class="img-slot ar-3-2" data-placeholder="Fotografija"></div>
+      </div>
+      <div class="teaser">
+        <div class="teaser-head"><div><h3>Publikacije</h3><p>Monografije i katalozi referenci.</p></div><a href="o-nama.html" class="arrow-btn" aria-label="Publikacije">→</a></div>
+        <div class="img-slot ar-3-2" data-placeholder="Fotografija"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== CONTACT FORM -->
+  <section class="bg-grey">
+    <div class="wrap contact">
+      <div>
+        <h2 class="h2">Povežimo se</h2>
+        <p class="lead">Imate pitanje o našim uslugama, projektima ili saradnji? Popunite formular i odgovorićemo u roku od dva radna dana.</p>
+      </div>
+      <div class="contact-success" data-success hidden role="status">
+        <div class="title">Hvala, <span data-success-name></span>.</div>
+        <p class="lead">Vaša poruka je poslata. Odgovor ćete dobiti na <span data-success-email></span>.</p>
+      </div>
+      <form class="contact-form" data-contact-form novalidate>
+        <label class="field" data-field="ime"><span class="field-label">Ime i prezime*</span><input name="ime" autocomplete="name"><span class="field-err" hidden></span></label>
+        <label class="field" data-field="email"><span class="field-label">E-mail*</span><input name="email" type="email" autocomplete="email"><span class="field-err" hidden></span></label>
+        <label class="field" data-field="kompanija"><span class="field-label">Kompanija</span><input name="kompanija" autocomplete="organization"></label>
+        <label class="field" data-field="zemlja"><span class="field-label">Zemlja</span><input name="zemlja" autocomplete="country-name"></label>
+        <label class="field" data-field="telefon"><span class="field-label">Telefon</span><input name="telefon" type="tel" autocomplete="tel"></label>
+        <label class="field full" data-field="pitanje"><span class="field-label">Vaše pitanje</span><input name="pitanje"></label>
+        <label class="consent"><input type="checkbox" name="consent"><span>Saglasan/na sam da Energoprojekt obrađuje moje podatke u skladu sa Politikom privatnosti.</span></label>
+        <span class="consent-err" data-consent-err hidden>Potrebna je saglasnost.</span>
+        <div class="form-actions"><button type="submit" class="btn">Pošalji</button></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<!-- ============================== FOOTER -->
+<footer class="site-footer">
+  <div class="wrap footer-top">
+    <p class="footer-tagline">Energoprojekt je od 1951. godine vodeća srpska kompanija u oblasti inženjeringa i izgradnje, sa projektima u 15 zemalja sveta.</p>
+    <div class="footer-col">
+      <div class="eyebrow">Kompanija</div>
+      <a href="o-nama.html">O nama</a><a href="projekti.html">Projekti</a><a href="karijera.html">Karijera</a><a href="kontakt.html">Kontakt</a>
+    </div>
+    <div class="footer-col">
+      <div class="eyebrow">Usluge</div>
+      <a href="projekti.html">Energetika</a><a href="projekti.html">Visokogradnja</a><a href="projekti.html">Infrastruktura</a><a href="projekti.html">Vodoprivreda</a>
+    </div>
+    <div class="footer-col">
+      <div class="eyebrow">Investitori i mediji</div>
+      <a href="investitori.html">Finansijski izveštaji</a><a href="investitori.html">Skupština</a><a href="vesti.html">Saopštenja</a><a href="vesti.html">Vesti</a>
+    </div>
+    <div class="footer-hq">
+      <div class="eyebrow">Sedište</div>
+      <span>Bulevar Mihajla Pupina 12</span>
+      <span>11070 Beograd, Srbija</span>
+      <a href="tel:+381113101010">+381 11 3101010</a>
+      <a href="mailto:ep@energoprojekt.rs">ep@energoprojekt.rs</a>
+      <div class="socials">
+        <a href="#" aria-label="LinkedIn">in</a>
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="YouTube">▶</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© 2026 Energoprojekt holding a.d.</span>
+    <a href="#">Politika privatnosti</a>
+    <a href="#">Kolačići</a>
+    <a href="#">Pristupačnost</a>
+    <img src="assets/logo-white.png" alt="Energoprojekt">
+  </div>
+</footer>
+
+</body>
+</html>

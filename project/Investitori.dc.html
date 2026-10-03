@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Barlow Semi Condensed',sans-serif;color:#111;background:#fff}a{color:#111}a:hover{color:#C11717}*:focus-visible{outline:2px solid #111;outline-offset:2px}</style>
+</helmet>
+<dc-import name="Header" active="Za investitore" hint-size="100%,96px"></dc-import>
+<main style="font-family:'Barlow Semi Condensed',sans-serif;">
+  <div style="max-width:1184px;margin:0 auto;padding:40px clamp(20px,5vw,48px) 56px;">
+    <div style="font-size:14px;color:#575656;margin-bottom:32px;display:flex;gap:8px;"><a href="Home.dc.html" style="color:#575656;">Početna</a><span>/</span><span>Za investitore</span></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 56px;">
+      <h1 style="font-size:clamp(40px,5vw,56px);font-weight:400;line-height:1.08;margin:0;">Za investitore</h1>
+      <p style="font-size:18px;line-height:1.5;margin:0;">Akcije Energoprojekt holdinga kotiraju se na Prime Listing tržištu Beogradske berze pod oznakom ENHL.</p>
+    </div>
+  </div>
+  <section style="background:#F2F2F2;">
+    <div style="max-width:1184px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,48px);">
+      <h2 style="font-size:clamp(28px,3vw,40px);font-weight:400;margin:0 0 40px;">Ključni pokazatelji 2021–2025</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px;">
+        <sc-for list="{{ charts }}" as="c" hint-placeholder-count="4">
+          <div style="background:#fff;padding:28px;">
+            <div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">{{ c.t }}</div>
+            <div style="font-size:40px;font-weight:300;margin:8px 0 4px;">{{ c.last }}</div>
+            <div style="font-size:14px;color:#575656;margin-bottom:20px;">mil. RSD, 2025.</div>
+            <div style="display:flex;align-items:flex-end;gap:8px;height:120px;border-bottom:1px solid #111;">
+              <sc-for list="{{ c.bars }}" as="b" hint-placeholder-count="5">
+                <div title="{{ b.v }}" style="flex:1;height:{{ b.h }};background:{{ b.c }};"></div>
+              </sc-for>
+            </div>
+            <div style="display:flex;gap:8px;margin-top:6px;font-size:13px;color:#575656;"><span style="flex:1;">21</span><span style="flex:1;">22</span><span style="flex:1;">23</span><span style="flex:1;">24</span><span style="flex:1;">25</span></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+  <section style="max-width:1184px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,48px) 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:0 32px;">
+    <sc-for list="{{ subpages }}" as="s" hint-placeholder-count="6">
+      <a href="#izvestaji" style="display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 0;border-bottom:1px solid #E1E1E1;font-size:20px;text-decoration:none;" style-hover="color:#C11717;">{{ s }}<span style="width:44px;height:44px;background:#C11717;color:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0;">→</span></a>
+    </sc-for>
+  </section>
+  <section id="izvestaji" style="max-width:1184px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,5vw,48px);">
+    <h2 style="font-size:clamp(30px,3.4vw,40px);font-weight:400;margin:0 0 32px;">Finansijski izveštaji</h2>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-bottom:48px;">
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:#575656;">Vrsta izveštaja
+        <select value="{{ type }}" onChange="{{ onType }}" style="height:48px;border:1px solid #111;border-radius:0;background:#fff;font-family:inherit;font-size:17px;padding:0 14px;min-width:240px;color:#111;">
+          <option>Sve vrste</option><option>Godišnji</option><option>Polugodišnji</option><option>Kvartalni</option>
+        </select>
+      </label>
+      <label style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:#575656;">Godina
+        <select value="{{ year }}" onChange="{{ onYear }}" style="height:48px;border:1px solid #111;border-radius:0;background:#fff;font-family:inherit;font-size:17px;padding:0 14px;min-width:160px;color:#111;">
+          <option>Sve godine</option><option>2026</option><option>2025</option><option>2024</option>
+        </select>
+      </label>
+    </div>
+    <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}"><div style="background:#F2F2F2;padding:40px;font-size:20px;">Nema izveštaja za izabrane filtere.</div></sc-if>
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="2">
+      <div style="margin-bottom:48px;">
+        <h3 style="font-size:28px;font-weight:400;margin:0 0 16px;">{{ g.year }}</h3>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <sc-for list="{{ g.items }}" as="r" hint-placeholder-count="2">
+            <div style="background:#F2F2F2;padding:28px 32px;">
+              <div style="display:flex;gap:10px;font-size:14px;color:#575656;margin-bottom:6px;"><span>{{ r.date }}</span><span style="width:1px;background:#999;"></span><span>{{ r.type }}</span></div>
+              <h4 style="font-size:24px;font-weight:400;margin:0 0 20px;">{{ r.title }}</h4>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:20px 32px;">
+                <div><div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;">Priloženi dokumenti</div>
+                  <sc-for list="{{ r.docs }}" as="d" hint-placeholder-count="2"><a href="#" style="display:flex;gap:12px;align-items:center;padding:8px 0;font-weight:600;font-size:17px;text-decoration:none;"><span style="width:36px;height:36px;background:#C11717;color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">PDF</span>{{ d }}</a></sc-for>
+                </div>
+                <div><div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;">Prezentacije</div>
+                  <a href="#" style="display:flex;gap:12px;align-items:center;padding:8px 0;font-weight:600;font-size:17px;text-decoration:none;"><span style="width:36px;height:36px;background:#C11717;color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">PDF</span>Prezentacija rezultata</a>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </section>
+</main>
+<dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state={type:'Sve vrste',year:'Sve godine'};
+  renderVals(){
+    const mk=(t,vals)=>{const mx=Math.max(...vals);return {t,last:vals[4].toLocaleString('sr-RS'),bars:vals.map((v,i)=>({v,h:Math.round(v/mx*100)+'%',c:i===4?'#C11717':'#BDBDBD'}))};};
+    const charts=[mk('Poslovni prihodi',[28400,31200,33900,36100,40450]),mk('Neto dobit',[1210,1480,1390,1720,2010]),mk('Ugovoreni poslovi',[35000,41800,38600,47200,52900]),mk('EBITDA',[2900,3350,3420,3980,4560])];
+    const reports=[
+      {year:'2026',date:'28. avg 2026.',type:'Polugodišnji',title:'Polugodišnji izveštaj 2026',docs:['Konsolidovani izveštaj','Izveštaj revizora']},
+      {year:'2026',date:'29. maj 2026.',type:'Kvartalni',title:'Kvartalni izveštaj Q1 2026',docs:['Konsolidovani izveštaj']},
+      {year:'2025',date:'30. apr 2026.',type:'Godišnji',title:'Godišnji izveštaj 2025',docs:['Godišnji izveštaj','Izveštaj revizora']},
+      {year:'2025',date:'28. avg 2025.',type:'Polugodišnji',title:'Polugodišnji izveštaj 2025',docs:['Konsolidovani izveštaj']},
+      {year:'2024',date:'30. apr 2025.',type:'Godišnji',title:'Godišnji izveštaj 2024',docs:['Godišnji izveštaj','Izveštaj revizora']}
+    ];
+    const {type,year}=this.state;
+    const f=reports.filter(r=>(type==='Sve vrste'||r.type===type)&&(year==='Sve godine'||r.year===year));
+    const groups=[...new Set(f.map(r=>r.year))].map(y=>({year:y,items:f.filter(r=>r.year===y)}));
+    return {charts,groups,type,year,empty:!f.length,
+      subpages:['Akcije i Beogradska berza','Skupština akcionara','Korporativno upravljanje','Finansijski kalendar','Obaveštenja akcionarima','Finansijski izveštaji'],
+      onType:e=>this.setState({type:e.target.value}),onYear:e=>this.setState({year:e.target.value})};
+  }
+}
+</script>
+</body>
+</html>

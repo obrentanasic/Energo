@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>body{margin:0;font-family:'Barlow Semi Condensed',sans-serif;color:#111;background:#fff}a{color:#111}a:hover{color:#C11717}*:focus-visible{outline:2px solid #111;outline-offset:2px}</style>
+</helmet>
+<dc-import name="Header" active="Projekti" hint-size="100%,96px"></dc-import>
+<main style="font-family:'Barlow Semi Condensed',sans-serif;">
+  <div style="max-width:1184px;margin:0 auto;padding:40px clamp(20px,5vw,48px) 56px;">
+    <div style="font-size:14px;color:#575656;margin-bottom:32px;display:flex;gap:8px;flex-wrap:wrap;"><a href="Home.dc.html" style="color:#575656;">Početna</a><span>/</span><a href="Projekti.dc.html" style="color:#575656;">Projekti</a><span>/</span><span>HE Gornja Drina</span></div>
+    <div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:16px;">Energetika | Bosna i Hercegovina</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 56px;align-items:end;">
+      <h1 style="font-size:clamp(40px,5vw,56px);font-weight:400;line-height:1.08;margin:0;">HE Gornja Drina: četiri hidroelektrane na jednom slivu</h1>
+      <p style="font-size:18px;line-height:1.5;margin:0;">Projektovanje i izgradnja kaskadnog sistema od četiri protočne hidroelektrane ukupne snage 118 MW, sa pratećom infrastrukturom i dalekovodima.</p>
+    </div>
+  </div>
+  <div style="aspect-ratio:21/9;min-height:260px;"><image-slot id="pd-hero" placeholder="Hero fotografija projekta" style="width:100%;height:100%;"></image-slot></div>
+  <section style="background:#F2F2F2;">
+    <dl style="max-width:1184px;margin:0 auto;padding:56px clamp(20px,5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:32px;">
+      <div style="border-top:2px solid #C11717;padding-top:12px;"><dt style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">Klijent</dt><dd style="margin:6px 0 0;font-size:20px;">Elektroprivreda RS</dd></div>
+      <div style="border-top:2px solid #C11717;padding-top:12px;"><dt style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">Lokacija</dt><dd style="margin:6px 0 0;font-size:20px;">Foča, BiH</dd></div>
+      <div style="border-top:2px solid #C11717;padding-top:12px;"><dt style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">Godina</dt><dd style="margin:6px 0 0;font-size:20px;">2023–2027</dd></div>
+      <div style="border-top:2px solid #C11717;padding-top:12px;"><dt style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">Vrednost</dt><dd style="margin:6px 0 0;font-size:20px;">€ 210 mil.</dd></div>
+      <div style="border-top:2px solid #C11717;padding-top:12px;"><dt style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">Kapacitet</dt><dd style="margin:6px 0 0;font-size:20px;">118 MW</dd></div>
+      <div style="border-top:2px solid #C11717;padding-top:12px;"><dt style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;">Naša uloga</dt><dd style="margin:6px 0 0;font-size:20px;">EPC izvođač</dd></div>
+    </dl>
+  </section>
+  <article style="max-width:840px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,5vw,48px) 0;font-size:18px;line-height:1.6;">
+    <h2 style="font-size:clamp(28px,3vw,40px);font-weight:400;line-height:1.2;margin:0 0 24px;">Izazov</h2>
+    <p style="margin:0 0 24px;">Teren u kanjonu gornjeg toka Drine zahtevao je pristupne puteve dužine 34 km, prilagođavanje rokova sezonskim vodostajima i strogu zaštitu rečnog ekosistema tokom svih faza gradnje.</p>
+    <p style="margin:0;">Energoprojekt je preuzeo kompletno projektovanje, nabavku opreme i izgradnju, uz koordinaciju sa lokalnim podizvođačima i nadzorom investitora.</p>
+  </article>
+  <div style="max-width:1184px;margin:0 auto;padding:56px clamp(20px,5vw,48px);"><div style="aspect-ratio:16/9;"><image-slot id="pd-wide" placeholder="Široka fotografija – brana" style="width:100%;height:100%;"></image-slot></div></div>
+  <article style="max-width:840px;margin:0 auto;padding:0 clamp(20px,5vw,48px);font-size:18px;line-height:1.6;">
+    <blockquote style="margin:0 0 48px;padding:0 0 0 0;font-size:clamp(24px,2.6vw,32px);font-weight:300;line-height:1.35;">„Kaskadni sistem daje 420 GWh čiste energije godišnje, dovoljno za oko 100.000 domaćinstava.“<footer style="font-size:16px;font-weight:400;margin-top:16px;color:#575656;">Marko Petrović, direktor projekta</footer></blockquote>
+    <h2 style="font-size:clamp(28px,3vw,40px);font-weight:400;line-height:1.2;margin:0 0 24px;">Rešenje</h2>
+    <p style="margin:0;">Primenom prefabrikovanih betonskih elemenata i paralelnog rada na četiri lokacije, rok izgradnje skraćen je za osam meseci u odnosu na prvobitni plan.</p>
+  </article>
+  <section style="max-width:1184px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px;">
+    <div style="aspect-ratio:4/3;"><image-slot id="pd-g1" placeholder="Galerija 1" style="width:100%;height:100%;"></image-slot></div>
+    <div style="aspect-ratio:4/3;"><image-slot id="pd-g2" placeholder="Galerija 2" style="width:100%;height:100%;"></image-slot></div>
+    <div style="aspect-ratio:4/3;"><image-slot id="pd-g3" placeholder="Galerija 3" style="width:100%;height:100%;"></image-slot></div>
+  </section>
+  <section style="background:#F2F2F2;">
+    <div style="max-width:1184px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,5vw,48px);">
+      <h2 style="font-size:clamp(30px,3.4vw,40px);font-weight:400;margin:0 0 40px;">Povezani projekti</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:40px 32px;">
+        <a href="Projekat.dc.html" style="text-decoration:none;"><h3 style="font-size:24px;font-weight:400;margin:0 0 8px;">Trafostanica Doha South</h3><div style="font-size:14px;color:#575656;margin-bottom:16px;">Katar | Energetika</div><div style="aspect-ratio:4/3;"><image-slot id="pd-r1" placeholder="Fotografija projekta" style="width:100%;height:100%;"></image-slot></div></a>
+        <a href="Projekat.dc.html" style="text-decoration:none;"><h3 style="font-size:24px;font-weight:400;margin:0 0 8px;">Brana Bujagali</h3><div style="font-size:14px;color:#575656;margin-bottom:16px;">Uganda | Vodoprivreda</div><div style="aspect-ratio:4/3;"><image-slot id="pd-r2" placeholder="Fotografija projekta" style="width:100%;height:100%;"></image-slot></div></a>
+        <a href="Projekat.dc.html" style="text-decoration:none;"><h3 style="font-size:24px;font-weight:400;margin:0 0 8px;">Fabrika cementa Novi Popovac</h3><div style="font-size:14px;color:#575656;margin-bottom:16px;">Srbija | Industrija</div><div style="aspect-ratio:4/3;"><image-slot id="pd-r3" placeholder="Fotografija projekta" style="width:100%;height:100%;"></image-slot></div></a>
+      </div>
+    </div>
+  </section>
+  <section style="max-width:1184px;margin:0 auto;padding:clamp(64px,8vw,112px) clamp(20px,5vw,48px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;">
+    <h2 style="font-size:clamp(28px,3vw,40px);font-weight:400;margin:0;">Planirate sličan projekat?</h2>
+    <a href="Kontakt.dc.html" style="background:#C11717;color:#fff;padding:16px 24px;font-size:18px;font-weight:500;text-decoration:none;" style-hover="background:#9E1212;color:#fff;">Kontaktirajte nas</a>
+  </section>
+</main>
+<dc-import name="Footer" hint-size="100%,520px"></dc-import>
+</x-dc>
+</body>
+</html>

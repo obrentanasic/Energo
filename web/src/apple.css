@@ -1,0 +1,50 @@
+/* Apple-style refinements: size-specific tracking, translucent chrome, quiet scroll edge, weight hierarchy. */
+
+/* ---------- Tracking: tighten as type grows, body stays at 0 ---------- */
+.h1, .page-head .h1, .hero .h1, .kar-hero .h1 { letter-spacing: -0.015em; text-wrap: balance; }
+.h2 { letter-spacing: -0.01em; text-wrap: balance; }
+.h3, .prose h2, .prose h3, .hq-card h2, .drawer h2 { letter-spacing: -0.005em; }
+.stat-num, .counter-val, .timeline .y, .kpi .v { letter-spacing: -0.02em; }
+.eyebrow, .stat-label, .kpi .t { letter-spacing: 0.08em; }   /* small caps text: open it up */
+
+/* ---------- Weight hierarchy: titles inside cards read one step heavier than body ---------- */
+.proj-card h3, .news-card h3, .news-list h2, .teaser h3, .ir-card h3, .rule-card h3, .report h4, .person-name, .entity .n {
+  font-weight: 500;
+}
+
+/* ---------- Translucent chrome: content scrolls under, structure stays legible ---------- */
+.site-header {
+  background: rgba(255, 255, 255, 0.78);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(180%);
+  transition: box-shadow 240ms var(--ease-out);
+}
+/* Scroll edge: a hairline that fades in only once content is actually under the bar */
+.site-header.scrolled { box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.14), 0 8px 24px -12px rgba(0, 0, 0, 0.12); }
+
+.sector-bar {
+  background: rgba(0, 0, 0, 0.42);
+  -webkit-backdrop-filter: blur(16px) saturate(160%);
+  backdrop-filter: blur(16px) saturate(160%);
+  border-top: 1px solid rgba(255, 255, 255, 0.18); /* light catching the material's top edge */
+}
+.sector-bar a { text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+
+/* ---------- Respect the user's accessibility settings ---------- */
+@media (prefers-reduced-transparency: reduce) {
+  .site-header { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .sector-bar { background: rgba(0, 0, 0, 0.78); -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .sector-bar a { text-shadow: none; }
+}
+@media (prefers-contrast: more) {
+  .site-header { background: var(--white); -webkit-backdrop-filter: none; backdrop-filter: none; border-bottom: 1px solid var(--ink); }
+  .sector-bar { background: #000; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .tab[aria-selected="true"] { text-decoration-thickness: 3px; }
+  .meta, .crumbs, .crumbs a { color: var(--ink); }
+  .field-label, .select-field, .person-role { color: var(--ink-2); }
+}
+/* Browsers without backdrop-filter get a more opaque bar so text never loses contrast */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .site-header { background: var(--white); }
+  .sector-bar { background: rgba(0, 0, 0, 0.7); }
+}

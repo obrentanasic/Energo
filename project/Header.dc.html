@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>body{margin:0;font-family:'Barlow Semi Condensed',sans-serif;color:#111;background:#fff}a{color:#111}a:hover{color:#C11717}*:focus-visible{outline:2px solid #111;outline-offset:2px}</style>
+</helmet>
+<header style="position:sticky;top:0;z-index:50;background:#fff;height:96px;box-shadow:{{ shadow }};font-family:'Barlow Semi Condensed',sans-serif;">
+  <div style="max-width:1376px;margin:0 auto;height:100%;padding:0 clamp(16px,4vw,32px);display:flex;align-items:center;gap:24px;box-sizing:border-box;">
+    <a href="Home.dc.html" style="display:flex;align-items:center;flex-shrink:0;" aria-label="Energoprojekt početna"><img src="assets/logo.png" alt="Energoprojekt" style="height:clamp(28px,3vw,40px);display:block;"></a>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+      <nav style="display:flex;gap:28px;margin-left:auto;align-items:center;">
+        <sc-for list="{{ nav }}" as="n" hint-placeholder-count="7">
+          <a href="{{ n.href }}" style="{{ n.style }}">{{ n.label }}</a>
+        </sc-for>
+      </nav>
+    </sc-if>
+    <div style="display:flex;gap:4px;margin-left:{{ toolsMargin }};">
+      <button onClick="{{ openOffices }}" aria-label="Kancelarije" style="width:48px;height:48px;border:0;background:#F2F2F2;cursor:pointer;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z"></path><circle cx="12" cy="9.5" r="2.5"></circle></svg></button>
+      <button onClick="{{ openSearch }}" aria-label="Pretraga" style="width:48px;height:48px;border:0;background:#F2F2F2;cursor:pointer;display:flex;align-items:center;justify-content:center;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="1.6"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="M15.5 15.5L21 21"></path></svg></button>
+      <button onClick="{{ openMega }}" aria-label="Meni" style="width:48px;height:48px;border:0;background:#444;cursor:pointer;display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center;"><span style="width:20px;height:2px;background:#fff;"></span><span style="width:20px;height:2px;background:#fff;"></span><span style="width:20px;height:2px;background:#fff;"></span></button>
+    </div>
+  </div>
+</header>
+
+<sc-if value="{{ mega }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:100;background:#fff;overflow:auto;font-family:'Barlow Semi Condensed',sans-serif;">
+    <div style="max-width:1376px;margin:0 auto;height:96px;padding:0 clamp(16px,4vw,32px);display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;border-bottom:1px solid #E1E1E1;">
+      <img src="assets/logo.png" alt="Energoprojekt" style="height:clamp(28px,3vw,40px);">
+      <button onClick="{{ close }}" aria-label="Zatvori" style="width:48px;height:48px;border:0;background:#444;color:#fff;font-size:28px;font-weight:300;cursor:pointer;font-family:inherit;">×</button>
+    </div>
+    <div style="max-width:1184px;margin:0 auto;padding:56px clamp(20px,5vw,48px) 96px;display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:48px 40px;">
+      <sc-for list="{{ menu }}" as="col" hint-placeholder-count="6">
+        <div style="border-top:2px solid #C11717;padding-top:16px;">
+          <a href="{{ col.href }}" style="font-size:28px;font-weight:400;text-decoration:none;display:block;margin-bottom:16px;">{{ col.label }}</a>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <sc-for list="{{ col.items }}" as="it" hint-placeholder-count="4">
+              <a href="{{ col.href }}" style="font-size:17px;text-decoration:none;color:#444;">{{ it }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ search }}" hint-placeholder-val="{{ false }}">
+  <div style="position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.6);overflow:auto;font-family:'Barlow Semi Condensed',sans-serif;">
+    <div style="background:#fff;padding:32px clamp(20px,5vw,48px) 56px;">
+      <div style="max-width:1088px;margin:0 auto;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px;">
+          <span style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;">Pretraga</span>
+          <button onClick="{{ close }}" aria-label="Zatvori" style="width:48px;height:48px;border:0;background:#444;color:#fff;font-size:28px;cursor:pointer;font-family:inherit;">×</button>
+        </div>
+        <input value="{{ q }}" onChange="{{ onQ }}" autoFocus="{{ true }}" placeholder="Šta tražite?" style="width:100%;box-sizing:border-box;border:0;border-bottom:2px solid #111;font-family:inherit;font-size:clamp(28px,4vw,48px);font-weight:300;padding:8px 0;outline:none;">
+        <sc-if value="{{ noResults }}" hint-placeholder-val="{{ false }}">
+          <p style="font-size:18px;margin-top:32px;color:#575656;">Nema rezultata za „{{ q }}“. Pokušajte sa drugim pojmom, npr. „hidroelektrana“ ili „izveštaj“.</p>
+        </sc-if>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:40px;margin-top:40px;">
+          <sc-for list="{{ results }}" as="g" hint-placeholder-count="3">
+            <div>
+              <div style="font-size:14px;letter-spacing:0.08em;text-transform:uppercase;color:#575656;padding-bottom:12px;border-bottom:1px solid #E1E1E1;">{{ g.group }} ({{ g.count }})</div>
+              <sc-for list="{{ g.items }}" as="r" hint-placeholder-count="3">
+                <a href="{{ g.href }}" style="display:block;padding:14px 0;border-bottom:1px solid #E1E1E1;font-size:18px;text-decoration:none;">{{ r }}</a>
+              </sc-for>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ offices }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;padding:16px;font-family:'Barlow Semi Condensed',sans-serif;">
+    <div onClick="{{ stop }}" style="background:#fff;width:100%;max-width:880px;max-height:90vh;overflow:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));">
+      <div style="padding:40px;">
+        <div style="display:flex;justify-content:space-between;align-items:start;"><h2 style="font-size:32px;font-weight:400;margin:0 0 24px;">Naše kancelarije</h2><button onClick="{{ close }}" aria-label="Zatvori" style="width:44px;height:44px;border:0;background:#444;color:#fff;font-size:24px;cursor:pointer;">×</button></div>
+        <sc-for list="{{ officeList }}" as="o" hint-placeholder-count="6">
+          <div style="padding:12px 0;border-bottom:1px solid #E1E1E1;display:flex;justify-content:space-between;gap:16px;font-size:17px;"><span>{{ o.city }}</span><span style="color:#575656;font-size:15px;">{{ o.country }}</span></div>
+        </sc-for>
+      </div>
+      <div style="background:#F2F2F2;min-height:320px;display:flex;align-items:center;justify-content:center;color:#575656;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;">Mapa lokacija</div>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;96px&quot;},&quot;active&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;&quot;,&quot;O nama&quot;,&quot;Za investitore&quot;,&quot;Održivost&quot;,&quot;Projekti&quot;,&quot;Karijera&quot;,&quot;Vesti&quot;,&quot;Kontakt&quot;],&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { mega:false, search:false, offices:false, q:'', w: window.innerWidth, scrolled:false };
+  componentDidMount(){
+    this.onR=()=>this.setState({w:window.innerWidth});
+    this.onS=()=>this.setState({scrolled:window.scrollY>4});
+    window.addEventListener('resize',this.onR);window.addEventListener('scroll',this.onS);
+  }
+  componentWillUnmount(){window.removeEventListener('resize',this.onR);window.removeEventListener('scroll',this.onS);}
+  renderVals(){
+    const active=this.props.active||'';
+    const navDef=[['O nama','ONama.dc.html'],['Za investitore','Investitori.dc.html'],['Održivost','ONama.dc.html'],['Projekti','Projekti.dc.html'],['Karijera','Karijera.dc.html'],['Vesti','Vesti.dc.html'],['Kontakt','Kontakt.dc.html']];
+    const nav=navDef.map(([label,href])=>({label,href,style:{fontSize:'17px',fontWeight:500,textDecoration:'none',paddingBottom:'4px',borderBottom:active===label?'2px solid #C11717':'2px solid transparent'}}));
+    const menu=[
+      {label:'O nama',href:'ONama.dc.html',items:['Ko smo','Misija, vizija, vrednosti','Istorijat','Organizacija','Tržišta','Publikacije']},
+      {label:'Usluge',href:'Projekti.dc.html',items:['Energetika','Visokogradnja','Infrastruktura','Vodoprivreda','Industrija','Real estate']},
+      {label:'Za investitore',href:'Investitori.dc.html',items:['Finansijski izveštaji','Akcije i Beogradska berza','Skupština','Korporativno upravljanje','Finansijski kalendar','Obaveštenja akcionarima']},
+      {label:'Projekti',href:'Projekti.dc.html',items:['Svi projekti','Izdvojeni projekti','Real estate – Kosa Kvart']},
+      {label:'Karijera',href:'Karijera.dc.html',items:['Zašto Energoprojekt','Slobodna radna mesta','Praksa i stipendije','Priče zaposlenih']},
+      {label:'Vesti',href:'Vesti.dc.html',items:['Sve vesti','Saopštenja','Mediji']},
+      {label:'Kontakt',href:'Kontakt.dc.html',items:['Sedište','Zavisna društva','Regionalne kancelarije']},
+      {label:'Sistem dizajna',href:'DesignSystem.dc.html',items:['Tokeni i komponente']}
+    ];
+    const data=[
+      {group:'Projekti',href:'Projekat.dc.html',items:['HE Gornja Drina','Autoput Pakovraće – Požega','Poslovni kompleks Ušće Tower 2','Kosa Kvart, Beograd','Vodovod Kampala','Trafostanica Doha South']},
+      {group:'Vesti',href:'Vesti.dc.html',items:['Potpisan ugovor za hidroelektranu u Ugandi','Energoprojekt na Sajmu građevinarstva','Rezultati poslovanja za prvo polugodište','Uručene stipendije studentima']},
+      {group:'Dokumenti',href:'Investitori.dc.html',items:['Godišnji izveštaj 2025 (PDF)','Polugodišnji izveštaj 2026 (PDF)','Poziv na sednicu skupštine (PDF)','Statut društva (PDF)']}
+    ];
+    const q=this.state.q.trim().toLowerCase();
+    const results=data.map(g=>{const items=q?g.items.filter(i=>i.toLowerCase().includes(q)):g.items.slice(0,3);return {...g,items,count:items.length};}).filter(g=>g.items.length);
+    const isDesktop=this.state.w>=1180;
+    const close=()=>this.setState({mega:false,search:false,offices:false});
+    return {
+      nav,menu,isDesktop,results,q:this.state.q,noResults:q&&!results.length,
+      toolsMargin:isDesktop?'16px':'auto',
+      shadow:this.state.scrolled?'0 1px 0 #E1E1E1, 0 4px 12px rgba(0,0,0,0.06)':'none',
+      mega:this.state.mega,search:this.state.search,offices:this.state.offices,
+      openMega:()=>this.setState({mega:true}),openSearch:()=>this.setState({search:true,q:''}),openOffices:()=>this.setState({offices:true}),
+      close,stop:e=>e.stopPropagation(),onQ:e=>this.setState({q:e.target.value}),
+      officeList:[{city:'Beograd (sedište)',country:'Srbija'},{city:'Kampala',country:'Uganda'},{city:'Doha',country:'Katar'},{city:'Lagos',country:'Nigerija'},{city:'Lima',country:'Peru'},{city:'Moskva',country:'Rusija'},{city:'Astana',country:'Kazahstan'},{city:'Alžir',country:'Alžir'}]
+    };
+  }
+}
+</script>
+</body>
+</html>

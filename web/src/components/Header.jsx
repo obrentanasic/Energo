@@ -1,0 +1,171 @@
+import { useEffect, useRef, useState } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
+import { megaMenu, nav } from '../content/site'
+import { matcher, offices, searchIndex } from '../data'
+import { OFFICE_PINS } from '../content/worldmap'
+import OfficeMap from './OfficeMap'
+
+function CloseButton({ onClick, small }) {
+  return (
+    <button type="button" className="close-btn" aria-label="Zatvori" onClick={onClick}
+      style={small ? { width: 44, height: 44, fontSize: 24 } : undefined}>×</button>
+  )
+}
+
+function SearchOverlay({ onClose }) {
+  const [q, setQ] = useState('')
+  const needle = q.trim()
+  const hit = matcher(needle)
+  const groups = searchIndex
+    .map(g => ({ ...g, items: (needle ? g.items.filter(i => hit(i.label)) : g.items.slice(0, 3)).slice(0, 8) }))
+    .filter(g => g.items.length)
+
+  return (
+    <div className="overlay search-ov" role="dialog" aria-modal="true" aria-label="Pretraga">
+      <div className="search-panel"><div>
+        <div className="search-head">
+          <span className="eyebrow">Pretraga</span>
+          <CloseButton onClick={onClose} />
+        </div>
+        <input className="search-input" type="search" autoFocus placeholder="Šta tražite?" aria-label="Šta tražite?"
+          value={q} onChange={e => setQ(e.target.value)} />
+        {needle && !groups.length && (
+          <p className="search-empty">Nema rezultata za „{q}“. Pokušajte sa drugim pojmom, npr. „hidroelektrana“ ili „izveštaj“.</p>
+        )}
+        <div className="search-results">
+          {groups.map(g => (
+            <div key={g.group}>
+              <div className="eyebrow search-group-title">{g.group} ({g.items.length})</div>
+              {g.items.map(item => item.href
+                ? <a key={item.href} href={item.href} target="_blank" rel="noopener noreferrer">{item.label}</a>
+                : <Link key={item.to} to={item.to} onClick={onClose}>{item.label}</Link>)}
+            </div>
+          ))}
+        </div>
+      </div></div>
+    </div>
+  )
+}
+
+function MegaMenu({ onClose }) {
+  const closeRef = useRef(null)
+  const [openCol, setOpenCol] = useState(null)
+  useEffect(() => closeRef.current?.focus(), [])
+  return (
+    <div className="overlay mega" role="dialog" aria-modal="true" aria-label="Meni">
+      <div className="mega-top">
+        <img src="assets/logo.png" alt="Energoprojekt" />
+        <button ref={closeRef} type="button" className="close-btn" aria-label="Zatvori" onClick={onClose}>×</button>
+      </div>
+      <div className="mega-grid">
+        {megaMenu.map(col => {
+          const isOpen = openCol === col.label
+          return (
+            <div className="mega-col" key={col.label}>
+              <Link className="mega-link" to={col.to} onClick={onClose}>{col.label}</Link>
+              <button type="button" className="mega-toggle" aria-expanded={isOpen} aria-controls={`mega-${col.label}`}
+                onClick={() => setOpenCol(isOpen ? null : col.label)}>
+                {col.label}<span className="chev" aria-hidden="true" />
+              </button>
+              <div className="mega-sub" id={`mega-${col.label}`} data-open={isOpen}>
+                <ul>
+                  <li className="mega-all"><Link to={col.to} onClick={onClose}>Pregled: {col.label} →</Link></li>
+                  {col.items.map(it => <li key={it.label}><Link to={it.to} state={{ scrollTo: it.id, tab: it.tab }} onClick={onClose}>{it.label}</Link></li>)}
+                </ul>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+// HQ first, then the abroad offices in map order; company names come from the old /kontakt page.
+const officeRows = OFFICE_PINS.map(p => ({
+  ...p,
+  name: p.city === 'Beograd' ? 'Energoprojekt Holding a.d. – sedište' : offices.find(o => o.city === p.country)?.country || '',
+}))
+
+function OfficesModal({ onClose }) {
+  const [active, setActive] = useState(null)
+  return (
+    <div className="overlay offices-ov" role="dialog" aria-modal="true" aria-labelledby="offices-title"
+      onClick={e => { if (e.target === e.currentTarget) onClose() }}>
+      <div className="offices-card">
+        <div className="offices-head"><h2 id="offices-title">Naše kancelarije</h2><CloseButton small onClick={onClose} /></div>
+        <OfficeMap active={active} onActive={setActive} />
+        <ul className="offices-list">
+          {officeRows.map(o => (
+            <li key={o.city} className={`office-row${o.city === active ? ' on' : ''}`} tabIndex={0}
+              onMouseEnter={() => setActive(o.city)} onMouseLeave={() => setActive(null)} onFocus={() => setActive(o.city)} onBlur={() => setActive(null)}>
+              <span className="where"><span className="country">{o.country}</span><span className="city">{o.city}</span></span>
+              <span className="name">{o.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  )
+}
+
+export default function Header() {
+  // Overlay is tied to the path it was opened on, so navigating away closes it.
+  const [opened, setOpened] = useState(null) // { name: 'mega' | 'search' | 'offices', key }
+  const [scrolled, setScrolled] = useState(false)
+  const triggerRef = useRef(null)
+  const { key: k, pathname } = useLocation()
+  // history entries have unique keys, so back/forward never reopens an overlay; the entry you land on
+  // (and any hand-typed hash change) all share key "default", so the path is part of the identity too
+  const key = `${pathname}|${k}`
+  const [seenKey, setSeenKey] = useState(key)
+  if (seenKey !== key) { setSeenKey(key); if (opened) setOpened(null) } // any navigation closes overlays
+  const overlay = opened && opened.key === key ? opened.name : null
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 4)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    document.body.classList.toggle('no-scroll', !!overlay)
+    if (!overlay) return
+    const onKey = e => { if (e.key === 'Escape') setOpened(null) }
+    document.addEventListener('keydown', onKey)
+    return () => document.removeEventListener('keydown', onKey)
+  }, [overlay])
+
+  const open = (name, e) => { triggerRef.current = e.currentTarget; setOpened({ name, key }) }
+  const close = () => { setOpened(null); triggerRef.current?.focus() }
+
+  return (
+    <>
+      <header className={`site-header${scrolled ? ' scrolled' : ''}`}>
+        <div className="header-inner">
+          <Link to="/" className="logo" aria-label="Energoprojekt početna"><img src="assets/logo.png" alt="Energoprojekt" /></Link>
+          <nav className="main-nav" aria-label="Glavna navigacija">
+            {nav.map(n => (
+              <NavLink key={n.label} to={n.to}>{n.label}</NavLink>
+            ))}
+          </nav>
+          <div className="header-tools">
+            <button className="icon-btn" type="button" aria-label="Kancelarije" aria-haspopup="dialog" onClick={e => open('offices', e)}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.6" aria-hidden="true"><path d="M12 22s7-7.2 7-12.5A7 7 0 0 0 5 9.5C5 14.8 12 22 12 22z" /><circle cx="12" cy="9.5" r="2.5" /></svg>
+            </button>
+            <button className="icon-btn" type="button" aria-label="Pretraga" aria-haspopup="dialog" onClick={e => open('search', e)}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111" strokeWidth="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="M15.5 15.5L21 21" /></svg>
+            </button>
+            <button className="icon-btn dark" type="button" aria-label="Meni" aria-haspopup="dialog" onClick={e => open('mega', e)}>
+              <span /><span /><span />
+            </button>
+          </div>
+        </div>
+      </header>
+      {overlay === 'mega' && <MegaMenu onClose={close} />}
+      {overlay === 'search' && <SearchOverlay onClose={close} />}
+      {overlay === 'offices' && <OfficesModal onClose={close} />}
+    </>
+  )
+}
